@@ -18,9 +18,22 @@ Desde la raíz del repositorio que se desee analizar:
 vulnminer scan . --standards owasp2025,api2023 --format json,html --output ./reportes
 ```
 
-También se puede ejecutar `python3 -m vulnminer scan RUTA` desde la raíz de VulnMiner sin instalarlo. La CLI usa `vulnminer/model.json` por defecto. Empieza por los contextos locales de Compose, aplica detección por manifiestos y reconoce estructuras `services/`, `microservices/` y `apps/`. El análisis lee archivos de texto localmente. Python y JavaScript están demostrados. TypeScript recibe análisis léxico experimental. La herramienta también lee los formatos de configuración de la demostración y reconoce Dockerfiles, manifiestos y definiciones OpenAPI de texto.
+La CLI empieza por los contextos locales de Compose, aplica detección por manifiestos y reconoce estructuras `services/`, `microservices/` y `apps/`. El análisis lee archivos de texto localmente. Python y JavaScript están demostrados. TypeScript recibe análisis léxico experimental. La herramienta también lee los formatos de configuración de la demostración y reconoce Dockerfiles, manifiestos y definiciones OpenAPI de texto.
 
-## Reproducir SEMMA y la demostración
+## Probar el modelo entrenado
+
+1. Abre una terminal en la carpeta de VulnMiner, donde están este README y `pyproject.toml`. Comprueba con `python3 --version` que tienes Python 3.9 o posterior.
+2. Ejecuta el análisis del proyecto de ejemplo. Este comando funciona sin instalar la CLI y carga automáticamente [el modelo ya entrenado](vulnminer/model.json).
+
+   ```bash
+   python3 -m vulnminer scan examples/proyecto-reservado --standards owasp2025,api2023 --format json,html --output reportes/prueba-modelo
+   ```
+
+3. Comprueba que la consola indique **3 microservicios, 8 archivos analizados y 5 hallazgos potenciales**. Abre `reportes/prueba-modelo/analisis.html` en el navegador o consulta `reportes/prueba-modelo/analisis.json`. Los cinco hallazgos cubren cinco categorías OWASP web y cuatro de API.
+
+Para analizar otro repositorio con el mismo modelo, sustituye `examples/proyecto-reservado` por su ruta. Puedes ejecutar las pruebas automatizadas desde la carpeta de VulnMiner con `python3 -m unittest discover -s tests -v`.
+
+## Reproducir el entrenamiento y la evaluación
 
 Ejecutar desde la raíz de VulnMiner:
 
