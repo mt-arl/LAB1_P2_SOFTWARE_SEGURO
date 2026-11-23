@@ -1,0 +1,9 @@
+api:
+  rate:
+    enabled: true
+  session:
+    expiration: false
+  transport:
+    require_tls: true
+  diagnostics:
+    debug: true

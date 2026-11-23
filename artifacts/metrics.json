@@ -1,0 +1,1562 @@
+{
+  "clean_records": 800,
+  "comparison": {
+    "bernoulli": {
+      "configuration": {
+        "algorithm": "bernoulli",
+        "false_positives": 0,
+        "macro_f1": 1.0,
+        "parameter": 0.5,
+        "threshold": 0.55
+      },
+      "test": {
+        "binary": {
+          "macro_f1": 1.0,
+          "per_label": {
+            "vulnerable": {
+              "f1": 1.0,
+              "fn": 0,
+              "fp": 0,
+              "matrix": [
+                [
+                  60,
+                  0
+                ],
+                [
+                  0,
+                  60
+                ]
+              ],
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 60,
+              "tn": 60,
+              "tp": 60
+            }
+          }
+        },
+        "errors": [],
+        "n": 120,
+        "owasp": {
+          "macro_f1": 1.0,
+          "per_label": {
+            "A01:2025": {
+              "f1": 1.0,
+              "fn": 0,
+              "fp": 0,
+              "matrix": [
+                [
+                  108,
+                  0
+                ],
+                [
+                  0,
+                  12
+                ]
+              ],
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 12,
+              "tn": 108,
+              "tp": 12
+            },
+            "A02:2025": {
+              "f1": 1.0,
+              "fn": 0,
+              "fp": 0,
+              "matrix": [
+                [
+                  108,
+                  0
+                ],
+                [
+                  0,
+                  12
+                ]
+              ],
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 12,
+              "tn": 108,
+              "tp": 12
+            },
+            "A04:2025": {
+              "f1": 1.0,
+              "fn": 0,
+              "fp": 0,
+              "matrix": [
+                [
+                  108,
+                  0
+                ],
+                [
+                  0,
+                  12
+                ]
+              ],
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 12,
+              "tn": 108,
+              "tp": 12
+            },
+            "A06:2025": {
+              "f1": 1.0,
+              "fn": 0,
+              "fp": 0,
+              "matrix": [
+                [
+                  108,
+                  0
+                ],
+                [
+                  0,
+                  12
+                ]
+              ],
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 12,
+              "tn": 108,
+              "tp": 12
+            },
+            "A07:2025": {
+              "f1": 1.0,
+              "fn": 0,
+              "fp": 0,
+              "matrix": [
+                [
+                  108,
+                  0
+                ],
+                [
+                  0,
+                  12
+                ]
+              ],
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 12,
+              "tn": 108,
+              "tp": 12
+            },
+            "API1:2023": {
+              "f1": 1.0,
+              "fn": 0,
+              "fp": 0,
+              "matrix": [
+                [
+                  109,
+                  0
+                ],
+                [
+                  0,
+                  11
+                ]
+              ],
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 11,
+              "tn": 109,
+              "tp": 11
+            },
+            "API2:2023": {
+              "f1": 1.0,
+              "fn": 0,
+              "fp": 0,
+              "matrix": [
+                [
+                  109,
+                  0
+                ],
+                [
+                  0,
+                  11
+                ]
+              ],
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 11,
+              "tn": 109,
+              "tp": 11
+            },
+            "API4:2023": {
+              "f1": 1.0,
+              "fn": 0,
+              "fp": 0,
+              "matrix": [
+                [
+                  109,
+                  0
+                ],
+                [
+                  0,
+                  11
+                ]
+              ],
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 11,
+              "tn": 109,
+              "tp": 11
+            },
+            "API8:2023": {
+              "f1": 1.0,
+              "fn": 0,
+              "fp": 0,
+              "matrix": [
+                [
+                  109,
+                  0
+                ],
+                [
+                  0,
+                  11
+                ]
+              ],
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 11,
+              "tn": 109,
+              "tp": 11
+            }
+          }
+        },
+        "patterns": {
+          "macro_f1": 1.0,
+          "per_label": {
+            "debug": {
+              "f1": 1.0,
+              "fn": 0,
+              "fp": 0,
+              "matrix": [
+                [
+                  108,
+                  0
+                ],
+                [
+                  0,
+                  12
+                ]
+              ],
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 12,
+              "tn": 108,
+              "tp": 12
+            },
+            "expiration": {
+              "f1": 1.0,
+              "fn": 0,
+              "fp": 0,
+              "matrix": [
+                [
+                  108,
+                  0
+                ],
+                [
+                  0,
+                  12
+                ]
+              ],
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 12,
+              "tn": 108,
+              "tp": 12
+            },
+            "ownership": {
+              "f1": 1.0,
+              "fn": 0,
+              "fp": 0,
+              "matrix": [
+                [
+                  108,
+                  0
+                ],
+                [
+                  0,
+                  12
+                ]
+              ],
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 12,
+              "tn": 108,
+              "tp": 12
+            },
+            "rate_limit": {
+              "f1": 1.0,
+              "fn": 0,
+              "fp": 0,
+              "matrix": [
+                [
+                  108,
+                  0
+                ],
+                [
+                  0,
+                  12
+                ]
+              ],
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 12,
+              "tn": 108,
+              "tp": 12
+            },
+            "transport": {
+              "f1": 1.0,
+              "fn": 0,
+              "fp": 0,
+              "matrix": [
+                [
+                  108,
+                  0
+                ],
+                [
+                  0,
+                  12
+                ]
+              ],
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 12,
+              "tn": 108,
+              "tp": 12
+            }
+          }
+        },
+        "unassessed_owasp": [
+          "A03:2025",
+          "A05:2025",
+          "A08:2025",
+          "A09:2025",
+          "A10:2025",
+          "API10:2023",
+          "API3:2023",
+          "API5:2023",
+          "API6:2023",
+          "API7:2023",
+          "API9:2023"
+        ]
+      },
+      "validation": {
+        "binary": {
+          "macro_f1": 1.0,
+          "per_label": {
+            "vulnerable": {
+              "f1": 1.0,
+              "fn": 0,
+              "fp": 0,
+              "matrix": [
+                [
+                  60,
+                  0
+                ],
+                [
+                  0,
+                  60
+                ]
+              ],
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 60,
+              "tn": 60,
+              "tp": 60
+            }
+          }
+        },
+        "errors": [],
+        "n": 120,
+        "owasp": {
+          "macro_f1": 1.0,
+          "per_label": {
+            "A01:2025": {
+              "f1": 1.0,
+              "fn": 0,
+              "fp": 0,
+              "matrix": [
+                [
+                  108,
+                  0
+                ],
+                [
+                  0,
+                  12
+                ]
+              ],
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 12,
+              "tn": 108,
+              "tp": 12
+            },
+            "A02:2025": {
+              "f1": 1.0,
+              "fn": 0,
+              "fp": 0,
+              "matrix": [
+                [
+                  108,
+                  0
+                ],
+                [
+                  0,
+                  12
+                ]
+              ],
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 12,
+              "tn": 108,
+              "tp": 12
+            },
+            "A04:2025": {
+              "f1": 1.0,
+              "fn": 0,
+              "fp": 0,
+              "matrix": [
+                [
+                  108,
+                  0
+                ],
+                [
+                  0,
+                  12
+                ]
+              ],
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 12,
+              "tn": 108,
+              "tp": 12
+            },
+            "A06:2025": {
+              "f1": 1.0,
+              "fn": 0,
+              "fp": 0,
+              "matrix": [
+                [
+                  108,
+                  0
+                ],
+                [
+                  0,
+                  12
+                ]
+              ],
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 12,
+              "tn": 108,
+              "tp": 12
+            },
+            "A07:2025": {
+              "f1": 1.0,
+              "fn": 0,
+              "fp": 0,
+              "matrix": [
+                [
+                  108,
+                  0
+                ],
+                [
+                  0,
+                  12
+                ]
+              ],
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 12,
+              "tn": 108,
+              "tp": 12
+            },
+            "API1:2023": {
+              "f1": 1.0,
+              "fn": 0,
+              "fp": 0,
+              "matrix": [
+                [
+                  109,
+                  0
+                ],
+                [
+                  0,
+                  11
+                ]
+              ],
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 11,
+              "tn": 109,
+              "tp": 11
+            },
+            "API2:2023": {
+              "f1": 1.0,
+              "fn": 0,
+              "fp": 0,
+              "matrix": [
+                [
+                  109,
+                  0
+                ],
+                [
+                  0,
+                  11
+                ]
+              ],
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 11,
+              "tn": 109,
+              "tp": 11
+            },
+            "API4:2023": {
+              "f1": 1.0,
+              "fn": 0,
+              "fp": 0,
+              "matrix": [
+                [
+                  109,
+                  0
+                ],
+                [
+                  0,
+                  11
+                ]
+              ],
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 11,
+              "tn": 109,
+              "tp": 11
+            },
+            "API8:2023": {
+              "f1": 1.0,
+              "fn": 0,
+              "fp": 0,
+              "matrix": [
+                [
+                  109,
+                  0
+                ],
+                [
+                  0,
+                  11
+                ]
+              ],
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 11,
+              "tn": 109,
+              "tp": 11
+            }
+          }
+        },
+        "patterns": {
+          "macro_f1": 1.0,
+          "per_label": {
+            "debug": {
+              "f1": 1.0,
+              "fn": 0,
+              "fp": 0,
+              "matrix": [
+                [
+                  108,
+                  0
+                ],
+                [
+                  0,
+                  12
+                ]
+              ],
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 12,
+              "tn": 108,
+              "tp": 12
+            },
+            "expiration": {
+              "f1": 1.0,
+              "fn": 0,
+              "fp": 0,
+              "matrix": [
+                [
+                  108,
+                  0
+                ],
+                [
+                  0,
+                  12
+                ]
+              ],
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 12,
+              "tn": 108,
+              "tp": 12
+            },
+            "ownership": {
+              "f1": 1.0,
+              "fn": 0,
+              "fp": 0,
+              "matrix": [
+                [
+                  108,
+                  0
+                ],
+                [
+                  0,
+                  12
+                ]
+              ],
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 12,
+              "tn": 108,
+              "tp": 12
+            },
+            "rate_limit": {
+              "f1": 1.0,
+              "fn": 0,
+              "fp": 0,
+              "matrix": [
+                [
+                  108,
+                  0
+                ],
+                [
+                  0,
+                  12
+                ]
+              ],
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 12,
+              "tn": 108,
+              "tp": 12
+            },
+            "transport": {
+              "f1": 1.0,
+              "fn": 0,
+              "fp": 0,
+              "matrix": [
+                [
+                  108,
+                  0
+                ],
+                [
+                  0,
+                  12
+                ]
+              ],
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 12,
+              "tn": 108,
+              "tp": 12
+            }
+          }
+        },
+        "unassessed_owasp": [
+          "A03:2025",
+          "A05:2025",
+          "A08:2025",
+          "A09:2025",
+          "A10:2025",
+          "API10:2023",
+          "API3:2023",
+          "API5:2023",
+          "API6:2023",
+          "API7:2023",
+          "API9:2023"
+        ]
+      }
+    },
+    "logistic": {
+      "configuration": {
+        "algorithm": "logistic",
+        "false_positives": 0,
+        "macro_f1": 1.0,
+        "parameter": 0.0005,
+        "threshold": 0.55
+      },
+      "test": {
+        "binary": {
+          "macro_f1": 1.0,
+          "per_label": {
+            "vulnerable": {
+              "f1": 1.0,
+              "fn": 0,
+              "fp": 0,
+              "matrix": [
+                [
+                  60,
+                  0
+                ],
+                [
+                  0,
+                  60
+                ]
+              ],
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 60,
+              "tn": 60,
+              "tp": 60
+            }
+          }
+        },
+        "errors": [],
+        "n": 120,
+        "owasp": {
+          "macro_f1": 1.0,
+          "per_label": {
+            "A01:2025": {
+              "f1": 1.0,
+              "fn": 0,
+              "fp": 0,
+              "matrix": [
+                [
+                  108,
+                  0
+                ],
+                [
+                  0,
+                  12
+                ]
+              ],
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 12,
+              "tn": 108,
+              "tp": 12
+            },
+            "A02:2025": {
+              "f1": 1.0,
+              "fn": 0,
+              "fp": 0,
+              "matrix": [
+                [
+                  108,
+                  0
+                ],
+                [
+                  0,
+                  12
+                ]
+              ],
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 12,
+              "tn": 108,
+              "tp": 12
+            },
+            "A04:2025": {
+              "f1": 1.0,
+              "fn": 0,
+              "fp": 0,
+              "matrix": [
+                [
+                  108,
+                  0
+                ],
+                [
+                  0,
+                  12
+                ]
+              ],
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 12,
+              "tn": 108,
+              "tp": 12
+            },
+            "A06:2025": {
+              "f1": 1.0,
+              "fn": 0,
+              "fp": 0,
+              "matrix": [
+                [
+                  108,
+                  0
+                ],
+                [
+                  0,
+                  12
+                ]
+              ],
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 12,
+              "tn": 108,
+              "tp": 12
+            },
+            "A07:2025": {
+              "f1": 1.0,
+              "fn": 0,
+              "fp": 0,
+              "matrix": [
+                [
+                  108,
+                  0
+                ],
+                [
+                  0,
+                  12
+                ]
+              ],
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 12,
+              "tn": 108,
+              "tp": 12
+            },
+            "API1:2023": {
+              "f1": 1.0,
+              "fn": 0,
+              "fp": 0,
+              "matrix": [
+                [
+                  109,
+                  0
+                ],
+                [
+                  0,
+                  11
+                ]
+              ],
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 11,
+              "tn": 109,
+              "tp": 11
+            },
+            "API2:2023": {
+              "f1": 1.0,
+              "fn": 0,
+              "fp": 0,
+              "matrix": [
+                [
+                  109,
+                  0
+                ],
+                [
+                  0,
+                  11
+                ]
+              ],
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 11,
+              "tn": 109,
+              "tp": 11
+            },
+            "API4:2023": {
+              "f1": 1.0,
+              "fn": 0,
+              "fp": 0,
+              "matrix": [
+                [
+                  109,
+                  0
+                ],
+                [
+                  0,
+                  11
+                ]
+              ],
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 11,
+              "tn": 109,
+              "tp": 11
+            },
+            "API8:2023": {
+              "f1": 1.0,
+              "fn": 0,
+              "fp": 0,
+              "matrix": [
+                [
+                  109,
+                  0
+                ],
+                [
+                  0,
+                  11
+                ]
+              ],
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 11,
+              "tn": 109,
+              "tp": 11
+            }
+          }
+        },
+        "patterns": {
+          "macro_f1": 1.0,
+          "per_label": {
+            "debug": {
+              "f1": 1.0,
+              "fn": 0,
+              "fp": 0,
+              "matrix": [
+                [
+                  108,
+                  0
+                ],
+                [
+                  0,
+                  12
+                ]
+              ],
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 12,
+              "tn": 108,
+              "tp": 12
+            },
+            "expiration": {
+              "f1": 1.0,
+              "fn": 0,
+              "fp": 0,
+              "matrix": [
+                [
+                  108,
+                  0
+                ],
+                [
+                  0,
+                  12
+                ]
+              ],
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 12,
+              "tn": 108,
+              "tp": 12
+            },
+            "ownership": {
+              "f1": 1.0,
+              "fn": 0,
+              "fp": 0,
+              "matrix": [
+                [
+                  108,
+                  0
+                ],
+                [
+                  0,
+                  12
+                ]
+              ],
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 12,
+              "tn": 108,
+              "tp": 12
+            },
+            "rate_limit": {
+              "f1": 1.0,
+              "fn": 0,
+              "fp": 0,
+              "matrix": [
+                [
+                  108,
+                  0
+                ],
+                [
+                  0,
+                  12
+                ]
+              ],
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 12,
+              "tn": 108,
+              "tp": 12
+            },
+            "transport": {
+              "f1": 1.0,
+              "fn": 0,
+              "fp": 0,
+              "matrix": [
+                [
+                  108,
+                  0
+                ],
+                [
+                  0,
+                  12
+                ]
+              ],
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 12,
+              "tn": 108,
+              "tp": 12
+            }
+          }
+        },
+        "unassessed_owasp": [
+          "A03:2025",
+          "A05:2025",
+          "A08:2025",
+          "A09:2025",
+          "A10:2025",
+          "API10:2023",
+          "API3:2023",
+          "API5:2023",
+          "API6:2023",
+          "API7:2023",
+          "API9:2023"
+        ]
+      },
+      "validation": {
+        "binary": {
+          "macro_f1": 1.0,
+          "per_label": {
+            "vulnerable": {
+              "f1": 1.0,
+              "fn": 0,
+              "fp": 0,
+              "matrix": [
+                [
+                  60,
+                  0
+                ],
+                [
+                  0,
+                  60
+                ]
+              ],
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 60,
+              "tn": 60,
+              "tp": 60
+            }
+          }
+        },
+        "errors": [],
+        "n": 120,
+        "owasp": {
+          "macro_f1": 1.0,
+          "per_label": {
+            "A01:2025": {
+              "f1": 1.0,
+              "fn": 0,
+              "fp": 0,
+              "matrix": [
+                [
+                  108,
+                  0
+                ],
+                [
+                  0,
+                  12
+                ]
+              ],
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 12,
+              "tn": 108,
+              "tp": 12
+            },
+            "A02:2025": {
+              "f1": 1.0,
+              "fn": 0,
+              "fp": 0,
+              "matrix": [
+                [
+                  108,
+                  0
+                ],
+                [
+                  0,
+                  12
+                ]
+              ],
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 12,
+              "tn": 108,
+              "tp": 12
+            },
+            "A04:2025": {
+              "f1": 1.0,
+              "fn": 0,
+              "fp": 0,
+              "matrix": [
+                [
+                  108,
+                  0
+                ],
+                [
+                  0,
+                  12
+                ]
+              ],
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 12,
+              "tn": 108,
+              "tp": 12
+            },
+            "A06:2025": {
+              "f1": 1.0,
+              "fn": 0,
+              "fp": 0,
+              "matrix": [
+                [
+                  108,
+                  0
+                ],
+                [
+                  0,
+                  12
+                ]
+              ],
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 12,
+              "tn": 108,
+              "tp": 12
+            },
+            "A07:2025": {
+              "f1": 1.0,
+              "fn": 0,
+              "fp": 0,
+              "matrix": [
+                [
+                  108,
+                  0
+                ],
+                [
+                  0,
+                  12
+                ]
+              ],
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 12,
+              "tn": 108,
+              "tp": 12
+            },
+            "API1:2023": {
+              "f1": 1.0,
+              "fn": 0,
+              "fp": 0,
+              "matrix": [
+                [
+                  109,
+                  0
+                ],
+                [
+                  0,
+                  11
+                ]
+              ],
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 11,
+              "tn": 109,
+              "tp": 11
+            },
+            "API2:2023": {
+              "f1": 1.0,
+              "fn": 0,
+              "fp": 0,
+              "matrix": [
+                [
+                  109,
+                  0
+                ],
+                [
+                  0,
+                  11
+                ]
+              ],
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 11,
+              "tn": 109,
+              "tp": 11
+            },
+            "API4:2023": {
+              "f1": 1.0,
+              "fn": 0,
+              "fp": 0,
+              "matrix": [
+                [
+                  109,
+                  0
+                ],
+                [
+                  0,
+                  11
+                ]
+              ],
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 11,
+              "tn": 109,
+              "tp": 11
+            },
+            "API8:2023": {
+              "f1": 1.0,
+              "fn": 0,
+              "fp": 0,
+              "matrix": [
+                [
+                  109,
+                  0
+                ],
+                [
+                  0,
+                  11
+                ]
+              ],
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 11,
+              "tn": 109,
+              "tp": 11
+            }
+          }
+        },
+        "patterns": {
+          "macro_f1": 1.0,
+          "per_label": {
+            "debug": {
+              "f1": 1.0,
+              "fn": 0,
+              "fp": 0,
+              "matrix": [
+                [
+                  108,
+                  0
+                ],
+                [
+                  0,
+                  12
+                ]
+              ],
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 12,
+              "tn": 108,
+              "tp": 12
+            },
+            "expiration": {
+              "f1": 1.0,
+              "fn": 0,
+              "fp": 0,
+              "matrix": [
+                [
+                  108,
+                  0
+                ],
+                [
+                  0,
+                  12
+                ]
+              ],
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 12,
+              "tn": 108,
+              "tp": 12
+            },
+            "ownership": {
+              "f1": 1.0,
+              "fn": 0,
+              "fp": 0,
+              "matrix": [
+                [
+                  108,
+                  0
+                ],
+                [
+                  0,
+                  12
+                ]
+              ],
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 12,
+              "tn": 108,
+              "tp": 12
+            },
+            "rate_limit": {
+              "f1": 1.0,
+              "fn": 0,
+              "fp": 0,
+              "matrix": [
+                [
+                  108,
+                  0
+                ],
+                [
+                  0,
+                  12
+                ]
+              ],
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 12,
+              "tn": 108,
+              "tp": 12
+            },
+            "transport": {
+              "f1": 1.0,
+              "fn": 0,
+              "fp": 0,
+              "matrix": [
+                [
+                  108,
+                  0
+                ],
+                [
+                  0,
+                  12
+                ]
+              ],
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 12,
+              "tn": 108,
+              "tp": 12
+            }
+          }
+        },
+        "unassessed_owasp": [
+          "A03:2025",
+          "A05:2025",
+          "A08:2025",
+          "A09:2025",
+          "A10:2025",
+          "API10:2023",
+          "API3:2023",
+          "API5:2023",
+          "API6:2023",
+          "API7:2023",
+          "API9:2023"
+        ]
+      }
+    }
+  },
+  "dataset": {
+    "categorias": {
+      "A01:2025": 80,
+      "A02:2025": 80,
+      "A04:2025": 80,
+      "A06:2025": 80,
+      "A07:2025": 80,
+      "API1:2023": 71,
+      "API2:2023": 71,
+      "API4:2023": 71,
+      "API8:2023": 71
+    },
+    "clases": {
+      "no vulnerable": 400,
+      "vulnerable": 400
+    },
+    "duplicados_exactos": 0,
+    "faltantes_requeridos": 0,
+    "familias": 60,
+    "lenguajes_formatos": {
+      "JavaScript": 200,
+      "Properties": 200,
+      "Python": 200,
+      "YAML": 200
+    },
+    "longitud_caracteres": {
+      "max": 49,
+      "min": 19,
+      "promedio": 33.76
+    },
+    "particiones": {
+      "test": 120,
+      "train": 560,
+      "validation": 120
+    },
+    "proyectos": 20,
+    "registros": 800
+  },
+  "feature_count": 404,
+  "selected": "logistic",
+  "selection_rule": "Mayor F1 macro OWASP en validación, menos falsos positivos binarios, umbral más cercano a 0.55 y regresión logística si persiste el empate",
+  "trials": [
+    {
+      "algorithm": "logistic",
+      "false_positives": 0,
+      "macro_f1": 1.0,
+      "parameter": 0.0005,
+      "threshold": 0.45
+    },
+    {
+      "algorithm": "logistic",
+      "false_positives": 0,
+      "macro_f1": 1.0,
+      "parameter": 0.0005,
+      "threshold": 0.55
+    },
+    {
+      "algorithm": "logistic",
+      "false_positives": 0,
+      "macro_f1": 1.0,
+      "parameter": 0.0005,
+      "threshold": 0.65
+    },
+    {
+      "algorithm": "logistic",
+      "false_positives": 0,
+      "macro_f1": 1.0,
+      "parameter": 0.0005,
+      "threshold": 0.75
+    },
+    {
+      "algorithm": "logistic",
+      "false_positives": 0,
+      "macro_f1": 1.0,
+      "parameter": 0.003,
+      "threshold": 0.45
+    },
+    {
+      "algorithm": "logistic",
+      "false_positives": 0,
+      "macro_f1": 1.0,
+      "parameter": 0.003,
+      "threshold": 0.55
+    },
+    {
+      "algorithm": "logistic",
+      "false_positives": 0,
+      "macro_f1": 1.0,
+      "parameter": 0.003,
+      "threshold": 0.65
+    },
+    {
+      "algorithm": "logistic",
+      "false_positives": 0,
+      "macro_f1": 1.0,
+      "parameter": 0.003,
+      "threshold": 0.75
+    },
+    {
+      "algorithm": "logistic",
+      "false_positives": 3,
+      "macro_f1": 0.9876543209876544,
+      "parameter": 0.015,
+      "threshold": 0.45
+    },
+    {
+      "algorithm": "logistic",
+      "false_positives": 0,
+      "macro_f1": 1.0,
+      "parameter": 0.015,
+      "threshold": 0.55
+    },
+    {
+      "algorithm": "logistic",
+      "false_positives": 0,
+      "macro_f1": 1.0,
+      "parameter": 0.015,
+      "threshold": 0.65
+    },
+    {
+      "algorithm": "logistic",
+      "false_positives": 0,
+      "macro_f1": 0.9331662489557225,
+      "parameter": 0.015,
+      "threshold": 0.75
+    },
+    {
+      "algorithm": "bernoulli",
+      "false_positives": 0,
+      "macro_f1": 1.0,
+      "parameter": 0.5,
+      "threshold": 0.45
+    },
+    {
+      "algorithm": "bernoulli",
+      "false_positives": 0,
+      "macro_f1": 1.0,
+      "parameter": 0.5,
+      "threshold": 0.55
+    },
+    {
+      "algorithm": "bernoulli",
+      "false_positives": 0,
+      "macro_f1": 1.0,
+      "parameter": 0.5,
+      "threshold": 0.65
+    },
+    {
+      "algorithm": "bernoulli",
+      "false_positives": 0,
+      "macro_f1": 1.0,
+      "parameter": 0.5,
+      "threshold": 0.75
+    },
+    {
+      "algorithm": "bernoulli",
+      "false_positives": 0,
+      "macro_f1": 1.0,
+      "parameter": 1.0,
+      "threshold": 0.45
+    },
+    {
+      "algorithm": "bernoulli",
+      "false_positives": 0,
+      "macro_f1": 1.0,
+      "parameter": 1.0,
+      "threshold": 0.55
+    },
+    {
+      "algorithm": "bernoulli",
+      "false_positives": 0,
+      "macro_f1": 1.0,
+      "parameter": 1.0,
+      "threshold": 0.65
+    },
+    {
+      "algorithm": "bernoulli",
+      "false_positives": 0,
+      "macro_f1": 1.0,
+      "parameter": 1.0,
+      "threshold": 0.75
+    },
+    {
+      "algorithm": "bernoulli",
+      "false_positives": 0,
+      "macro_f1": 1.0,
+      "parameter": 2.0,
+      "threshold": 0.45
+    },
+    {
+      "algorithm": "bernoulli",
+      "false_positives": 0,
+      "macro_f1": 1.0,
+      "parameter": 2.0,
+      "threshold": 0.55
+    },
+    {
+      "algorithm": "bernoulli",
+      "false_positives": 0,
+      "macro_f1": 1.0,
+      "parameter": 2.0,
+      "threshold": 0.65
+    },
+    {
+      "algorithm": "bernoulli",
+      "false_positives": 0,
+      "macro_f1": 1.0,
+      "parameter": 2.0,
+      "threshold": 0.75
+    }
+  ]
+}

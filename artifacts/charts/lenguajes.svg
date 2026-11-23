@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="640" height="226" preserveAspectRatio="xMinYMin meet" viewBox="0 0 640 226" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="640" height="226"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-226)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="640" height="226" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="16" y="202" style="font-family: Helvetica-Bold; font-size: 16px;fill: rgb(8%,17%,21%); stroke:none;" transform="translate(0,404) scale(1,-1)">Lenguajes y formatos</text>
+			<text x="16" y="182" style="font-family: Times-Roman; font-size: 10px;fill: rgb(25%,34%,40%); stroke:none;" transform="translate(0,364) scale(1,-1)">Registros por formato de entrada</text>
+			<g transform="">
+				<path d="M 162,42 L 162,163 Z" style="stroke: rgb(85%,89%,90%); stroke-linecap: butt; stroke-width: 0.25;"/>
+				<path d="M 252.2,42 L 252.2,163 Z" style="stroke: rgb(85%,89%,90%); stroke-linecap: butt; stroke-width: 0.25;"/>
+				<path d="M 342.4,42 L 342.4,163 Z" style="stroke: rgb(85%,89%,90%); stroke-linecap: butt; stroke-width: 0.25;"/>
+				<path d="M 432.6,42 L 432.6,163 Z" style="stroke: rgb(85%,89%,90%); stroke-linecap: butt; stroke-width: 0.25;"/>
+				<path d="M 522.8,42 L 522.8,163 Z" style="stroke: rgb(85%,89%,90%); stroke-linecap: butt; stroke-width: 0.25;"/>
+				<path d="M 613,42 L 613,163 Z" style="stroke: rgb(85%,89%,90%); stroke-linecap: butt; stroke-width: 0.25;"/>
+				<g transform="">
+					<rect x="162.0" y="47.041666666666664" width="360.79999999999995" height="20.166666666666664" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,41%,33%); fill-rule: evenodd;"/>
+					<rect x="162.0" y="77.29166666666667" width="360.79999999999995" height="20.16666666666667" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,41%,33%); fill-rule: evenodd;"/>
+					<rect x="162.0" y="107.54166666666667" width="360.79999999999995" height="20.16666666666667" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,41%,33%); fill-rule: evenodd;"/>
+					<rect x="162.0" y="137.79166666666666" width="360.79999999999995" height="20.166666666666657" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,41%,33%); fill-rule: evenodd;"/>
+					<g transform=""/>
+				</g>
+				<g transform="">
+					<g transform="">
+						<path d="M 162,42 L 162,163 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+					</g>
+					<g transform="">
+						<path d="M 162,42 L 157,42 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 162,72.25 L 157,72.25 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 162,102.5 L 157,102.5 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 162,132.75 L 157,132.75 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 162,163 L 157,163 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+					</g>
+					<g transform="">
+						<g transform=" matrix(1,0,0,1,157,57.125)">
+							<text x="-41.013000000000005" y="-3.6000000000000005" style="font-family: Helvetica; font-size: 9px;fill: rgb(8%,17%,21%); stroke:none;" transform="translate(0,-7) scale(1,-1)">Properties</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,157,87.375)">
+							<text x="-24.506999999999998" y="-3.6000000000000005" style="font-family: Helvetica; font-size: 9px;fill: rgb(8%,17%,21%); stroke:none;" transform="translate(0,-7) scale(1,-1)">YAML</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,157,117.625)">
+							<text x="-42.012" y="-3.6000000000000005" style="font-family: Helvetica; font-size: 9px;fill: rgb(8%,17%,21%); stroke:none;" transform="translate(0,-7) scale(1,-1)">JavaScript</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,157,147.875)">
+							<text x="-28.017" y="-3.6000000000000005" style="font-family: Helvetica; font-size: 9px;fill: rgb(8%,17%,21%); stroke:none;" transform="translate(0,-7) scale(1,-1)">Python</text>
+						</g>
+					</g>
+				</g>
+				<g transform="">
+					<g transform="">
+						<path d="M 162,42 L 613,42 Z" style="stroke: rgb(85%,89%,90%); stroke-linecap: butt; stroke-width: 1;"/>
+					</g>
+					<g transform="">
+						<path d="M 162,42 L 162,37 Z" style="stroke: rgb(85%,89%,90%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 252.2,42 L 252.2,37 Z" style="stroke: rgb(85%,89%,90%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 342.4,42 L 342.4,37 Z" style="stroke: rgb(85%,89%,90%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 432.6,42 L 432.6,37 Z" style="stroke: rgb(85%,89%,90%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 522.8,42 L 522.8,37 Z" style="stroke: rgb(85%,89%,90%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 613,42 L 613,37 Z" style="stroke: rgb(85%,89%,90%); stroke-linecap: butt; stroke-width: 1;"/>
+					</g>
+					<g transform="">
+						<g transform=" matrix(1,0,0,1,162,37)">
+							<text x="-2.25" y="-9.0" style="font-family: Times-Roman; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-18) scale(1,-1)">0</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,252.2,37)">
+							<text x="-4.5" y="-9.0" style="font-family: Times-Roman; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-18) scale(1,-1)">50</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,342.4,37)">
+							<text x="-6.75" y="-9.0" style="font-family: Times-Roman; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-18) scale(1,-1)">100</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,432.6,37)">
+							<text x="-6.75" y="-9.0" style="font-family: Times-Roman; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-18) scale(1,-1)">150</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,522.8,37)">
+							<text x="-6.75" y="-9.0" style="font-family: Times-Roman; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-18) scale(1,-1)">200</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,613,37)">
+							<text x="-6.75" y="-9.0" style="font-family: Times-Roman; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-18) scale(1,-1)">250</text>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>

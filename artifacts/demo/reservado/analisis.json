@@ -1,0 +1,292 @@
+{
+  "version_reporte": 1,
+  "proyecto": "proyecto-reservado",
+  "estandares": [
+    "owasp2025",
+    "api2023"
+  ],
+  "modelo": {
+    "algoritmo": "logistic",
+    "version": 1,
+    "huella_dataset": "231663a06dceedfb9a761c461771ae3b654c3d7e1b5f83d503a0ddf24b4ccbbb"
+  },
+  "resumen": {
+    "microservicios": 3,
+    "archivos_analizados": 8,
+    "archivos_omitidos": 0,
+    "lenguajes_y_formatos": [
+      "Configuración",
+      "JSON",
+      "JavaScript",
+      "Python",
+      "TOML",
+      "YAML"
+    ],
+    "hallazgos_potenciales": 5,
+    "pendientes_de_revision": 0
+  },
+  "microservicios": [
+    {
+      "nombre": "documents",
+      "directorio": "documents-api",
+      "descubrimiento": "Compose"
+    },
+    {
+      "nombre": "gateway",
+      "directorio": "gateway-api",
+      "descubrimiento": "Compose"
+    },
+    {
+      "nombre": "identity",
+      "directorio": "identity-api",
+      "descubrimiento": "Compose"
+    }
+  ],
+  "catalogo": [
+    {
+      "codigo": "A01:2025",
+      "nombre": "Control de acceso roto",
+      "estado": "evaluada_en_laboratorio"
+    },
+    {
+      "codigo": "A02:2025",
+      "nombre": "Configuración de seguridad incorrecta",
+      "estado": "evaluada_en_laboratorio"
+    },
+    {
+      "codigo": "A03:2025",
+      "nombre": "Fallas en la cadena de suministro de software",
+      "estado": "no_evaluada"
+    },
+    {
+      "codigo": "A04:2025",
+      "nombre": "Fallas criptográficas",
+      "estado": "evaluada_en_laboratorio"
+    },
+    {
+      "codigo": "A05:2025",
+      "nombre": "Inyección",
+      "estado": "no_evaluada"
+    },
+    {
+      "codigo": "A06:2025",
+      "nombre": "Diseño inseguro",
+      "estado": "evaluada_en_laboratorio"
+    },
+    {
+      "codigo": "A07:2025",
+      "nombre": "Fallas de autenticación",
+      "estado": "evaluada_en_laboratorio"
+    },
+    {
+      "codigo": "A08:2025",
+      "nombre": "Fallas de integridad del software o los datos",
+      "estado": "no_evaluada"
+    },
+    {
+      "codigo": "A09:2025",
+      "nombre": "Fallas en el registro y las alertas de seguridad",
+      "estado": "no_evaluada"
+    },
+    {
+      "codigo": "A10:2025",
+      "nombre": "Manejo inadecuado de condiciones excepcionales",
+      "estado": "no_evaluada"
+    },
+    {
+      "codigo": "API1:2023",
+      "nombre": "Autorización rota a nivel de objeto",
+      "estado": "evaluada_en_laboratorio"
+    },
+    {
+      "codigo": "API2:2023",
+      "nombre": "Autenticación rota",
+      "estado": "evaluada_en_laboratorio"
+    },
+    {
+      "codigo": "API3:2023",
+      "nombre": "Autorización rota a nivel de propiedades del objeto",
+      "estado": "no_evaluada"
+    },
+    {
+      "codigo": "API4:2023",
+      "nombre": "Consumo de recursos sin restricciones",
+      "estado": "evaluada_en_laboratorio"
+    },
+    {
+      "codigo": "API5:2023",
+      "nombre": "Autorización rota a nivel de función",
+      "estado": "no_evaluada"
+    },
+    {
+      "codigo": "API6:2023",
+      "nombre": "Acceso sin restricciones a flujos de negocio sensibles",
+      "estado": "no_evaluada"
+    },
+    {
+      "codigo": "API7:2023",
+      "nombre": "Falsificación de solicitudes del lado del servidor",
+      "estado": "no_evaluada"
+    },
+    {
+      "codigo": "API8:2023",
+      "nombre": "Configuración de seguridad incorrecta",
+      "estado": "evaluada_en_laboratorio"
+    },
+    {
+      "codigo": "API9:2023",
+      "nombre": "Inventario inadecuado de API",
+      "estado": "no_evaluada"
+    },
+    {
+      "codigo": "API10:2023",
+      "nombre": "Consumo inseguro de API",
+      "estado": "no_evaluada"
+    }
+  ],
+  "archivos_omitidos": [],
+  "hallazgos": [
+    {
+      "id": "VM-0963a83d2a75",
+      "microservicio": "documents",
+      "archivo": "documents-api/document-policy.js",
+      "linea": 1,
+      "lenguaje": "JavaScript",
+      "descripcion": "Posible desactivación de la comprobación de propiedad de objetos.",
+      "evidencia": {
+        "fragmento": "export const requireDocumentOwnerCheck = false;",
+        "senales_modelo": [
+          "owner=false",
+          "owner/false",
+          "verify=false",
+          "owner/require"
+        ]
+      },
+      "categorias_owasp": [
+        "A01:2025",
+        "API1:2023"
+      ],
+      "cwe": "CWE-283",
+      "confianza": 0.9696,
+      "severidad": {
+        "nivel": "alta",
+        "justificacion": "Si se aplica a objetos privados, podría permitir acceso entre cuentas."
+      },
+      "remediacion": "Exigir autorización del lado del servidor para cada objeto y operación; revisar cómo se vincula el acceso a la identidad autenticada.",
+      "estado": "requiere_verificacion"
+    },
+    {
+      "id": "VM-f82e813a0bf3",
+      "microservicio": "gateway",
+      "archivo": "gateway-api/application.yml",
+      "linea": 1,
+      "lenguaje": "YAML",
+      "descripcion": "Posible modo de depuración o diagnóstico detallado habilitado.",
+      "evidencia": {
+        "fragmento": "http_api_debug_output: true",
+        "senales_modelo": [
+          "debug=true",
+          "debug/true"
+        ]
+      },
+      "categorias_owasp": [
+        "A02:2025",
+        "API8:2023"
+      ],
+      "cwe": "CWE-489",
+      "confianza": 0.9848,
+      "severidad": {
+        "nivel": "media",
+        "justificacion": "En un entorno expuesto, el diagnóstico puede revelar detalles internos."
+      },
+      "remediacion": "Desactivar la depuración en despliegues y enviar diagnósticos detallados a registros internos con control de acceso.",
+      "estado": "requiere_verificacion"
+    },
+    {
+      "id": "VM-c770dc7cf042",
+      "microservicio": "gateway",
+      "archivo": "gateway-api/application.yml",
+      "linea": 2,
+      "lenguaje": "YAML",
+      "descripcion": "Posible desactivación o ausencia de un límite declarado de frecuencia.",
+      "evidencia": {
+        "fragmento": "enable_api_rate_limit: false",
+        "senales_modelo": [
+          "rate=false",
+          "rate/false",
+          "limit=false",
+          "limit/false"
+        ]
+      },
+      "categorias_owasp": [
+        "A06:2025",
+        "API4:2023"
+      ],
+      "cwe": "CWE-799",
+      "confianza": 0.97,
+      "severidad": {
+        "nivel": "media",
+        "justificacion": "Las operaciones costosas podrían afectar la disponibilidad del servicio."
+      },
+      "remediacion": "Definir límites por identidad y operación, aplicarlos de forma centralizada y revisar los límites efectivos del gateway.",
+      "estado": "requiere_verificacion"
+    },
+    {
+      "id": "VM-93a4e006fc58",
+      "microservicio": "identity",
+      "archivo": "identity-api/session_policy.py",
+      "linea": 3,
+      "lenguaje": "Python",
+      "descripcion": "Posible política que omite la expiración de sesión o token.",
+      "evidencia": {
+        "fragmento": "require_api_token_expiration = False",
+        "senales_modelo": [
+          "expire=false",
+          "expire/false",
+          "token=false",
+          "token/false"
+        ]
+      },
+      "categorias_owasp": [
+        "A07:2025",
+        "API2:2023"
+      ],
+      "cwe": "CWE-613",
+      "confianza": 0.9589,
+      "severidad": {
+        "nivel": "alta",
+        "justificacion": "Si controla sesiones activas, puede prolongar el uso de una sesión comprometida."
+      },
+      "remediacion": "Exigir expiración explícita, verificarla del lado del servidor y definir invalidación y renovación según el flujo de autenticación.",
+      "estado": "requiere_verificacion"
+    },
+    {
+      "id": "VM-eb8b1994ec6d",
+      "microservicio": "identity",
+      "archivo": "identity-api/session_policy.py",
+      "linea": 4,
+      "lenguaje": "Python",
+      "descripcion": "Posible política de transporte sin cifrado obligatorio.",
+      "evidencia": {
+        "fragmento": "identity_service_tls_required = False",
+        "senales_modelo": [
+          "tls=false",
+          "tls/false",
+          "require=false",
+          "tls/require"
+        ]
+      },
+      "categorias_owasp": [
+        "A04:2025"
+      ],
+      "cwe": "CWE-319",
+      "confianza": 0.9723,
+      "severidad": {
+        "nivel": "media",
+        "justificacion": "Si el canal transporta información sensible, su confidencialidad puede verse afectada."
+      },
+      "remediacion": "Exigir HTTPS/TLS en la comunicación y comprobar la configuración efectiva en el proxy y en los servicios internos.",
+      "estado": "requiere_verificacion"
+    }
+  ]
+}

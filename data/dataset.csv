@@ -1,0 +1,801 @@
+id,project,source,path,family,language,partition,api_context,is_vulnerable,patterns,owasp,content
+orders-ownership-1-0,synthetic/orders,"Caso controlado original, scripts/corpus.py",api/policies.py,train/ownership/1,Python,train,1,0,,,orders_verify_object_owner = True
+orders-ownership-1-1,synthetic/orders,"Caso controlado original, scripts/corpus.py",api/policies.py,train/ownership/1,Python,train,1,1,ownership,A01:2025|API1:2023,orders_verify_object_owner = False
+orders-ownership-2-0,synthetic/orders,"Caso controlado original, scripts/corpus.py",api/policies.js,train/ownership/2,JavaScript,train,1,0,,,const ordersObjectOwnerCheck = true;
+orders-ownership-2-1,synthetic/orders,"Caso controlado original, scripts/corpus.py",api/policies.js,train/ownership/2,JavaScript,train,1,1,ownership,A01:2025|API1:2023,const ordersObjectOwnerCheck = false;
+orders-ownership-3-0,synthetic/orders,"Caso controlado original, scripts/corpus.py",config/application.yml,train/ownership/3,YAML,train,1,0,,,orders_require_ownership: true
+orders-ownership-3-1,synthetic/orders,"Caso controlado original, scripts/corpus.py",config/application.yml,train/ownership/3,YAML,train,1,1,ownership,A01:2025|API1:2023,orders_require_ownership: false
+orders-ownership-4-0,synthetic/orders,"Caso controlado original, scripts/corpus.py",config/application.properties,train/ownership/4,Properties,train,1,0,,,orders.resource.owner.verify=true
+orders-ownership-4-1,synthetic/orders,"Caso controlado original, scripts/corpus.py",config/application.properties,train/ownership/4,Properties,train,1,1,ownership,A01:2025|API1:2023,orders.resource.owner.verify=false
+orders-debug-1-0,synthetic/orders,"Caso controlado original, scripts/corpus.py",api/policies.py,train/debug/1,Python,train,1,0,,,orders_debug = False
+orders-debug-1-1,synthetic/orders,"Caso controlado original, scripts/corpus.py",api/policies.py,train/debug/1,Python,train,1,1,debug,A02:2025|API8:2023,orders_debug = True
+orders-debug-2-0,synthetic/orders,"Caso controlado original, scripts/corpus.py",api/policies.js,train/debug/2,JavaScript,train,1,0,,,const ordersDebugMode = false;
+orders-debug-2-1,synthetic/orders,"Caso controlado original, scripts/corpus.py",api/policies.js,train/debug/2,JavaScript,train,1,1,debug,A02:2025|API8:2023,const ordersDebugMode = true;
+orders-debug-3-0,synthetic/orders,"Caso controlado original, scripts/corpus.py",config/application.yml,train/debug/3,YAML,train,1,0,,,orders_debug_diagnostics: false
+orders-debug-3-1,synthetic/orders,"Caso controlado original, scripts/corpus.py",config/application.yml,train/debug/3,YAML,train,1,1,debug,A02:2025|API8:2023,orders_debug_diagnostics: true
+orders-debug-4-0,synthetic/orders,"Caso controlado original, scripts/corpus.py",config/application.properties,train/debug/4,Properties,train,1,0,,,orders.server.debug.enabled=false
+orders-debug-4-1,synthetic/orders,"Caso controlado original, scripts/corpus.py",config/application.properties,train/debug/4,Properties,train,1,1,debug,A02:2025|API8:2023,orders.server.debug.enabled=true
+orders-transport-1-0,synthetic/orders,"Caso controlado original, scripts/corpus.py",api/policies.py,train/transport/1,Python,train,1,0,,,orders_require_tls = True
+orders-transport-1-1,synthetic/orders,"Caso controlado original, scripts/corpus.py",api/policies.py,train/transport/1,Python,train,1,1,transport,A04:2025,orders_require_tls = False
+orders-transport-2-0,synthetic/orders,"Caso controlado original, scripts/corpus.py",api/policies.js,train/transport/2,JavaScript,train,1,0,,,const ordersTlsRequired = true;
+orders-transport-2-1,synthetic/orders,"Caso controlado original, scripts/corpus.py",api/policies.js,train/transport/2,JavaScript,train,1,1,transport,A04:2025,const ordersTlsRequired = false;
+orders-transport-3-0,synthetic/orders,"Caso controlado original, scripts/corpus.py",config/application.yml,train/transport/3,YAML,train,1,0,,,orders_enforce_https: true
+orders-transport-3-1,synthetic/orders,"Caso controlado original, scripts/corpus.py",config/application.yml,train/transport/3,YAML,train,1,1,transport,A04:2025,orders_enforce_https: false
+orders-transport-4-0,synthetic/orders,"Caso controlado original, scripts/corpus.py",config/application.properties,train/transport/4,Properties,train,1,0,,,orders.transport.encryption.required=true
+orders-transport-4-1,synthetic/orders,"Caso controlado original, scripts/corpus.py",config/application.properties,train/transport/4,Properties,train,1,1,transport,A04:2025,orders.transport.encryption.required=false
+orders-rate_limit-1-0,synthetic/orders,"Caso controlado original, scripts/corpus.py",api/policies.py,train/rate_limit/1,Python,train,1,0,,,orders_rate_limit_enabled = True
+orders-rate_limit-1-1,synthetic/orders,"Caso controlado original, scripts/corpus.py",api/policies.py,train/rate_limit/1,Python,train,1,1,rate_limit,A06:2025|API4:2023,orders_rate_limit_enabled = False
+orders-rate_limit-2-0,synthetic/orders,"Caso controlado original, scripts/corpus.py",api/policies.js,train/rate_limit/2,JavaScript,train,1,0,,,const ordersEnforceRateLimit = true;
+orders-rate_limit-2-1,synthetic/orders,"Caso controlado original, scripts/corpus.py",api/policies.js,train/rate_limit/2,JavaScript,train,1,1,rate_limit,A06:2025|API4:2023,const ordersEnforceRateLimit = false;
+orders-rate_limit-3-0,synthetic/orders,"Caso controlado original, scripts/corpus.py",config/application.yml,train/rate_limit/3,YAML,train,1,0,,,orders_request_limit: 45
+orders-rate_limit-3-1,synthetic/orders,"Caso controlado original, scripts/corpus.py",config/application.yml,train/rate_limit/3,YAML,train,1,1,rate_limit,A06:2025|API4:2023,orders_request_limit: 0
+orders-rate_limit-4-0,synthetic/orders,"Caso controlado original, scripts/corpus.py",config/application.properties,train/rate_limit/4,Properties,train,1,0,,,orders.request.rate.limit=true
+orders-rate_limit-4-1,synthetic/orders,"Caso controlado original, scripts/corpus.py",config/application.properties,train/rate_limit/4,Properties,train,1,1,rate_limit,A06:2025|API4:2023,orders.request.rate.limit=false
+orders-expiration-1-0,synthetic/orders,"Caso controlado original, scripts/corpus.py",api/policies.py,train/expiration/1,Python,train,1,0,,,orders_verify_expiration = True
+orders-expiration-1-1,synthetic/orders,"Caso controlado original, scripts/corpus.py",api/policies.py,train/expiration/1,Python,train,1,1,expiration,A07:2025|API2:2023,orders_verify_expiration = False
+orders-expiration-2-0,synthetic/orders,"Caso controlado original, scripts/corpus.py",api/policies.js,train/expiration/2,JavaScript,train,1,0,,,const ordersRequireTokenExpiration = true;
+orders-expiration-2-1,synthetic/orders,"Caso controlado original, scripts/corpus.py",api/policies.js,train/expiration/2,JavaScript,train,1,1,expiration,A07:2025|API2:2023,const ordersRequireTokenExpiration = false;
+orders-expiration-3-0,synthetic/orders,"Caso controlado original, scripts/corpus.py",config/application.yml,train/expiration/3,YAML,train,1,0,,,orders_session_ttl: 45
+orders-expiration-3-1,synthetic/orders,"Caso controlado original, scripts/corpus.py",config/application.yml,train/expiration/3,YAML,train,1,1,expiration,A07:2025|API2:2023,orders_session_ttl: 0
+orders-expiration-4-0,synthetic/orders,"Caso controlado original, scripts/corpus.py",config/application.properties,train/expiration/4,Properties,train,1,0,,,orders.session.expiration.required=true
+orders-expiration-4-1,synthetic/orders,"Caso controlado original, scripts/corpus.py",config/application.properties,train/expiration/4,Properties,train,1,1,expiration,A07:2025|API2:2023,orders.session.expiration.required=false
+billing-ownership-1-0,synthetic/billing,"Caso controlado original, scripts/corpus.py",api/policies.py,train/ownership/1,Python,train,1,0,,,billing_verify_object_owner = True
+billing-ownership-1-1,synthetic/billing,"Caso controlado original, scripts/corpus.py",api/policies.py,train/ownership/1,Python,train,1,1,ownership,A01:2025|API1:2023,billing_verify_object_owner = False
+billing-ownership-2-0,synthetic/billing,"Caso controlado original, scripts/corpus.py",api/policies.js,train/ownership/2,JavaScript,train,1,0,,,const billingObjectOwnerCheck = true;
+billing-ownership-2-1,synthetic/billing,"Caso controlado original, scripts/corpus.py",api/policies.js,train/ownership/2,JavaScript,train,1,1,ownership,A01:2025|API1:2023,const billingObjectOwnerCheck = false;
+billing-ownership-3-0,synthetic/billing,"Caso controlado original, scripts/corpus.py",config/application.yml,train/ownership/3,YAML,train,1,0,,,billing_require_ownership: true
+billing-ownership-3-1,synthetic/billing,"Caso controlado original, scripts/corpus.py",config/application.yml,train/ownership/3,YAML,train,1,1,ownership,A01:2025|API1:2023,billing_require_ownership: false
+billing-ownership-4-0,synthetic/billing,"Caso controlado original, scripts/corpus.py",config/application.properties,train/ownership/4,Properties,train,0,0,,,billing.resource.owner.verify=true
+billing-ownership-4-1,synthetic/billing,"Caso controlado original, scripts/corpus.py",config/application.properties,train/ownership/4,Properties,train,0,1,ownership,A01:2025,billing.resource.owner.verify=false
+billing-debug-1-0,synthetic/billing,"Caso controlado original, scripts/corpus.py",api/policies.py,train/debug/1,Python,train,1,0,,,billing_debug = False
+billing-debug-1-1,synthetic/billing,"Caso controlado original, scripts/corpus.py",api/policies.py,train/debug/1,Python,train,1,1,debug,A02:2025|API8:2023,billing_debug = True
+billing-debug-2-0,synthetic/billing,"Caso controlado original, scripts/corpus.py",api/policies.js,train/debug/2,JavaScript,train,1,0,,,const billingDebugMode = false;
+billing-debug-2-1,synthetic/billing,"Caso controlado original, scripts/corpus.py",api/policies.js,train/debug/2,JavaScript,train,1,1,debug,A02:2025|API8:2023,const billingDebugMode = true;
+billing-debug-3-0,synthetic/billing,"Caso controlado original, scripts/corpus.py",config/application.yml,train/debug/3,YAML,train,1,0,,,billing_debug_diagnostics: false
+billing-debug-3-1,synthetic/billing,"Caso controlado original, scripts/corpus.py",config/application.yml,train/debug/3,YAML,train,1,1,debug,A02:2025|API8:2023,billing_debug_diagnostics: true
+billing-debug-4-0,synthetic/billing,"Caso controlado original, scripts/corpus.py",config/application.properties,train/debug/4,Properties,train,0,0,,,billing.server.debug.enabled=false
+billing-debug-4-1,synthetic/billing,"Caso controlado original, scripts/corpus.py",config/application.properties,train/debug/4,Properties,train,0,1,debug,A02:2025,billing.server.debug.enabled=true
+billing-transport-1-0,synthetic/billing,"Caso controlado original, scripts/corpus.py",api/policies.py,train/transport/1,Python,train,1,0,,,billing_require_tls = True
+billing-transport-1-1,synthetic/billing,"Caso controlado original, scripts/corpus.py",api/policies.py,train/transport/1,Python,train,1,1,transport,A04:2025,billing_require_tls = False
+billing-transport-2-0,synthetic/billing,"Caso controlado original, scripts/corpus.py",api/policies.js,train/transport/2,JavaScript,train,1,0,,,const billingTlsRequired = true;
+billing-transport-2-1,synthetic/billing,"Caso controlado original, scripts/corpus.py",api/policies.js,train/transport/2,JavaScript,train,1,1,transport,A04:2025,const billingTlsRequired = false;
+billing-transport-3-0,synthetic/billing,"Caso controlado original, scripts/corpus.py",config/application.yml,train/transport/3,YAML,train,1,0,,,billing_enforce_https: true
+billing-transport-3-1,synthetic/billing,"Caso controlado original, scripts/corpus.py",config/application.yml,train/transport/3,YAML,train,1,1,transport,A04:2025,billing_enforce_https: false
+billing-transport-4-0,synthetic/billing,"Caso controlado original, scripts/corpus.py",config/application.properties,train/transport/4,Properties,train,0,0,,,billing.transport.encryption.required=true
+billing-transport-4-1,synthetic/billing,"Caso controlado original, scripts/corpus.py",config/application.properties,train/transport/4,Properties,train,0,1,transport,A04:2025,billing.transport.encryption.required=false
+billing-rate_limit-1-0,synthetic/billing,"Caso controlado original, scripts/corpus.py",api/policies.py,train/rate_limit/1,Python,train,1,0,,,billing_rate_limit_enabled = True
+billing-rate_limit-1-1,synthetic/billing,"Caso controlado original, scripts/corpus.py",api/policies.py,train/rate_limit/1,Python,train,1,1,rate_limit,A06:2025|API4:2023,billing_rate_limit_enabled = False
+billing-rate_limit-2-0,synthetic/billing,"Caso controlado original, scripts/corpus.py",api/policies.js,train/rate_limit/2,JavaScript,train,1,0,,,const billingEnforceRateLimit = true;
+billing-rate_limit-2-1,synthetic/billing,"Caso controlado original, scripts/corpus.py",api/policies.js,train/rate_limit/2,JavaScript,train,1,1,rate_limit,A06:2025|API4:2023,const billingEnforceRateLimit = false;
+billing-rate_limit-3-0,synthetic/billing,"Caso controlado original, scripts/corpus.py",config/application.yml,train/rate_limit/3,YAML,train,1,0,,,billing_request_limit: 50
+billing-rate_limit-3-1,synthetic/billing,"Caso controlado original, scripts/corpus.py",config/application.yml,train/rate_limit/3,YAML,train,1,1,rate_limit,A06:2025|API4:2023,billing_request_limit: 0
+billing-rate_limit-4-0,synthetic/billing,"Caso controlado original, scripts/corpus.py",config/application.properties,train/rate_limit/4,Properties,train,0,0,,,billing.request.rate.limit=true
+billing-rate_limit-4-1,synthetic/billing,"Caso controlado original, scripts/corpus.py",config/application.properties,train/rate_limit/4,Properties,train,0,1,rate_limit,A06:2025,billing.request.rate.limit=false
+billing-expiration-1-0,synthetic/billing,"Caso controlado original, scripts/corpus.py",api/policies.py,train/expiration/1,Python,train,1,0,,,billing_verify_expiration = True
+billing-expiration-1-1,synthetic/billing,"Caso controlado original, scripts/corpus.py",api/policies.py,train/expiration/1,Python,train,1,1,expiration,A07:2025|API2:2023,billing_verify_expiration = False
+billing-expiration-2-0,synthetic/billing,"Caso controlado original, scripts/corpus.py",api/policies.js,train/expiration/2,JavaScript,train,1,0,,,const billingRequireTokenExpiration = true;
+billing-expiration-2-1,synthetic/billing,"Caso controlado original, scripts/corpus.py",api/policies.js,train/expiration/2,JavaScript,train,1,1,expiration,A07:2025|API2:2023,const billingRequireTokenExpiration = false;
+billing-expiration-3-0,synthetic/billing,"Caso controlado original, scripts/corpus.py",config/application.yml,train/expiration/3,YAML,train,1,0,,,billing_session_ttl: 50
+billing-expiration-3-1,synthetic/billing,"Caso controlado original, scripts/corpus.py",config/application.yml,train/expiration/3,YAML,train,1,1,expiration,A07:2025|API2:2023,billing_session_ttl: 0
+billing-expiration-4-0,synthetic/billing,"Caso controlado original, scripts/corpus.py",config/application.properties,train/expiration/4,Properties,train,0,0,,,billing.session.expiration.required=true
+billing-expiration-4-1,synthetic/billing,"Caso controlado original, scripts/corpus.py",config/application.properties,train/expiration/4,Properties,train,0,1,expiration,A07:2025,billing.session.expiration.required=false
+products-ownership-1-0,synthetic/products,"Caso controlado original, scripts/corpus.py",api/policies.py,train/ownership/1,Python,train,1,0,,,products_verify_object_owner = True
+products-ownership-1-1,synthetic/products,"Caso controlado original, scripts/corpus.py",api/policies.py,train/ownership/1,Python,train,1,1,ownership,A01:2025|API1:2023,products_verify_object_owner = False
+products-ownership-2-0,synthetic/products,"Caso controlado original, scripts/corpus.py",api/policies.js,train/ownership/2,JavaScript,train,1,0,,,const productsObjectOwnerCheck = true;
+products-ownership-2-1,synthetic/products,"Caso controlado original, scripts/corpus.py",api/policies.js,train/ownership/2,JavaScript,train,1,1,ownership,A01:2025|API1:2023,const productsObjectOwnerCheck = false;
+products-ownership-3-0,synthetic/products,"Caso controlado original, scripts/corpus.py",config/application.yml,train/ownership/3,YAML,train,1,0,,,products_require_ownership: true
+products-ownership-3-1,synthetic/products,"Caso controlado original, scripts/corpus.py",config/application.yml,train/ownership/3,YAML,train,1,1,ownership,A01:2025|API1:2023,products_require_ownership: false
+products-ownership-4-0,synthetic/products,"Caso controlado original, scripts/corpus.py",config/application.properties,train/ownership/4,Properties,train,1,0,,,products.resource.owner.verify=true
+products-ownership-4-1,synthetic/products,"Caso controlado original, scripts/corpus.py",config/application.properties,train/ownership/4,Properties,train,1,1,ownership,A01:2025|API1:2023,products.resource.owner.verify=false
+products-debug-1-0,synthetic/products,"Caso controlado original, scripts/corpus.py",api/policies.py,train/debug/1,Python,train,1,0,,,products_debug = False
+products-debug-1-1,synthetic/products,"Caso controlado original, scripts/corpus.py",api/policies.py,train/debug/1,Python,train,1,1,debug,A02:2025|API8:2023,products_debug = True
+products-debug-2-0,synthetic/products,"Caso controlado original, scripts/corpus.py",api/policies.js,train/debug/2,JavaScript,train,1,0,,,const productsDebugMode = false;
+products-debug-2-1,synthetic/products,"Caso controlado original, scripts/corpus.py",api/policies.js,train/debug/2,JavaScript,train,1,1,debug,A02:2025|API8:2023,const productsDebugMode = true;
+products-debug-3-0,synthetic/products,"Caso controlado original, scripts/corpus.py",config/application.yml,train/debug/3,YAML,train,1,0,,,products_debug_diagnostics: false
+products-debug-3-1,synthetic/products,"Caso controlado original, scripts/corpus.py",config/application.yml,train/debug/3,YAML,train,1,1,debug,A02:2025|API8:2023,products_debug_diagnostics: true
+products-debug-4-0,synthetic/products,"Caso controlado original, scripts/corpus.py",config/application.properties,train/debug/4,Properties,train,1,0,,,products.server.debug.enabled=false
+products-debug-4-1,synthetic/products,"Caso controlado original, scripts/corpus.py",config/application.properties,train/debug/4,Properties,train,1,1,debug,A02:2025|API8:2023,products.server.debug.enabled=true
+products-transport-1-0,synthetic/products,"Caso controlado original, scripts/corpus.py",api/policies.py,train/transport/1,Python,train,1,0,,,products_require_tls = True
+products-transport-1-1,synthetic/products,"Caso controlado original, scripts/corpus.py",api/policies.py,train/transport/1,Python,train,1,1,transport,A04:2025,products_require_tls = False
+products-transport-2-0,synthetic/products,"Caso controlado original, scripts/corpus.py",api/policies.js,train/transport/2,JavaScript,train,1,0,,,const productsTlsRequired = true;
+products-transport-2-1,synthetic/products,"Caso controlado original, scripts/corpus.py",api/policies.js,train/transport/2,JavaScript,train,1,1,transport,A04:2025,const productsTlsRequired = false;
+products-transport-3-0,synthetic/products,"Caso controlado original, scripts/corpus.py",config/application.yml,train/transport/3,YAML,train,1,0,,,products_enforce_https: true
+products-transport-3-1,synthetic/products,"Caso controlado original, scripts/corpus.py",config/application.yml,train/transport/3,YAML,train,1,1,transport,A04:2025,products_enforce_https: false
+products-transport-4-0,synthetic/products,"Caso controlado original, scripts/corpus.py",config/application.properties,train/transport/4,Properties,train,1,0,,,products.transport.encryption.required=true
+products-transport-4-1,synthetic/products,"Caso controlado original, scripts/corpus.py",config/application.properties,train/transport/4,Properties,train,1,1,transport,A04:2025,products.transport.encryption.required=false
+products-rate_limit-1-0,synthetic/products,"Caso controlado original, scripts/corpus.py",api/policies.py,train/rate_limit/1,Python,train,1,0,,,products_rate_limit_enabled = True
+products-rate_limit-1-1,synthetic/products,"Caso controlado original, scripts/corpus.py",api/policies.py,train/rate_limit/1,Python,train,1,1,rate_limit,A06:2025|API4:2023,products_rate_limit_enabled = False
+products-rate_limit-2-0,synthetic/products,"Caso controlado original, scripts/corpus.py",api/policies.js,train/rate_limit/2,JavaScript,train,1,0,,,const productsEnforceRateLimit = true;
+products-rate_limit-2-1,synthetic/products,"Caso controlado original, scripts/corpus.py",api/policies.js,train/rate_limit/2,JavaScript,train,1,1,rate_limit,A06:2025|API4:2023,const productsEnforceRateLimit = false;
+products-rate_limit-3-0,synthetic/products,"Caso controlado original, scripts/corpus.py",config/application.yml,train/rate_limit/3,YAML,train,1,0,,,products_request_limit: 55
+products-rate_limit-3-1,synthetic/products,"Caso controlado original, scripts/corpus.py",config/application.yml,train/rate_limit/3,YAML,train,1,1,rate_limit,A06:2025|API4:2023,products_request_limit: 0
+products-rate_limit-4-0,synthetic/products,"Caso controlado original, scripts/corpus.py",config/application.properties,train/rate_limit/4,Properties,train,1,0,,,products.request.rate.limit=true
+products-rate_limit-4-1,synthetic/products,"Caso controlado original, scripts/corpus.py",config/application.properties,train/rate_limit/4,Properties,train,1,1,rate_limit,A06:2025|API4:2023,products.request.rate.limit=false
+products-expiration-1-0,synthetic/products,"Caso controlado original, scripts/corpus.py",api/policies.py,train/expiration/1,Python,train,1,0,,,products_verify_expiration = True
+products-expiration-1-1,synthetic/products,"Caso controlado original, scripts/corpus.py",api/policies.py,train/expiration/1,Python,train,1,1,expiration,A07:2025|API2:2023,products_verify_expiration = False
+products-expiration-2-0,synthetic/products,"Caso controlado original, scripts/corpus.py",api/policies.js,train/expiration/2,JavaScript,train,1,0,,,const productsRequireTokenExpiration = true;
+products-expiration-2-1,synthetic/products,"Caso controlado original, scripts/corpus.py",api/policies.js,train/expiration/2,JavaScript,train,1,1,expiration,A07:2025|API2:2023,const productsRequireTokenExpiration = false;
+products-expiration-3-0,synthetic/products,"Caso controlado original, scripts/corpus.py",config/application.yml,train/expiration/3,YAML,train,1,0,,,products_session_ttl: 55
+products-expiration-3-1,synthetic/products,"Caso controlado original, scripts/corpus.py",config/application.yml,train/expiration/3,YAML,train,1,1,expiration,A07:2025|API2:2023,products_session_ttl: 0
+products-expiration-4-0,synthetic/products,"Caso controlado original, scripts/corpus.py",config/application.properties,train/expiration/4,Properties,train,1,0,,,products.session.expiration.required=true
+products-expiration-4-1,synthetic/products,"Caso controlado original, scripts/corpus.py",config/application.properties,train/expiration/4,Properties,train,1,1,expiration,A07:2025|API2:2023,products.session.expiration.required=false
+members-ownership-1-0,synthetic/members,"Caso controlado original, scripts/corpus.py",api/policies.py,train/ownership/1,Python,train,1,0,,,members_verify_object_owner = True
+members-ownership-1-1,synthetic/members,"Caso controlado original, scripts/corpus.py",api/policies.py,train/ownership/1,Python,train,1,1,ownership,A01:2025|API1:2023,members_verify_object_owner = False
+members-ownership-2-0,synthetic/members,"Caso controlado original, scripts/corpus.py",api/policies.js,train/ownership/2,JavaScript,train,1,0,,,const membersObjectOwnerCheck = true;
+members-ownership-2-1,synthetic/members,"Caso controlado original, scripts/corpus.py",api/policies.js,train/ownership/2,JavaScript,train,1,1,ownership,A01:2025|API1:2023,const membersObjectOwnerCheck = false;
+members-ownership-3-0,synthetic/members,"Caso controlado original, scripts/corpus.py",config/application.yml,train/ownership/3,YAML,train,1,0,,,members_require_ownership: true
+members-ownership-3-1,synthetic/members,"Caso controlado original, scripts/corpus.py",config/application.yml,train/ownership/3,YAML,train,1,1,ownership,A01:2025|API1:2023,members_require_ownership: false
+members-ownership-4-0,synthetic/members,"Caso controlado original, scripts/corpus.py",config/application.properties,train/ownership/4,Properties,train,0,0,,,members.resource.owner.verify=true
+members-ownership-4-1,synthetic/members,"Caso controlado original, scripts/corpus.py",config/application.properties,train/ownership/4,Properties,train,0,1,ownership,A01:2025,members.resource.owner.verify=false
+members-debug-1-0,synthetic/members,"Caso controlado original, scripts/corpus.py",api/policies.py,train/debug/1,Python,train,1,0,,,members_debug = False
+members-debug-1-1,synthetic/members,"Caso controlado original, scripts/corpus.py",api/policies.py,train/debug/1,Python,train,1,1,debug,A02:2025|API8:2023,members_debug = True
+members-debug-2-0,synthetic/members,"Caso controlado original, scripts/corpus.py",api/policies.js,train/debug/2,JavaScript,train,1,0,,,const membersDebugMode = false;
+members-debug-2-1,synthetic/members,"Caso controlado original, scripts/corpus.py",api/policies.js,train/debug/2,JavaScript,train,1,1,debug,A02:2025|API8:2023,const membersDebugMode = true;
+members-debug-3-0,synthetic/members,"Caso controlado original, scripts/corpus.py",config/application.yml,train/debug/3,YAML,train,1,0,,,members_debug_diagnostics: false
+members-debug-3-1,synthetic/members,"Caso controlado original, scripts/corpus.py",config/application.yml,train/debug/3,YAML,train,1,1,debug,A02:2025|API8:2023,members_debug_diagnostics: true
+members-debug-4-0,synthetic/members,"Caso controlado original, scripts/corpus.py",config/application.properties,train/debug/4,Properties,train,0,0,,,members.server.debug.enabled=false
+members-debug-4-1,synthetic/members,"Caso controlado original, scripts/corpus.py",config/application.properties,train/debug/4,Properties,train,0,1,debug,A02:2025,members.server.debug.enabled=true
+members-transport-1-0,synthetic/members,"Caso controlado original, scripts/corpus.py",api/policies.py,train/transport/1,Python,train,1,0,,,members_require_tls = True
+members-transport-1-1,synthetic/members,"Caso controlado original, scripts/corpus.py",api/policies.py,train/transport/1,Python,train,1,1,transport,A04:2025,members_require_tls = False
+members-transport-2-0,synthetic/members,"Caso controlado original, scripts/corpus.py",api/policies.js,train/transport/2,JavaScript,train,1,0,,,const membersTlsRequired = true;
+members-transport-2-1,synthetic/members,"Caso controlado original, scripts/corpus.py",api/policies.js,train/transport/2,JavaScript,train,1,1,transport,A04:2025,const membersTlsRequired = false;
+members-transport-3-0,synthetic/members,"Caso controlado original, scripts/corpus.py",config/application.yml,train/transport/3,YAML,train,1,0,,,members_enforce_https: true
+members-transport-3-1,synthetic/members,"Caso controlado original, scripts/corpus.py",config/application.yml,train/transport/3,YAML,train,1,1,transport,A04:2025,members_enforce_https: false
+members-transport-4-0,synthetic/members,"Caso controlado original, scripts/corpus.py",config/application.properties,train/transport/4,Properties,train,0,0,,,members.transport.encryption.required=true
+members-transport-4-1,synthetic/members,"Caso controlado original, scripts/corpus.py",config/application.properties,train/transport/4,Properties,train,0,1,transport,A04:2025,members.transport.encryption.required=false
+members-rate_limit-1-0,synthetic/members,"Caso controlado original, scripts/corpus.py",api/policies.py,train/rate_limit/1,Python,train,1,0,,,members_rate_limit_enabled = True
+members-rate_limit-1-1,synthetic/members,"Caso controlado original, scripts/corpus.py",api/policies.py,train/rate_limit/1,Python,train,1,1,rate_limit,A06:2025|API4:2023,members_rate_limit_enabled = False
+members-rate_limit-2-0,synthetic/members,"Caso controlado original, scripts/corpus.py",api/policies.js,train/rate_limit/2,JavaScript,train,1,0,,,const membersEnforceRateLimit = true;
+members-rate_limit-2-1,synthetic/members,"Caso controlado original, scripts/corpus.py",api/policies.js,train/rate_limit/2,JavaScript,train,1,1,rate_limit,A06:2025|API4:2023,const membersEnforceRateLimit = false;
+members-rate_limit-3-0,synthetic/members,"Caso controlado original, scripts/corpus.py",config/application.yml,train/rate_limit/3,YAML,train,1,0,,,members_request_limit: 60
+members-rate_limit-3-1,synthetic/members,"Caso controlado original, scripts/corpus.py",config/application.yml,train/rate_limit/3,YAML,train,1,1,rate_limit,A06:2025|API4:2023,members_request_limit: 0
+members-rate_limit-4-0,synthetic/members,"Caso controlado original, scripts/corpus.py",config/application.properties,train/rate_limit/4,Properties,train,0,0,,,members.request.rate.limit=true
+members-rate_limit-4-1,synthetic/members,"Caso controlado original, scripts/corpus.py",config/application.properties,train/rate_limit/4,Properties,train,0,1,rate_limit,A06:2025,members.request.rate.limit=false
+members-expiration-1-0,synthetic/members,"Caso controlado original, scripts/corpus.py",api/policies.py,train/expiration/1,Python,train,1,0,,,members_verify_expiration = True
+members-expiration-1-1,synthetic/members,"Caso controlado original, scripts/corpus.py",api/policies.py,train/expiration/1,Python,train,1,1,expiration,A07:2025|API2:2023,members_verify_expiration = False
+members-expiration-2-0,synthetic/members,"Caso controlado original, scripts/corpus.py",api/policies.js,train/expiration/2,JavaScript,train,1,0,,,const membersRequireTokenExpiration = true;
+members-expiration-2-1,synthetic/members,"Caso controlado original, scripts/corpus.py",api/policies.js,train/expiration/2,JavaScript,train,1,1,expiration,A07:2025|API2:2023,const membersRequireTokenExpiration = false;
+members-expiration-3-0,synthetic/members,"Caso controlado original, scripts/corpus.py",config/application.yml,train/expiration/3,YAML,train,1,0,,,members_session_ttl: 60
+members-expiration-3-1,synthetic/members,"Caso controlado original, scripts/corpus.py",config/application.yml,train/expiration/3,YAML,train,1,1,expiration,A07:2025|API2:2023,members_session_ttl: 0
+members-expiration-4-0,synthetic/members,"Caso controlado original, scripts/corpus.py",config/application.properties,train/expiration/4,Properties,train,0,0,,,members.session.expiration.required=true
+members-expiration-4-1,synthetic/members,"Caso controlado original, scripts/corpus.py",config/application.properties,train/expiration/4,Properties,train,0,1,expiration,A07:2025,members.session.expiration.required=false
+calendar-ownership-1-0,synthetic/calendar,"Caso controlado original, scripts/corpus.py",api/policies.py,train/ownership/1,Python,train,1,0,,,calendar_verify_object_owner = True
+calendar-ownership-1-1,synthetic/calendar,"Caso controlado original, scripts/corpus.py",api/policies.py,train/ownership/1,Python,train,1,1,ownership,A01:2025|API1:2023,calendar_verify_object_owner = False
+calendar-ownership-2-0,synthetic/calendar,"Caso controlado original, scripts/corpus.py",api/policies.js,train/ownership/2,JavaScript,train,1,0,,,const calendarObjectOwnerCheck = true;
+calendar-ownership-2-1,synthetic/calendar,"Caso controlado original, scripts/corpus.py",api/policies.js,train/ownership/2,JavaScript,train,1,1,ownership,A01:2025|API1:2023,const calendarObjectOwnerCheck = false;
+calendar-ownership-3-0,synthetic/calendar,"Caso controlado original, scripts/corpus.py",config/application.yml,train/ownership/3,YAML,train,1,0,,,calendar_require_ownership: true
+calendar-ownership-3-1,synthetic/calendar,"Caso controlado original, scripts/corpus.py",config/application.yml,train/ownership/3,YAML,train,1,1,ownership,A01:2025|API1:2023,calendar_require_ownership: false
+calendar-ownership-4-0,synthetic/calendar,"Caso controlado original, scripts/corpus.py",config/application.properties,train/ownership/4,Properties,train,1,0,,,calendar.resource.owner.verify=true
+calendar-ownership-4-1,synthetic/calendar,"Caso controlado original, scripts/corpus.py",config/application.properties,train/ownership/4,Properties,train,1,1,ownership,A01:2025|API1:2023,calendar.resource.owner.verify=false
+calendar-debug-1-0,synthetic/calendar,"Caso controlado original, scripts/corpus.py",api/policies.py,train/debug/1,Python,train,1,0,,,calendar_debug = False
+calendar-debug-1-1,synthetic/calendar,"Caso controlado original, scripts/corpus.py",api/policies.py,train/debug/1,Python,train,1,1,debug,A02:2025|API8:2023,calendar_debug = True
+calendar-debug-2-0,synthetic/calendar,"Caso controlado original, scripts/corpus.py",api/policies.js,train/debug/2,JavaScript,train,1,0,,,const calendarDebugMode = false;
+calendar-debug-2-1,synthetic/calendar,"Caso controlado original, scripts/corpus.py",api/policies.js,train/debug/2,JavaScript,train,1,1,debug,A02:2025|API8:2023,const calendarDebugMode = true;
+calendar-debug-3-0,synthetic/calendar,"Caso controlado original, scripts/corpus.py",config/application.yml,train/debug/3,YAML,train,1,0,,,calendar_debug_diagnostics: false
+calendar-debug-3-1,synthetic/calendar,"Caso controlado original, scripts/corpus.py",config/application.yml,train/debug/3,YAML,train,1,1,debug,A02:2025|API8:2023,calendar_debug_diagnostics: true
+calendar-debug-4-0,synthetic/calendar,"Caso controlado original, scripts/corpus.py",config/application.properties,train/debug/4,Properties,train,1,0,,,calendar.server.debug.enabled=false
+calendar-debug-4-1,synthetic/calendar,"Caso controlado original, scripts/corpus.py",config/application.properties,train/debug/4,Properties,train,1,1,debug,A02:2025|API8:2023,calendar.server.debug.enabled=true
+calendar-transport-1-0,synthetic/calendar,"Caso controlado original, scripts/corpus.py",api/policies.py,train/transport/1,Python,train,1,0,,,calendar_require_tls = True
+calendar-transport-1-1,synthetic/calendar,"Caso controlado original, scripts/corpus.py",api/policies.py,train/transport/1,Python,train,1,1,transport,A04:2025,calendar_require_tls = False
+calendar-transport-2-0,synthetic/calendar,"Caso controlado original, scripts/corpus.py",api/policies.js,train/transport/2,JavaScript,train,1,0,,,const calendarTlsRequired = true;
+calendar-transport-2-1,synthetic/calendar,"Caso controlado original, scripts/corpus.py",api/policies.js,train/transport/2,JavaScript,train,1,1,transport,A04:2025,const calendarTlsRequired = false;
+calendar-transport-3-0,synthetic/calendar,"Caso controlado original, scripts/corpus.py",config/application.yml,train/transport/3,YAML,train,1,0,,,calendar_enforce_https: true
+calendar-transport-3-1,synthetic/calendar,"Caso controlado original, scripts/corpus.py",config/application.yml,train/transport/3,YAML,train,1,1,transport,A04:2025,calendar_enforce_https: false
+calendar-transport-4-0,synthetic/calendar,"Caso controlado original, scripts/corpus.py",config/application.properties,train/transport/4,Properties,train,1,0,,,calendar.transport.encryption.required=true
+calendar-transport-4-1,synthetic/calendar,"Caso controlado original, scripts/corpus.py",config/application.properties,train/transport/4,Properties,train,1,1,transport,A04:2025,calendar.transport.encryption.required=false
+calendar-rate_limit-1-0,synthetic/calendar,"Caso controlado original, scripts/corpus.py",api/policies.py,train/rate_limit/1,Python,train,1,0,,,calendar_rate_limit_enabled = True
+calendar-rate_limit-1-1,synthetic/calendar,"Caso controlado original, scripts/corpus.py",api/policies.py,train/rate_limit/1,Python,train,1,1,rate_limit,A06:2025|API4:2023,calendar_rate_limit_enabled = False
+calendar-rate_limit-2-0,synthetic/calendar,"Caso controlado original, scripts/corpus.py",api/policies.js,train/rate_limit/2,JavaScript,train,1,0,,,const calendarEnforceRateLimit = true;
+calendar-rate_limit-2-1,synthetic/calendar,"Caso controlado original, scripts/corpus.py",api/policies.js,train/rate_limit/2,JavaScript,train,1,1,rate_limit,A06:2025|API4:2023,const calendarEnforceRateLimit = false;
+calendar-rate_limit-3-0,synthetic/calendar,"Caso controlado original, scripts/corpus.py",config/application.yml,train/rate_limit/3,YAML,train,1,0,,,calendar_request_limit: 65
+calendar-rate_limit-3-1,synthetic/calendar,"Caso controlado original, scripts/corpus.py",config/application.yml,train/rate_limit/3,YAML,train,1,1,rate_limit,A06:2025|API4:2023,calendar_request_limit: 0
+calendar-rate_limit-4-0,synthetic/calendar,"Caso controlado original, scripts/corpus.py",config/application.properties,train/rate_limit/4,Properties,train,1,0,,,calendar.request.rate.limit=true
+calendar-rate_limit-4-1,synthetic/calendar,"Caso controlado original, scripts/corpus.py",config/application.properties,train/rate_limit/4,Properties,train,1,1,rate_limit,A06:2025|API4:2023,calendar.request.rate.limit=false
+calendar-expiration-1-0,synthetic/calendar,"Caso controlado original, scripts/corpus.py",api/policies.py,train/expiration/1,Python,train,1,0,,,calendar_verify_expiration = True
+calendar-expiration-1-1,synthetic/calendar,"Caso controlado original, scripts/corpus.py",api/policies.py,train/expiration/1,Python,train,1,1,expiration,A07:2025|API2:2023,calendar_verify_expiration = False
+calendar-expiration-2-0,synthetic/calendar,"Caso controlado original, scripts/corpus.py",api/policies.js,train/expiration/2,JavaScript,train,1,0,,,const calendarRequireTokenExpiration = true;
+calendar-expiration-2-1,synthetic/calendar,"Caso controlado original, scripts/corpus.py",api/policies.js,train/expiration/2,JavaScript,train,1,1,expiration,A07:2025|API2:2023,const calendarRequireTokenExpiration = false;
+calendar-expiration-3-0,synthetic/calendar,"Caso controlado original, scripts/corpus.py",config/application.yml,train/expiration/3,YAML,train,1,0,,,calendar_session_ttl: 65
+calendar-expiration-3-1,synthetic/calendar,"Caso controlado original, scripts/corpus.py",config/application.yml,train/expiration/3,YAML,train,1,1,expiration,A07:2025|API2:2023,calendar_session_ttl: 0
+calendar-expiration-4-0,synthetic/calendar,"Caso controlado original, scripts/corpus.py",config/application.properties,train/expiration/4,Properties,train,1,0,,,calendar.session.expiration.required=true
+calendar-expiration-4-1,synthetic/calendar,"Caso controlado original, scripts/corpus.py",config/application.properties,train/expiration/4,Properties,train,1,1,expiration,A07:2025|API2:2023,calendar.session.expiration.required=false
+delivery-ownership-1-0,synthetic/delivery,"Caso controlado original, scripts/corpus.py",api/policies.py,train/ownership/1,Python,train,1,0,,,delivery_verify_object_owner = True
+delivery-ownership-1-1,synthetic/delivery,"Caso controlado original, scripts/corpus.py",api/policies.py,train/ownership/1,Python,train,1,1,ownership,A01:2025|API1:2023,delivery_verify_object_owner = False
+delivery-ownership-2-0,synthetic/delivery,"Caso controlado original, scripts/corpus.py",api/policies.js,train/ownership/2,JavaScript,train,1,0,,,const deliveryObjectOwnerCheck = true;
+delivery-ownership-2-1,synthetic/delivery,"Caso controlado original, scripts/corpus.py",api/policies.js,train/ownership/2,JavaScript,train,1,1,ownership,A01:2025|API1:2023,const deliveryObjectOwnerCheck = false;
+delivery-ownership-3-0,synthetic/delivery,"Caso controlado original, scripts/corpus.py",config/application.yml,train/ownership/3,YAML,train,1,0,,,delivery_require_ownership: true
+delivery-ownership-3-1,synthetic/delivery,"Caso controlado original, scripts/corpus.py",config/application.yml,train/ownership/3,YAML,train,1,1,ownership,A01:2025|API1:2023,delivery_require_ownership: false
+delivery-ownership-4-0,synthetic/delivery,"Caso controlado original, scripts/corpus.py",config/application.properties,train/ownership/4,Properties,train,0,0,,,delivery.resource.owner.verify=true
+delivery-ownership-4-1,synthetic/delivery,"Caso controlado original, scripts/corpus.py",config/application.properties,train/ownership/4,Properties,train,0,1,ownership,A01:2025,delivery.resource.owner.verify=false
+delivery-debug-1-0,synthetic/delivery,"Caso controlado original, scripts/corpus.py",api/policies.py,train/debug/1,Python,train,1,0,,,delivery_debug = False
+delivery-debug-1-1,synthetic/delivery,"Caso controlado original, scripts/corpus.py",api/policies.py,train/debug/1,Python,train,1,1,debug,A02:2025|API8:2023,delivery_debug = True
+delivery-debug-2-0,synthetic/delivery,"Caso controlado original, scripts/corpus.py",api/policies.js,train/debug/2,JavaScript,train,1,0,,,const deliveryDebugMode = false;
+delivery-debug-2-1,synthetic/delivery,"Caso controlado original, scripts/corpus.py",api/policies.js,train/debug/2,JavaScript,train,1,1,debug,A02:2025|API8:2023,const deliveryDebugMode = true;
+delivery-debug-3-0,synthetic/delivery,"Caso controlado original, scripts/corpus.py",config/application.yml,train/debug/3,YAML,train,1,0,,,delivery_debug_diagnostics: false
+delivery-debug-3-1,synthetic/delivery,"Caso controlado original, scripts/corpus.py",config/application.yml,train/debug/3,YAML,train,1,1,debug,A02:2025|API8:2023,delivery_debug_diagnostics: true
+delivery-debug-4-0,synthetic/delivery,"Caso controlado original, scripts/corpus.py",config/application.properties,train/debug/4,Properties,train,0,0,,,delivery.server.debug.enabled=false
+delivery-debug-4-1,synthetic/delivery,"Caso controlado original, scripts/corpus.py",config/application.properties,train/debug/4,Properties,train,0,1,debug,A02:2025,delivery.server.debug.enabled=true
+delivery-transport-1-0,synthetic/delivery,"Caso controlado original, scripts/corpus.py",api/policies.py,train/transport/1,Python,train,1,0,,,delivery_require_tls = True
+delivery-transport-1-1,synthetic/delivery,"Caso controlado original, scripts/corpus.py",api/policies.py,train/transport/1,Python,train,1,1,transport,A04:2025,delivery_require_tls = False
+delivery-transport-2-0,synthetic/delivery,"Caso controlado original, scripts/corpus.py",api/policies.js,train/transport/2,JavaScript,train,1,0,,,const deliveryTlsRequired = true;
+delivery-transport-2-1,synthetic/delivery,"Caso controlado original, scripts/corpus.py",api/policies.js,train/transport/2,JavaScript,train,1,1,transport,A04:2025,const deliveryTlsRequired = false;
+delivery-transport-3-0,synthetic/delivery,"Caso controlado original, scripts/corpus.py",config/application.yml,train/transport/3,YAML,train,1,0,,,delivery_enforce_https: true
+delivery-transport-3-1,synthetic/delivery,"Caso controlado original, scripts/corpus.py",config/application.yml,train/transport/3,YAML,train,1,1,transport,A04:2025,delivery_enforce_https: false
+delivery-transport-4-0,synthetic/delivery,"Caso controlado original, scripts/corpus.py",config/application.properties,train/transport/4,Properties,train,0,0,,,delivery.transport.encryption.required=true
+delivery-transport-4-1,synthetic/delivery,"Caso controlado original, scripts/corpus.py",config/application.properties,train/transport/4,Properties,train,0,1,transport,A04:2025,delivery.transport.encryption.required=false
+delivery-rate_limit-1-0,synthetic/delivery,"Caso controlado original, scripts/corpus.py",api/policies.py,train/rate_limit/1,Python,train,1,0,,,delivery_rate_limit_enabled = True
+delivery-rate_limit-1-1,synthetic/delivery,"Caso controlado original, scripts/corpus.py",api/policies.py,train/rate_limit/1,Python,train,1,1,rate_limit,A06:2025|API4:2023,delivery_rate_limit_enabled = False
+delivery-rate_limit-2-0,synthetic/delivery,"Caso controlado original, scripts/corpus.py",api/policies.js,train/rate_limit/2,JavaScript,train,1,0,,,const deliveryEnforceRateLimit = true;
+delivery-rate_limit-2-1,synthetic/delivery,"Caso controlado original, scripts/corpus.py",api/policies.js,train/rate_limit/2,JavaScript,train,1,1,rate_limit,A06:2025|API4:2023,const deliveryEnforceRateLimit = false;
+delivery-rate_limit-3-0,synthetic/delivery,"Caso controlado original, scripts/corpus.py",config/application.yml,train/rate_limit/3,YAML,train,1,0,,,delivery_request_limit: 70
+delivery-rate_limit-3-1,synthetic/delivery,"Caso controlado original, scripts/corpus.py",config/application.yml,train/rate_limit/3,YAML,train,1,1,rate_limit,A06:2025|API4:2023,delivery_request_limit: 0
+delivery-rate_limit-4-0,synthetic/delivery,"Caso controlado original, scripts/corpus.py",config/application.properties,train/rate_limit/4,Properties,train,0,0,,,delivery.request.rate.limit=true
+delivery-rate_limit-4-1,synthetic/delivery,"Caso controlado original, scripts/corpus.py",config/application.properties,train/rate_limit/4,Properties,train,0,1,rate_limit,A06:2025,delivery.request.rate.limit=false
+delivery-expiration-1-0,synthetic/delivery,"Caso controlado original, scripts/corpus.py",api/policies.py,train/expiration/1,Python,train,1,0,,,delivery_verify_expiration = True
+delivery-expiration-1-1,synthetic/delivery,"Caso controlado original, scripts/corpus.py",api/policies.py,train/expiration/1,Python,train,1,1,expiration,A07:2025|API2:2023,delivery_verify_expiration = False
+delivery-expiration-2-0,synthetic/delivery,"Caso controlado original, scripts/corpus.py",api/policies.js,train/expiration/2,JavaScript,train,1,0,,,const deliveryRequireTokenExpiration = true;
+delivery-expiration-2-1,synthetic/delivery,"Caso controlado original, scripts/corpus.py",api/policies.js,train/expiration/2,JavaScript,train,1,1,expiration,A07:2025|API2:2023,const deliveryRequireTokenExpiration = false;
+delivery-expiration-3-0,synthetic/delivery,"Caso controlado original, scripts/corpus.py",config/application.yml,train/expiration/3,YAML,train,1,0,,,delivery_session_ttl: 70
+delivery-expiration-3-1,synthetic/delivery,"Caso controlado original, scripts/corpus.py",config/application.yml,train/expiration/3,YAML,train,1,1,expiration,A07:2025|API2:2023,delivery_session_ttl: 0
+delivery-expiration-4-0,synthetic/delivery,"Caso controlado original, scripts/corpus.py",config/application.properties,train/expiration/4,Properties,train,0,0,,,delivery.session.expiration.required=true
+delivery-expiration-4-1,synthetic/delivery,"Caso controlado original, scripts/corpus.py",config/application.properties,train/expiration/4,Properties,train,0,1,expiration,A07:2025,delivery.session.expiration.required=false
+payments-ownership-1-0,synthetic/payments,"Caso controlado original, scripts/corpus.py",api/policies.py,train/ownership/1,Python,train,1,0,,,payments_verify_object_owner = True
+payments-ownership-1-1,synthetic/payments,"Caso controlado original, scripts/corpus.py",api/policies.py,train/ownership/1,Python,train,1,1,ownership,A01:2025|API1:2023,payments_verify_object_owner = False
+payments-ownership-2-0,synthetic/payments,"Caso controlado original, scripts/corpus.py",api/policies.js,train/ownership/2,JavaScript,train,1,0,,,const paymentsObjectOwnerCheck = true;
+payments-ownership-2-1,synthetic/payments,"Caso controlado original, scripts/corpus.py",api/policies.js,train/ownership/2,JavaScript,train,1,1,ownership,A01:2025|API1:2023,const paymentsObjectOwnerCheck = false;
+payments-ownership-3-0,synthetic/payments,"Caso controlado original, scripts/corpus.py",config/application.yml,train/ownership/3,YAML,train,1,0,,,payments_require_ownership: true
+payments-ownership-3-1,synthetic/payments,"Caso controlado original, scripts/corpus.py",config/application.yml,train/ownership/3,YAML,train,1,1,ownership,A01:2025|API1:2023,payments_require_ownership: false
+payments-ownership-4-0,synthetic/payments,"Caso controlado original, scripts/corpus.py",config/application.properties,train/ownership/4,Properties,train,1,0,,,payments.resource.owner.verify=true
+payments-ownership-4-1,synthetic/payments,"Caso controlado original, scripts/corpus.py",config/application.properties,train/ownership/4,Properties,train,1,1,ownership,A01:2025|API1:2023,payments.resource.owner.verify=false
+payments-debug-1-0,synthetic/payments,"Caso controlado original, scripts/corpus.py",api/policies.py,train/debug/1,Python,train,1,0,,,payments_debug = False
+payments-debug-1-1,synthetic/payments,"Caso controlado original, scripts/corpus.py",api/policies.py,train/debug/1,Python,train,1,1,debug,A02:2025|API8:2023,payments_debug = True
+payments-debug-2-0,synthetic/payments,"Caso controlado original, scripts/corpus.py",api/policies.js,train/debug/2,JavaScript,train,1,0,,,const paymentsDebugMode = false;
+payments-debug-2-1,synthetic/payments,"Caso controlado original, scripts/corpus.py",api/policies.js,train/debug/2,JavaScript,train,1,1,debug,A02:2025|API8:2023,const paymentsDebugMode = true;
+payments-debug-3-0,synthetic/payments,"Caso controlado original, scripts/corpus.py",config/application.yml,train/debug/3,YAML,train,1,0,,,payments_debug_diagnostics: false
+payments-debug-3-1,synthetic/payments,"Caso controlado original, scripts/corpus.py",config/application.yml,train/debug/3,YAML,train,1,1,debug,A02:2025|API8:2023,payments_debug_diagnostics: true
+payments-debug-4-0,synthetic/payments,"Caso controlado original, scripts/corpus.py",config/application.properties,train/debug/4,Properties,train,1,0,,,payments.server.debug.enabled=false
+payments-debug-4-1,synthetic/payments,"Caso controlado original, scripts/corpus.py",config/application.properties,train/debug/4,Properties,train,1,1,debug,A02:2025|API8:2023,payments.server.debug.enabled=true
+payments-transport-1-0,synthetic/payments,"Caso controlado original, scripts/corpus.py",api/policies.py,train/transport/1,Python,train,1,0,,,payments_require_tls = True
+payments-transport-1-1,synthetic/payments,"Caso controlado original, scripts/corpus.py",api/policies.py,train/transport/1,Python,train,1,1,transport,A04:2025,payments_require_tls = False
+payments-transport-2-0,synthetic/payments,"Caso controlado original, scripts/corpus.py",api/policies.js,train/transport/2,JavaScript,train,1,0,,,const paymentsTlsRequired = true;
+payments-transport-2-1,synthetic/payments,"Caso controlado original, scripts/corpus.py",api/policies.js,train/transport/2,JavaScript,train,1,1,transport,A04:2025,const paymentsTlsRequired = false;
+payments-transport-3-0,synthetic/payments,"Caso controlado original, scripts/corpus.py",config/application.yml,train/transport/3,YAML,train,1,0,,,payments_enforce_https: true
+payments-transport-3-1,synthetic/payments,"Caso controlado original, scripts/corpus.py",config/application.yml,train/transport/3,YAML,train,1,1,transport,A04:2025,payments_enforce_https: false
+payments-transport-4-0,synthetic/payments,"Caso controlado original, scripts/corpus.py",config/application.properties,train/transport/4,Properties,train,1,0,,,payments.transport.encryption.required=true
+payments-transport-4-1,synthetic/payments,"Caso controlado original, scripts/corpus.py",config/application.properties,train/transport/4,Properties,train,1,1,transport,A04:2025,payments.transport.encryption.required=false
+payments-rate_limit-1-0,synthetic/payments,"Caso controlado original, scripts/corpus.py",api/policies.py,train/rate_limit/1,Python,train,1,0,,,payments_rate_limit_enabled = True
+payments-rate_limit-1-1,synthetic/payments,"Caso controlado original, scripts/corpus.py",api/policies.py,train/rate_limit/1,Python,train,1,1,rate_limit,A06:2025|API4:2023,payments_rate_limit_enabled = False
+payments-rate_limit-2-0,synthetic/payments,"Caso controlado original, scripts/corpus.py",api/policies.js,train/rate_limit/2,JavaScript,train,1,0,,,const paymentsEnforceRateLimit = true;
+payments-rate_limit-2-1,synthetic/payments,"Caso controlado original, scripts/corpus.py",api/policies.js,train/rate_limit/2,JavaScript,train,1,1,rate_limit,A06:2025|API4:2023,const paymentsEnforceRateLimit = false;
+payments-rate_limit-3-0,synthetic/payments,"Caso controlado original, scripts/corpus.py",config/application.yml,train/rate_limit/3,YAML,train,1,0,,,payments_request_limit: 75
+payments-rate_limit-3-1,synthetic/payments,"Caso controlado original, scripts/corpus.py",config/application.yml,train/rate_limit/3,YAML,train,1,1,rate_limit,A06:2025|API4:2023,payments_request_limit: 0
+payments-rate_limit-4-0,synthetic/payments,"Caso controlado original, scripts/corpus.py",config/application.properties,train/rate_limit/4,Properties,train,1,0,,,payments.request.rate.limit=true
+payments-rate_limit-4-1,synthetic/payments,"Caso controlado original, scripts/corpus.py",config/application.properties,train/rate_limit/4,Properties,train,1,1,rate_limit,A06:2025|API4:2023,payments.request.rate.limit=false
+payments-expiration-1-0,synthetic/payments,"Caso controlado original, scripts/corpus.py",api/policies.py,train/expiration/1,Python,train,1,0,,,payments_verify_expiration = True
+payments-expiration-1-1,synthetic/payments,"Caso controlado original, scripts/corpus.py",api/policies.py,train/expiration/1,Python,train,1,1,expiration,A07:2025|API2:2023,payments_verify_expiration = False
+payments-expiration-2-0,synthetic/payments,"Caso controlado original, scripts/corpus.py",api/policies.js,train/expiration/2,JavaScript,train,1,0,,,const paymentsRequireTokenExpiration = true;
+payments-expiration-2-1,synthetic/payments,"Caso controlado original, scripts/corpus.py",api/policies.js,train/expiration/2,JavaScript,train,1,1,expiration,A07:2025|API2:2023,const paymentsRequireTokenExpiration = false;
+payments-expiration-3-0,synthetic/payments,"Caso controlado original, scripts/corpus.py",config/application.yml,train/expiration/3,YAML,train,1,0,,,payments_session_ttl: 75
+payments-expiration-3-1,synthetic/payments,"Caso controlado original, scripts/corpus.py",config/application.yml,train/expiration/3,YAML,train,1,1,expiration,A07:2025|API2:2023,payments_session_ttl: 0
+payments-expiration-4-0,synthetic/payments,"Caso controlado original, scripts/corpus.py",config/application.properties,train/expiration/4,Properties,train,1,0,,,payments.session.expiration.required=true
+payments-expiration-4-1,synthetic/payments,"Caso controlado original, scripts/corpus.py",config/application.properties,train/expiration/4,Properties,train,1,1,expiration,A07:2025|API2:2023,payments.session.expiration.required=false
+records-ownership-1-0,synthetic/records,"Caso controlado original, scripts/corpus.py",api/policies.py,train/ownership/1,Python,train,1,0,,,records_verify_object_owner = True
+records-ownership-1-1,synthetic/records,"Caso controlado original, scripts/corpus.py",api/policies.py,train/ownership/1,Python,train,1,1,ownership,A01:2025|API1:2023,records_verify_object_owner = False
+records-ownership-2-0,synthetic/records,"Caso controlado original, scripts/corpus.py",api/policies.js,train/ownership/2,JavaScript,train,1,0,,,const recordsObjectOwnerCheck = true;
+records-ownership-2-1,synthetic/records,"Caso controlado original, scripts/corpus.py",api/policies.js,train/ownership/2,JavaScript,train,1,1,ownership,A01:2025|API1:2023,const recordsObjectOwnerCheck = false;
+records-ownership-3-0,synthetic/records,"Caso controlado original, scripts/corpus.py",config/application.yml,train/ownership/3,YAML,train,1,0,,,records_require_ownership: true
+records-ownership-3-1,synthetic/records,"Caso controlado original, scripts/corpus.py",config/application.yml,train/ownership/3,YAML,train,1,1,ownership,A01:2025|API1:2023,records_require_ownership: false
+records-ownership-4-0,synthetic/records,"Caso controlado original, scripts/corpus.py",config/application.properties,train/ownership/4,Properties,train,0,0,,,records.resource.owner.verify=true
+records-ownership-4-1,synthetic/records,"Caso controlado original, scripts/corpus.py",config/application.properties,train/ownership/4,Properties,train,0,1,ownership,A01:2025,records.resource.owner.verify=false
+records-debug-1-0,synthetic/records,"Caso controlado original, scripts/corpus.py",api/policies.py,train/debug/1,Python,train,1,0,,,records_debug = False
+records-debug-1-1,synthetic/records,"Caso controlado original, scripts/corpus.py",api/policies.py,train/debug/1,Python,train,1,1,debug,A02:2025|API8:2023,records_debug = True
+records-debug-2-0,synthetic/records,"Caso controlado original, scripts/corpus.py",api/policies.js,train/debug/2,JavaScript,train,1,0,,,const recordsDebugMode = false;
+records-debug-2-1,synthetic/records,"Caso controlado original, scripts/corpus.py",api/policies.js,train/debug/2,JavaScript,train,1,1,debug,A02:2025|API8:2023,const recordsDebugMode = true;
+records-debug-3-0,synthetic/records,"Caso controlado original, scripts/corpus.py",config/application.yml,train/debug/3,YAML,train,1,0,,,records_debug_diagnostics: false
+records-debug-3-1,synthetic/records,"Caso controlado original, scripts/corpus.py",config/application.yml,train/debug/3,YAML,train,1,1,debug,A02:2025|API8:2023,records_debug_diagnostics: true
+records-debug-4-0,synthetic/records,"Caso controlado original, scripts/corpus.py",config/application.properties,train/debug/4,Properties,train,0,0,,,records.server.debug.enabled=false
+records-debug-4-1,synthetic/records,"Caso controlado original, scripts/corpus.py",config/application.properties,train/debug/4,Properties,train,0,1,debug,A02:2025,records.server.debug.enabled=true
+records-transport-1-0,synthetic/records,"Caso controlado original, scripts/corpus.py",api/policies.py,train/transport/1,Python,train,1,0,,,records_require_tls = True
+records-transport-1-1,synthetic/records,"Caso controlado original, scripts/corpus.py",api/policies.py,train/transport/1,Python,train,1,1,transport,A04:2025,records_require_tls = False
+records-transport-2-0,synthetic/records,"Caso controlado original, scripts/corpus.py",api/policies.js,train/transport/2,JavaScript,train,1,0,,,const recordsTlsRequired = true;
+records-transport-2-1,synthetic/records,"Caso controlado original, scripts/corpus.py",api/policies.js,train/transport/2,JavaScript,train,1,1,transport,A04:2025,const recordsTlsRequired = false;
+records-transport-3-0,synthetic/records,"Caso controlado original, scripts/corpus.py",config/application.yml,train/transport/3,YAML,train,1,0,,,records_enforce_https: true
+records-transport-3-1,synthetic/records,"Caso controlado original, scripts/corpus.py",config/application.yml,train/transport/3,YAML,train,1,1,transport,A04:2025,records_enforce_https: false
+records-transport-4-0,synthetic/records,"Caso controlado original, scripts/corpus.py",config/application.properties,train/transport/4,Properties,train,0,0,,,records.transport.encryption.required=true
+records-transport-4-1,synthetic/records,"Caso controlado original, scripts/corpus.py",config/application.properties,train/transport/4,Properties,train,0,1,transport,A04:2025,records.transport.encryption.required=false
+records-rate_limit-1-0,synthetic/records,"Caso controlado original, scripts/corpus.py",api/policies.py,train/rate_limit/1,Python,train,1,0,,,records_rate_limit_enabled = True
+records-rate_limit-1-1,synthetic/records,"Caso controlado original, scripts/corpus.py",api/policies.py,train/rate_limit/1,Python,train,1,1,rate_limit,A06:2025|API4:2023,records_rate_limit_enabled = False
+records-rate_limit-2-0,synthetic/records,"Caso controlado original, scripts/corpus.py",api/policies.js,train/rate_limit/2,JavaScript,train,1,0,,,const recordsEnforceRateLimit = true;
+records-rate_limit-2-1,synthetic/records,"Caso controlado original, scripts/corpus.py",api/policies.js,train/rate_limit/2,JavaScript,train,1,1,rate_limit,A06:2025|API4:2023,const recordsEnforceRateLimit = false;
+records-rate_limit-3-0,synthetic/records,"Caso controlado original, scripts/corpus.py",config/application.yml,train/rate_limit/3,YAML,train,1,0,,,records_request_limit: 80
+records-rate_limit-3-1,synthetic/records,"Caso controlado original, scripts/corpus.py",config/application.yml,train/rate_limit/3,YAML,train,1,1,rate_limit,A06:2025|API4:2023,records_request_limit: 0
+records-rate_limit-4-0,synthetic/records,"Caso controlado original, scripts/corpus.py",config/application.properties,train/rate_limit/4,Properties,train,0,0,,,records.request.rate.limit=true
+records-rate_limit-4-1,synthetic/records,"Caso controlado original, scripts/corpus.py",config/application.properties,train/rate_limit/4,Properties,train,0,1,rate_limit,A06:2025,records.request.rate.limit=false
+records-expiration-1-0,synthetic/records,"Caso controlado original, scripts/corpus.py",api/policies.py,train/expiration/1,Python,train,1,0,,,records_verify_expiration = True
+records-expiration-1-1,synthetic/records,"Caso controlado original, scripts/corpus.py",api/policies.py,train/expiration/1,Python,train,1,1,expiration,A07:2025|API2:2023,records_verify_expiration = False
+records-expiration-2-0,synthetic/records,"Caso controlado original, scripts/corpus.py",api/policies.js,train/expiration/2,JavaScript,train,1,0,,,const recordsRequireTokenExpiration = true;
+records-expiration-2-1,synthetic/records,"Caso controlado original, scripts/corpus.py",api/policies.js,train/expiration/2,JavaScript,train,1,1,expiration,A07:2025|API2:2023,const recordsRequireTokenExpiration = false;
+records-expiration-3-0,synthetic/records,"Caso controlado original, scripts/corpus.py",config/application.yml,train/expiration/3,YAML,train,1,0,,,records_session_ttl: 80
+records-expiration-3-1,synthetic/records,"Caso controlado original, scripts/corpus.py",config/application.yml,train/expiration/3,YAML,train,1,1,expiration,A07:2025|API2:2023,records_session_ttl: 0
+records-expiration-4-0,synthetic/records,"Caso controlado original, scripts/corpus.py",config/application.properties,train/expiration/4,Properties,train,0,0,,,records.session.expiration.required=true
+records-expiration-4-1,synthetic/records,"Caso controlado original, scripts/corpus.py",config/application.properties,train/expiration/4,Properties,train,0,1,expiration,A07:2025,records.session.expiration.required=false
+warehouse-ownership-1-0,synthetic/warehouse,"Caso controlado original, scripts/corpus.py",api/policies.py,train/ownership/1,Python,train,1,0,,,warehouse_verify_object_owner = True
+warehouse-ownership-1-1,synthetic/warehouse,"Caso controlado original, scripts/corpus.py",api/policies.py,train/ownership/1,Python,train,1,1,ownership,A01:2025|API1:2023,warehouse_verify_object_owner = False
+warehouse-ownership-2-0,synthetic/warehouse,"Caso controlado original, scripts/corpus.py",api/policies.js,train/ownership/2,JavaScript,train,1,0,,,const warehouseObjectOwnerCheck = true;
+warehouse-ownership-2-1,synthetic/warehouse,"Caso controlado original, scripts/corpus.py",api/policies.js,train/ownership/2,JavaScript,train,1,1,ownership,A01:2025|API1:2023,const warehouseObjectOwnerCheck = false;
+warehouse-ownership-3-0,synthetic/warehouse,"Caso controlado original, scripts/corpus.py",config/application.yml,train/ownership/3,YAML,train,1,0,,,warehouse_require_ownership: true
+warehouse-ownership-3-1,synthetic/warehouse,"Caso controlado original, scripts/corpus.py",config/application.yml,train/ownership/3,YAML,train,1,1,ownership,A01:2025|API1:2023,warehouse_require_ownership: false
+warehouse-ownership-4-0,synthetic/warehouse,"Caso controlado original, scripts/corpus.py",config/application.properties,train/ownership/4,Properties,train,1,0,,,warehouse.resource.owner.verify=true
+warehouse-ownership-4-1,synthetic/warehouse,"Caso controlado original, scripts/corpus.py",config/application.properties,train/ownership/4,Properties,train,1,1,ownership,A01:2025|API1:2023,warehouse.resource.owner.verify=false
+warehouse-debug-1-0,synthetic/warehouse,"Caso controlado original, scripts/corpus.py",api/policies.py,train/debug/1,Python,train,1,0,,,warehouse_debug = False
+warehouse-debug-1-1,synthetic/warehouse,"Caso controlado original, scripts/corpus.py",api/policies.py,train/debug/1,Python,train,1,1,debug,A02:2025|API8:2023,warehouse_debug = True
+warehouse-debug-2-0,synthetic/warehouse,"Caso controlado original, scripts/corpus.py",api/policies.js,train/debug/2,JavaScript,train,1,0,,,const warehouseDebugMode = false;
+warehouse-debug-2-1,synthetic/warehouse,"Caso controlado original, scripts/corpus.py",api/policies.js,train/debug/2,JavaScript,train,1,1,debug,A02:2025|API8:2023,const warehouseDebugMode = true;
+warehouse-debug-3-0,synthetic/warehouse,"Caso controlado original, scripts/corpus.py",config/application.yml,train/debug/3,YAML,train,1,0,,,warehouse_debug_diagnostics: false
+warehouse-debug-3-1,synthetic/warehouse,"Caso controlado original, scripts/corpus.py",config/application.yml,train/debug/3,YAML,train,1,1,debug,A02:2025|API8:2023,warehouse_debug_diagnostics: true
+warehouse-debug-4-0,synthetic/warehouse,"Caso controlado original, scripts/corpus.py",config/application.properties,train/debug/4,Properties,train,1,0,,,warehouse.server.debug.enabled=false
+warehouse-debug-4-1,synthetic/warehouse,"Caso controlado original, scripts/corpus.py",config/application.properties,train/debug/4,Properties,train,1,1,debug,A02:2025|API8:2023,warehouse.server.debug.enabled=true
+warehouse-transport-1-0,synthetic/warehouse,"Caso controlado original, scripts/corpus.py",api/policies.py,train/transport/1,Python,train,1,0,,,warehouse_require_tls = True
+warehouse-transport-1-1,synthetic/warehouse,"Caso controlado original, scripts/corpus.py",api/policies.py,train/transport/1,Python,train,1,1,transport,A04:2025,warehouse_require_tls = False
+warehouse-transport-2-0,synthetic/warehouse,"Caso controlado original, scripts/corpus.py",api/policies.js,train/transport/2,JavaScript,train,1,0,,,const warehouseTlsRequired = true;
+warehouse-transport-2-1,synthetic/warehouse,"Caso controlado original, scripts/corpus.py",api/policies.js,train/transport/2,JavaScript,train,1,1,transport,A04:2025,const warehouseTlsRequired = false;
+warehouse-transport-3-0,synthetic/warehouse,"Caso controlado original, scripts/corpus.py",config/application.yml,train/transport/3,YAML,train,1,0,,,warehouse_enforce_https: true
+warehouse-transport-3-1,synthetic/warehouse,"Caso controlado original, scripts/corpus.py",config/application.yml,train/transport/3,YAML,train,1,1,transport,A04:2025,warehouse_enforce_https: false
+warehouse-transport-4-0,synthetic/warehouse,"Caso controlado original, scripts/corpus.py",config/application.properties,train/transport/4,Properties,train,1,0,,,warehouse.transport.encryption.required=true
+warehouse-transport-4-1,synthetic/warehouse,"Caso controlado original, scripts/corpus.py",config/application.properties,train/transport/4,Properties,train,1,1,transport,A04:2025,warehouse.transport.encryption.required=false
+warehouse-rate_limit-1-0,synthetic/warehouse,"Caso controlado original, scripts/corpus.py",api/policies.py,train/rate_limit/1,Python,train,1,0,,,warehouse_rate_limit_enabled = True
+warehouse-rate_limit-1-1,synthetic/warehouse,"Caso controlado original, scripts/corpus.py",api/policies.py,train/rate_limit/1,Python,train,1,1,rate_limit,A06:2025|API4:2023,warehouse_rate_limit_enabled = False
+warehouse-rate_limit-2-0,synthetic/warehouse,"Caso controlado original, scripts/corpus.py",api/policies.js,train/rate_limit/2,JavaScript,train,1,0,,,const warehouseEnforceRateLimit = true;
+warehouse-rate_limit-2-1,synthetic/warehouse,"Caso controlado original, scripts/corpus.py",api/policies.js,train/rate_limit/2,JavaScript,train,1,1,rate_limit,A06:2025|API4:2023,const warehouseEnforceRateLimit = false;
+warehouse-rate_limit-3-0,synthetic/warehouse,"Caso controlado original, scripts/corpus.py",config/application.yml,train/rate_limit/3,YAML,train,1,0,,,warehouse_request_limit: 85
+warehouse-rate_limit-3-1,synthetic/warehouse,"Caso controlado original, scripts/corpus.py",config/application.yml,train/rate_limit/3,YAML,train,1,1,rate_limit,A06:2025|API4:2023,warehouse_request_limit: 0
+warehouse-rate_limit-4-0,synthetic/warehouse,"Caso controlado original, scripts/corpus.py",config/application.properties,train/rate_limit/4,Properties,train,1,0,,,warehouse.request.rate.limit=true
+warehouse-rate_limit-4-1,synthetic/warehouse,"Caso controlado original, scripts/corpus.py",config/application.properties,train/rate_limit/4,Properties,train,1,1,rate_limit,A06:2025|API4:2023,warehouse.request.rate.limit=false
+warehouse-expiration-1-0,synthetic/warehouse,"Caso controlado original, scripts/corpus.py",api/policies.py,train/expiration/1,Python,train,1,0,,,warehouse_verify_expiration = True
+warehouse-expiration-1-1,synthetic/warehouse,"Caso controlado original, scripts/corpus.py",api/policies.py,train/expiration/1,Python,train,1,1,expiration,A07:2025|API2:2023,warehouse_verify_expiration = False
+warehouse-expiration-2-0,synthetic/warehouse,"Caso controlado original, scripts/corpus.py",api/policies.js,train/expiration/2,JavaScript,train,1,0,,,const warehouseRequireTokenExpiration = true;
+warehouse-expiration-2-1,synthetic/warehouse,"Caso controlado original, scripts/corpus.py",api/policies.js,train/expiration/2,JavaScript,train,1,1,expiration,A07:2025|API2:2023,const warehouseRequireTokenExpiration = false;
+warehouse-expiration-3-0,synthetic/warehouse,"Caso controlado original, scripts/corpus.py",config/application.yml,train/expiration/3,YAML,train,1,0,,,warehouse_session_ttl: 85
+warehouse-expiration-3-1,synthetic/warehouse,"Caso controlado original, scripts/corpus.py",config/application.yml,train/expiration/3,YAML,train,1,1,expiration,A07:2025|API2:2023,warehouse_session_ttl: 0
+warehouse-expiration-4-0,synthetic/warehouse,"Caso controlado original, scripts/corpus.py",config/application.properties,train/expiration/4,Properties,train,1,0,,,warehouse.session.expiration.required=true
+warehouse-expiration-4-1,synthetic/warehouse,"Caso controlado original, scripts/corpus.py",config/application.properties,train/expiration/4,Properties,train,1,1,expiration,A07:2025|API2:2023,warehouse.session.expiration.required=false
+accounts-ownership-1-0,synthetic/accounts,"Caso controlado original, scripts/corpus.py",api/policies.py,train/ownership/1,Python,train,1,0,,,accounts_verify_object_owner = True
+accounts-ownership-1-1,synthetic/accounts,"Caso controlado original, scripts/corpus.py",api/policies.py,train/ownership/1,Python,train,1,1,ownership,A01:2025|API1:2023,accounts_verify_object_owner = False
+accounts-ownership-2-0,synthetic/accounts,"Caso controlado original, scripts/corpus.py",api/policies.js,train/ownership/2,JavaScript,train,1,0,,,const accountsObjectOwnerCheck = true;
+accounts-ownership-2-1,synthetic/accounts,"Caso controlado original, scripts/corpus.py",api/policies.js,train/ownership/2,JavaScript,train,1,1,ownership,A01:2025|API1:2023,const accountsObjectOwnerCheck = false;
+accounts-ownership-3-0,synthetic/accounts,"Caso controlado original, scripts/corpus.py",config/application.yml,train/ownership/3,YAML,train,1,0,,,accounts_require_ownership: true
+accounts-ownership-3-1,synthetic/accounts,"Caso controlado original, scripts/corpus.py",config/application.yml,train/ownership/3,YAML,train,1,1,ownership,A01:2025|API1:2023,accounts_require_ownership: false
+accounts-ownership-4-0,synthetic/accounts,"Caso controlado original, scripts/corpus.py",config/application.properties,train/ownership/4,Properties,train,0,0,,,accounts.resource.owner.verify=true
+accounts-ownership-4-1,synthetic/accounts,"Caso controlado original, scripts/corpus.py",config/application.properties,train/ownership/4,Properties,train,0,1,ownership,A01:2025,accounts.resource.owner.verify=false
+accounts-debug-1-0,synthetic/accounts,"Caso controlado original, scripts/corpus.py",api/policies.py,train/debug/1,Python,train,1,0,,,accounts_debug = False
+accounts-debug-1-1,synthetic/accounts,"Caso controlado original, scripts/corpus.py",api/policies.py,train/debug/1,Python,train,1,1,debug,A02:2025|API8:2023,accounts_debug = True
+accounts-debug-2-0,synthetic/accounts,"Caso controlado original, scripts/corpus.py",api/policies.js,train/debug/2,JavaScript,train,1,0,,,const accountsDebugMode = false;
+accounts-debug-2-1,synthetic/accounts,"Caso controlado original, scripts/corpus.py",api/policies.js,train/debug/2,JavaScript,train,1,1,debug,A02:2025|API8:2023,const accountsDebugMode = true;
+accounts-debug-3-0,synthetic/accounts,"Caso controlado original, scripts/corpus.py",config/application.yml,train/debug/3,YAML,train,1,0,,,accounts_debug_diagnostics: false
+accounts-debug-3-1,synthetic/accounts,"Caso controlado original, scripts/corpus.py",config/application.yml,train/debug/3,YAML,train,1,1,debug,A02:2025|API8:2023,accounts_debug_diagnostics: true
+accounts-debug-4-0,synthetic/accounts,"Caso controlado original, scripts/corpus.py",config/application.properties,train/debug/4,Properties,train,0,0,,,accounts.server.debug.enabled=false
+accounts-debug-4-1,synthetic/accounts,"Caso controlado original, scripts/corpus.py",config/application.properties,train/debug/4,Properties,train,0,1,debug,A02:2025,accounts.server.debug.enabled=true
+accounts-transport-1-0,synthetic/accounts,"Caso controlado original, scripts/corpus.py",api/policies.py,train/transport/1,Python,train,1,0,,,accounts_require_tls = True
+accounts-transport-1-1,synthetic/accounts,"Caso controlado original, scripts/corpus.py",api/policies.py,train/transport/1,Python,train,1,1,transport,A04:2025,accounts_require_tls = False
+accounts-transport-2-0,synthetic/accounts,"Caso controlado original, scripts/corpus.py",api/policies.js,train/transport/2,JavaScript,train,1,0,,,const accountsTlsRequired = true;
+accounts-transport-2-1,synthetic/accounts,"Caso controlado original, scripts/corpus.py",api/policies.js,train/transport/2,JavaScript,train,1,1,transport,A04:2025,const accountsTlsRequired = false;
+accounts-transport-3-0,synthetic/accounts,"Caso controlado original, scripts/corpus.py",config/application.yml,train/transport/3,YAML,train,1,0,,,accounts_enforce_https: true
+accounts-transport-3-1,synthetic/accounts,"Caso controlado original, scripts/corpus.py",config/application.yml,train/transport/3,YAML,train,1,1,transport,A04:2025,accounts_enforce_https: false
+accounts-transport-4-0,synthetic/accounts,"Caso controlado original, scripts/corpus.py",config/application.properties,train/transport/4,Properties,train,0,0,,,accounts.transport.encryption.required=true
+accounts-transport-4-1,synthetic/accounts,"Caso controlado original, scripts/corpus.py",config/application.properties,train/transport/4,Properties,train,0,1,transport,A04:2025,accounts.transport.encryption.required=false
+accounts-rate_limit-1-0,synthetic/accounts,"Caso controlado original, scripts/corpus.py",api/policies.py,train/rate_limit/1,Python,train,1,0,,,accounts_rate_limit_enabled = True
+accounts-rate_limit-1-1,synthetic/accounts,"Caso controlado original, scripts/corpus.py",api/policies.py,train/rate_limit/1,Python,train,1,1,rate_limit,A06:2025|API4:2023,accounts_rate_limit_enabled = False
+accounts-rate_limit-2-0,synthetic/accounts,"Caso controlado original, scripts/corpus.py",api/policies.js,train/rate_limit/2,JavaScript,train,1,0,,,const accountsEnforceRateLimit = true;
+accounts-rate_limit-2-1,synthetic/accounts,"Caso controlado original, scripts/corpus.py",api/policies.js,train/rate_limit/2,JavaScript,train,1,1,rate_limit,A06:2025|API4:2023,const accountsEnforceRateLimit = false;
+accounts-rate_limit-3-0,synthetic/accounts,"Caso controlado original, scripts/corpus.py",config/application.yml,train/rate_limit/3,YAML,train,1,0,,,accounts_request_limit: 90
+accounts-rate_limit-3-1,synthetic/accounts,"Caso controlado original, scripts/corpus.py",config/application.yml,train/rate_limit/3,YAML,train,1,1,rate_limit,A06:2025|API4:2023,accounts_request_limit: 0
+accounts-rate_limit-4-0,synthetic/accounts,"Caso controlado original, scripts/corpus.py",config/application.properties,train/rate_limit/4,Properties,train,0,0,,,accounts.request.rate.limit=true
+accounts-rate_limit-4-1,synthetic/accounts,"Caso controlado original, scripts/corpus.py",config/application.properties,train/rate_limit/4,Properties,train,0,1,rate_limit,A06:2025,accounts.request.rate.limit=false
+accounts-expiration-1-0,synthetic/accounts,"Caso controlado original, scripts/corpus.py",api/policies.py,train/expiration/1,Python,train,1,0,,,accounts_verify_expiration = True
+accounts-expiration-1-1,synthetic/accounts,"Caso controlado original, scripts/corpus.py",api/policies.py,train/expiration/1,Python,train,1,1,expiration,A07:2025|API2:2023,accounts_verify_expiration = False
+accounts-expiration-2-0,synthetic/accounts,"Caso controlado original, scripts/corpus.py",api/policies.js,train/expiration/2,JavaScript,train,1,0,,,const accountsRequireTokenExpiration = true;
+accounts-expiration-2-1,synthetic/accounts,"Caso controlado original, scripts/corpus.py",api/policies.js,train/expiration/2,JavaScript,train,1,1,expiration,A07:2025|API2:2023,const accountsRequireTokenExpiration = false;
+accounts-expiration-3-0,synthetic/accounts,"Caso controlado original, scripts/corpus.py",config/application.yml,train/expiration/3,YAML,train,1,0,,,accounts_session_ttl: 90
+accounts-expiration-3-1,synthetic/accounts,"Caso controlado original, scripts/corpus.py",config/application.yml,train/expiration/3,YAML,train,1,1,expiration,A07:2025|API2:2023,accounts_session_ttl: 0
+accounts-expiration-4-0,synthetic/accounts,"Caso controlado original, scripts/corpus.py",config/application.properties,train/expiration/4,Properties,train,0,0,,,accounts.session.expiration.required=true
+accounts-expiration-4-1,synthetic/accounts,"Caso controlado original, scripts/corpus.py",config/application.properties,train/expiration/4,Properties,train,0,1,expiration,A07:2025,accounts.session.expiration.required=false
+training-ownership-1-0,synthetic/training,"Caso controlado original, scripts/corpus.py",api/policies.py,train/ownership/1,Python,train,1,0,,,training_verify_object_owner = True
+training-ownership-1-1,synthetic/training,"Caso controlado original, scripts/corpus.py",api/policies.py,train/ownership/1,Python,train,1,1,ownership,A01:2025|API1:2023,training_verify_object_owner = False
+training-ownership-2-0,synthetic/training,"Caso controlado original, scripts/corpus.py",api/policies.js,train/ownership/2,JavaScript,train,1,0,,,const trainingObjectOwnerCheck = true;
+training-ownership-2-1,synthetic/training,"Caso controlado original, scripts/corpus.py",api/policies.js,train/ownership/2,JavaScript,train,1,1,ownership,A01:2025|API1:2023,const trainingObjectOwnerCheck = false;
+training-ownership-3-0,synthetic/training,"Caso controlado original, scripts/corpus.py",config/application.yml,train/ownership/3,YAML,train,1,0,,,training_require_ownership: true
+training-ownership-3-1,synthetic/training,"Caso controlado original, scripts/corpus.py",config/application.yml,train/ownership/3,YAML,train,1,1,ownership,A01:2025|API1:2023,training_require_ownership: false
+training-ownership-4-0,synthetic/training,"Caso controlado original, scripts/corpus.py",config/application.properties,train/ownership/4,Properties,train,1,0,,,training.resource.owner.verify=true
+training-ownership-4-1,synthetic/training,"Caso controlado original, scripts/corpus.py",config/application.properties,train/ownership/4,Properties,train,1,1,ownership,A01:2025|API1:2023,training.resource.owner.verify=false
+training-debug-1-0,synthetic/training,"Caso controlado original, scripts/corpus.py",api/policies.py,train/debug/1,Python,train,1,0,,,training_debug = False
+training-debug-1-1,synthetic/training,"Caso controlado original, scripts/corpus.py",api/policies.py,train/debug/1,Python,train,1,1,debug,A02:2025|API8:2023,training_debug = True
+training-debug-2-0,synthetic/training,"Caso controlado original, scripts/corpus.py",api/policies.js,train/debug/2,JavaScript,train,1,0,,,const trainingDebugMode = false;
+training-debug-2-1,synthetic/training,"Caso controlado original, scripts/corpus.py",api/policies.js,train/debug/2,JavaScript,train,1,1,debug,A02:2025|API8:2023,const trainingDebugMode = true;
+training-debug-3-0,synthetic/training,"Caso controlado original, scripts/corpus.py",config/application.yml,train/debug/3,YAML,train,1,0,,,training_debug_diagnostics: false
+training-debug-3-1,synthetic/training,"Caso controlado original, scripts/corpus.py",config/application.yml,train/debug/3,YAML,train,1,1,debug,A02:2025|API8:2023,training_debug_diagnostics: true
+training-debug-4-0,synthetic/training,"Caso controlado original, scripts/corpus.py",config/application.properties,train/debug/4,Properties,train,1,0,,,training.server.debug.enabled=false
+training-debug-4-1,synthetic/training,"Caso controlado original, scripts/corpus.py",config/application.properties,train/debug/4,Properties,train,1,1,debug,A02:2025|API8:2023,training.server.debug.enabled=true
+training-transport-1-0,synthetic/training,"Caso controlado original, scripts/corpus.py",api/policies.py,train/transport/1,Python,train,1,0,,,training_require_tls = True
+training-transport-1-1,synthetic/training,"Caso controlado original, scripts/corpus.py",api/policies.py,train/transport/1,Python,train,1,1,transport,A04:2025,training_require_tls = False
+training-transport-2-0,synthetic/training,"Caso controlado original, scripts/corpus.py",api/policies.js,train/transport/2,JavaScript,train,1,0,,,const trainingTlsRequired = true;
+training-transport-2-1,synthetic/training,"Caso controlado original, scripts/corpus.py",api/policies.js,train/transport/2,JavaScript,train,1,1,transport,A04:2025,const trainingTlsRequired = false;
+training-transport-3-0,synthetic/training,"Caso controlado original, scripts/corpus.py",config/application.yml,train/transport/3,YAML,train,1,0,,,training_enforce_https: true
+training-transport-3-1,synthetic/training,"Caso controlado original, scripts/corpus.py",config/application.yml,train/transport/3,YAML,train,1,1,transport,A04:2025,training_enforce_https: false
+training-transport-4-0,synthetic/training,"Caso controlado original, scripts/corpus.py",config/application.properties,train/transport/4,Properties,train,1,0,,,training.transport.encryption.required=true
+training-transport-4-1,synthetic/training,"Caso controlado original, scripts/corpus.py",config/application.properties,train/transport/4,Properties,train,1,1,transport,A04:2025,training.transport.encryption.required=false
+training-rate_limit-1-0,synthetic/training,"Caso controlado original, scripts/corpus.py",api/policies.py,train/rate_limit/1,Python,train,1,0,,,training_rate_limit_enabled = True
+training-rate_limit-1-1,synthetic/training,"Caso controlado original, scripts/corpus.py",api/policies.py,train/rate_limit/1,Python,train,1,1,rate_limit,A06:2025|API4:2023,training_rate_limit_enabled = False
+training-rate_limit-2-0,synthetic/training,"Caso controlado original, scripts/corpus.py",api/policies.js,train/rate_limit/2,JavaScript,train,1,0,,,const trainingEnforceRateLimit = true;
+training-rate_limit-2-1,synthetic/training,"Caso controlado original, scripts/corpus.py",api/policies.js,train/rate_limit/2,JavaScript,train,1,1,rate_limit,A06:2025|API4:2023,const trainingEnforceRateLimit = false;
+training-rate_limit-3-0,synthetic/training,"Caso controlado original, scripts/corpus.py",config/application.yml,train/rate_limit/3,YAML,train,1,0,,,training_request_limit: 95
+training-rate_limit-3-1,synthetic/training,"Caso controlado original, scripts/corpus.py",config/application.yml,train/rate_limit/3,YAML,train,1,1,rate_limit,A06:2025|API4:2023,training_request_limit: 0
+training-rate_limit-4-0,synthetic/training,"Caso controlado original, scripts/corpus.py",config/application.properties,train/rate_limit/4,Properties,train,1,0,,,training.request.rate.limit=true
+training-rate_limit-4-1,synthetic/training,"Caso controlado original, scripts/corpus.py",config/application.properties,train/rate_limit/4,Properties,train,1,1,rate_limit,A06:2025|API4:2023,training.request.rate.limit=false
+training-expiration-1-0,synthetic/training,"Caso controlado original, scripts/corpus.py",api/policies.py,train/expiration/1,Python,train,1,0,,,training_verify_expiration = True
+training-expiration-1-1,synthetic/training,"Caso controlado original, scripts/corpus.py",api/policies.py,train/expiration/1,Python,train,1,1,expiration,A07:2025|API2:2023,training_verify_expiration = False
+training-expiration-2-0,synthetic/training,"Caso controlado original, scripts/corpus.py",api/policies.js,train/expiration/2,JavaScript,train,1,0,,,const trainingRequireTokenExpiration = true;
+training-expiration-2-1,synthetic/training,"Caso controlado original, scripts/corpus.py",api/policies.js,train/expiration/2,JavaScript,train,1,1,expiration,A07:2025|API2:2023,const trainingRequireTokenExpiration = false;
+training-expiration-3-0,synthetic/training,"Caso controlado original, scripts/corpus.py",config/application.yml,train/expiration/3,YAML,train,1,0,,,training_session_ttl: 95
+training-expiration-3-1,synthetic/training,"Caso controlado original, scripts/corpus.py",config/application.yml,train/expiration/3,YAML,train,1,1,expiration,A07:2025|API2:2023,training_session_ttl: 0
+training-expiration-4-0,synthetic/training,"Caso controlado original, scripts/corpus.py",config/application.properties,train/expiration/4,Properties,train,1,0,,,training.session.expiration.required=true
+training-expiration-4-1,synthetic/training,"Caso controlado original, scripts/corpus.py",config/application.properties,train/expiration/4,Properties,train,1,1,expiration,A07:2025|API2:2023,training.session.expiration.required=false
+offers-ownership-1-0,synthetic/offers,"Caso controlado original, scripts/corpus.py",api/policies.py,train/ownership/1,Python,train,1,0,,,offers_verify_object_owner = True
+offers-ownership-1-1,synthetic/offers,"Caso controlado original, scripts/corpus.py",api/policies.py,train/ownership/1,Python,train,1,1,ownership,A01:2025|API1:2023,offers_verify_object_owner = False
+offers-ownership-2-0,synthetic/offers,"Caso controlado original, scripts/corpus.py",api/policies.js,train/ownership/2,JavaScript,train,1,0,,,const offersObjectOwnerCheck = true;
+offers-ownership-2-1,synthetic/offers,"Caso controlado original, scripts/corpus.py",api/policies.js,train/ownership/2,JavaScript,train,1,1,ownership,A01:2025|API1:2023,const offersObjectOwnerCheck = false;
+offers-ownership-3-0,synthetic/offers,"Caso controlado original, scripts/corpus.py",config/application.yml,train/ownership/3,YAML,train,1,0,,,offers_require_ownership: true
+offers-ownership-3-1,synthetic/offers,"Caso controlado original, scripts/corpus.py",config/application.yml,train/ownership/3,YAML,train,1,1,ownership,A01:2025|API1:2023,offers_require_ownership: false
+offers-ownership-4-0,synthetic/offers,"Caso controlado original, scripts/corpus.py",config/application.properties,train/ownership/4,Properties,train,0,0,,,offers.resource.owner.verify=true
+offers-ownership-4-1,synthetic/offers,"Caso controlado original, scripts/corpus.py",config/application.properties,train/ownership/4,Properties,train,0,1,ownership,A01:2025,offers.resource.owner.verify=false
+offers-debug-1-0,synthetic/offers,"Caso controlado original, scripts/corpus.py",api/policies.py,train/debug/1,Python,train,1,0,,,offers_debug = False
+offers-debug-1-1,synthetic/offers,"Caso controlado original, scripts/corpus.py",api/policies.py,train/debug/1,Python,train,1,1,debug,A02:2025|API8:2023,offers_debug = True
+offers-debug-2-0,synthetic/offers,"Caso controlado original, scripts/corpus.py",api/policies.js,train/debug/2,JavaScript,train,1,0,,,const offersDebugMode = false;
+offers-debug-2-1,synthetic/offers,"Caso controlado original, scripts/corpus.py",api/policies.js,train/debug/2,JavaScript,train,1,1,debug,A02:2025|API8:2023,const offersDebugMode = true;
+offers-debug-3-0,synthetic/offers,"Caso controlado original, scripts/corpus.py",config/application.yml,train/debug/3,YAML,train,1,0,,,offers_debug_diagnostics: false
+offers-debug-3-1,synthetic/offers,"Caso controlado original, scripts/corpus.py",config/application.yml,train/debug/3,YAML,train,1,1,debug,A02:2025|API8:2023,offers_debug_diagnostics: true
+offers-debug-4-0,synthetic/offers,"Caso controlado original, scripts/corpus.py",config/application.properties,train/debug/4,Properties,train,0,0,,,offers.server.debug.enabled=false
+offers-debug-4-1,synthetic/offers,"Caso controlado original, scripts/corpus.py",config/application.properties,train/debug/4,Properties,train,0,1,debug,A02:2025,offers.server.debug.enabled=true
+offers-transport-1-0,synthetic/offers,"Caso controlado original, scripts/corpus.py",api/policies.py,train/transport/1,Python,train,1,0,,,offers_require_tls = True
+offers-transport-1-1,synthetic/offers,"Caso controlado original, scripts/corpus.py",api/policies.py,train/transport/1,Python,train,1,1,transport,A04:2025,offers_require_tls = False
+offers-transport-2-0,synthetic/offers,"Caso controlado original, scripts/corpus.py",api/policies.js,train/transport/2,JavaScript,train,1,0,,,const offersTlsRequired = true;
+offers-transport-2-1,synthetic/offers,"Caso controlado original, scripts/corpus.py",api/policies.js,train/transport/2,JavaScript,train,1,1,transport,A04:2025,const offersTlsRequired = false;
+offers-transport-3-0,synthetic/offers,"Caso controlado original, scripts/corpus.py",config/application.yml,train/transport/3,YAML,train,1,0,,,offers_enforce_https: true
+offers-transport-3-1,synthetic/offers,"Caso controlado original, scripts/corpus.py",config/application.yml,train/transport/3,YAML,train,1,1,transport,A04:2025,offers_enforce_https: false
+offers-transport-4-0,synthetic/offers,"Caso controlado original, scripts/corpus.py",config/application.properties,train/transport/4,Properties,train,0,0,,,offers.transport.encryption.required=true
+offers-transport-4-1,synthetic/offers,"Caso controlado original, scripts/corpus.py",config/application.properties,train/transport/4,Properties,train,0,1,transport,A04:2025,offers.transport.encryption.required=false
+offers-rate_limit-1-0,synthetic/offers,"Caso controlado original, scripts/corpus.py",api/policies.py,train/rate_limit/1,Python,train,1,0,,,offers_rate_limit_enabled = True
+offers-rate_limit-1-1,synthetic/offers,"Caso controlado original, scripts/corpus.py",api/policies.py,train/rate_limit/1,Python,train,1,1,rate_limit,A06:2025|API4:2023,offers_rate_limit_enabled = False
+offers-rate_limit-2-0,synthetic/offers,"Caso controlado original, scripts/corpus.py",api/policies.js,train/rate_limit/2,JavaScript,train,1,0,,,const offersEnforceRateLimit = true;
+offers-rate_limit-2-1,synthetic/offers,"Caso controlado original, scripts/corpus.py",api/policies.js,train/rate_limit/2,JavaScript,train,1,1,rate_limit,A06:2025|API4:2023,const offersEnforceRateLimit = false;
+offers-rate_limit-3-0,synthetic/offers,"Caso controlado original, scripts/corpus.py",config/application.yml,train/rate_limit/3,YAML,train,1,0,,,offers_request_limit: 100
+offers-rate_limit-3-1,synthetic/offers,"Caso controlado original, scripts/corpus.py",config/application.yml,train/rate_limit/3,YAML,train,1,1,rate_limit,A06:2025|API4:2023,offers_request_limit: 0
+offers-rate_limit-4-0,synthetic/offers,"Caso controlado original, scripts/corpus.py",config/application.properties,train/rate_limit/4,Properties,train,0,0,,,offers.request.rate.limit=true
+offers-rate_limit-4-1,synthetic/offers,"Caso controlado original, scripts/corpus.py",config/application.properties,train/rate_limit/4,Properties,train,0,1,rate_limit,A06:2025,offers.request.rate.limit=false
+offers-expiration-1-0,synthetic/offers,"Caso controlado original, scripts/corpus.py",api/policies.py,train/expiration/1,Python,train,1,0,,,offers_verify_expiration = True
+offers-expiration-1-1,synthetic/offers,"Caso controlado original, scripts/corpus.py",api/policies.py,train/expiration/1,Python,train,1,1,expiration,A07:2025|API2:2023,offers_verify_expiration = False
+offers-expiration-2-0,synthetic/offers,"Caso controlado original, scripts/corpus.py",api/policies.js,train/expiration/2,JavaScript,train,1,0,,,const offersRequireTokenExpiration = true;
+offers-expiration-2-1,synthetic/offers,"Caso controlado original, scripts/corpus.py",api/policies.js,train/expiration/2,JavaScript,train,1,1,expiration,A07:2025|API2:2023,const offersRequireTokenExpiration = false;
+offers-expiration-3-0,synthetic/offers,"Caso controlado original, scripts/corpus.py",config/application.yml,train/expiration/3,YAML,train,1,0,,,offers_session_ttl: 100
+offers-expiration-3-1,synthetic/offers,"Caso controlado original, scripts/corpus.py",config/application.yml,train/expiration/3,YAML,train,1,1,expiration,A07:2025|API2:2023,offers_session_ttl: 0
+offers-expiration-4-0,synthetic/offers,"Caso controlado original, scripts/corpus.py",config/application.properties,train/expiration/4,Properties,train,0,0,,,offers.session.expiration.required=true
+offers-expiration-4-1,synthetic/offers,"Caso controlado original, scripts/corpus.py",config/application.properties,train/expiration/4,Properties,train,0,1,expiration,A07:2025,offers.session.expiration.required=false
+support-ownership-1-0,synthetic/support,"Caso controlado original, scripts/corpus.py",api/policies.py,train/ownership/1,Python,train,1,0,,,support_verify_object_owner = True
+support-ownership-1-1,synthetic/support,"Caso controlado original, scripts/corpus.py",api/policies.py,train/ownership/1,Python,train,1,1,ownership,A01:2025|API1:2023,support_verify_object_owner = False
+support-ownership-2-0,synthetic/support,"Caso controlado original, scripts/corpus.py",api/policies.js,train/ownership/2,JavaScript,train,1,0,,,const supportObjectOwnerCheck = true;
+support-ownership-2-1,synthetic/support,"Caso controlado original, scripts/corpus.py",api/policies.js,train/ownership/2,JavaScript,train,1,1,ownership,A01:2025|API1:2023,const supportObjectOwnerCheck = false;
+support-ownership-3-0,synthetic/support,"Caso controlado original, scripts/corpus.py",config/application.yml,train/ownership/3,YAML,train,1,0,,,support_require_ownership: true
+support-ownership-3-1,synthetic/support,"Caso controlado original, scripts/corpus.py",config/application.yml,train/ownership/3,YAML,train,1,1,ownership,A01:2025|API1:2023,support_require_ownership: false
+support-ownership-4-0,synthetic/support,"Caso controlado original, scripts/corpus.py",config/application.properties,train/ownership/4,Properties,train,1,0,,,support.resource.owner.verify=true
+support-ownership-4-1,synthetic/support,"Caso controlado original, scripts/corpus.py",config/application.properties,train/ownership/4,Properties,train,1,1,ownership,A01:2025|API1:2023,support.resource.owner.verify=false
+support-debug-1-0,synthetic/support,"Caso controlado original, scripts/corpus.py",api/policies.py,train/debug/1,Python,train,1,0,,,support_debug = False
+support-debug-1-1,synthetic/support,"Caso controlado original, scripts/corpus.py",api/policies.py,train/debug/1,Python,train,1,1,debug,A02:2025|API8:2023,support_debug = True
+support-debug-2-0,synthetic/support,"Caso controlado original, scripts/corpus.py",api/policies.js,train/debug/2,JavaScript,train,1,0,,,const supportDebugMode = false;
+support-debug-2-1,synthetic/support,"Caso controlado original, scripts/corpus.py",api/policies.js,train/debug/2,JavaScript,train,1,1,debug,A02:2025|API8:2023,const supportDebugMode = true;
+support-debug-3-0,synthetic/support,"Caso controlado original, scripts/corpus.py",config/application.yml,train/debug/3,YAML,train,1,0,,,support_debug_diagnostics: false
+support-debug-3-1,synthetic/support,"Caso controlado original, scripts/corpus.py",config/application.yml,train/debug/3,YAML,train,1,1,debug,A02:2025|API8:2023,support_debug_diagnostics: true
+support-debug-4-0,synthetic/support,"Caso controlado original, scripts/corpus.py",config/application.properties,train/debug/4,Properties,train,1,0,,,support.server.debug.enabled=false
+support-debug-4-1,synthetic/support,"Caso controlado original, scripts/corpus.py",config/application.properties,train/debug/4,Properties,train,1,1,debug,A02:2025|API8:2023,support.server.debug.enabled=true
+support-transport-1-0,synthetic/support,"Caso controlado original, scripts/corpus.py",api/policies.py,train/transport/1,Python,train,1,0,,,support_require_tls = True
+support-transport-1-1,synthetic/support,"Caso controlado original, scripts/corpus.py",api/policies.py,train/transport/1,Python,train,1,1,transport,A04:2025,support_require_tls = False
+support-transport-2-0,synthetic/support,"Caso controlado original, scripts/corpus.py",api/policies.js,train/transport/2,JavaScript,train,1,0,,,const supportTlsRequired = true;
+support-transport-2-1,synthetic/support,"Caso controlado original, scripts/corpus.py",api/policies.js,train/transport/2,JavaScript,train,1,1,transport,A04:2025,const supportTlsRequired = false;
+support-transport-3-0,synthetic/support,"Caso controlado original, scripts/corpus.py",config/application.yml,train/transport/3,YAML,train,1,0,,,support_enforce_https: true
+support-transport-3-1,synthetic/support,"Caso controlado original, scripts/corpus.py",config/application.yml,train/transport/3,YAML,train,1,1,transport,A04:2025,support_enforce_https: false
+support-transport-4-0,synthetic/support,"Caso controlado original, scripts/corpus.py",config/application.properties,train/transport/4,Properties,train,1,0,,,support.transport.encryption.required=true
+support-transport-4-1,synthetic/support,"Caso controlado original, scripts/corpus.py",config/application.properties,train/transport/4,Properties,train,1,1,transport,A04:2025,support.transport.encryption.required=false
+support-rate_limit-1-0,synthetic/support,"Caso controlado original, scripts/corpus.py",api/policies.py,train/rate_limit/1,Python,train,1,0,,,support_rate_limit_enabled = True
+support-rate_limit-1-1,synthetic/support,"Caso controlado original, scripts/corpus.py",api/policies.py,train/rate_limit/1,Python,train,1,1,rate_limit,A06:2025|API4:2023,support_rate_limit_enabled = False
+support-rate_limit-2-0,synthetic/support,"Caso controlado original, scripts/corpus.py",api/policies.js,train/rate_limit/2,JavaScript,train,1,0,,,const supportEnforceRateLimit = true;
+support-rate_limit-2-1,synthetic/support,"Caso controlado original, scripts/corpus.py",api/policies.js,train/rate_limit/2,JavaScript,train,1,1,rate_limit,A06:2025|API4:2023,const supportEnforceRateLimit = false;
+support-rate_limit-3-0,synthetic/support,"Caso controlado original, scripts/corpus.py",config/application.yml,train/rate_limit/3,YAML,train,1,0,,,support_request_limit: 105
+support-rate_limit-3-1,synthetic/support,"Caso controlado original, scripts/corpus.py",config/application.yml,train/rate_limit/3,YAML,train,1,1,rate_limit,A06:2025|API4:2023,support_request_limit: 0
+support-rate_limit-4-0,synthetic/support,"Caso controlado original, scripts/corpus.py",config/application.properties,train/rate_limit/4,Properties,train,1,0,,,support.request.rate.limit=true
+support-rate_limit-4-1,synthetic/support,"Caso controlado original, scripts/corpus.py",config/application.properties,train/rate_limit/4,Properties,train,1,1,rate_limit,A06:2025|API4:2023,support.request.rate.limit=false
+support-expiration-1-0,synthetic/support,"Caso controlado original, scripts/corpus.py",api/policies.py,train/expiration/1,Python,train,1,0,,,support_verify_expiration = True
+support-expiration-1-1,synthetic/support,"Caso controlado original, scripts/corpus.py",api/policies.py,train/expiration/1,Python,train,1,1,expiration,A07:2025|API2:2023,support_verify_expiration = False
+support-expiration-2-0,synthetic/support,"Caso controlado original, scripts/corpus.py",api/policies.js,train/expiration/2,JavaScript,train,1,0,,,const supportRequireTokenExpiration = true;
+support-expiration-2-1,synthetic/support,"Caso controlado original, scripts/corpus.py",api/policies.js,train/expiration/2,JavaScript,train,1,1,expiration,A07:2025|API2:2023,const supportRequireTokenExpiration = false;
+support-expiration-3-0,synthetic/support,"Caso controlado original, scripts/corpus.py",config/application.yml,train/expiration/3,YAML,train,1,0,,,support_session_ttl: 105
+support-expiration-3-1,synthetic/support,"Caso controlado original, scripts/corpus.py",config/application.yml,train/expiration/3,YAML,train,1,1,expiration,A07:2025|API2:2023,support_session_ttl: 0
+support-expiration-4-0,synthetic/support,"Caso controlado original, scripts/corpus.py",config/application.properties,train/expiration/4,Properties,train,1,0,,,support.session.expiration.required=true
+support-expiration-4-1,synthetic/support,"Caso controlado original, scripts/corpus.py",config/application.properties,train/expiration/4,Properties,train,1,1,expiration,A07:2025|API2:2023,support.session.expiration.required=false
+inventory-ownership-1-0,synthetic/inventory,"Caso controlado original, scripts/corpus.py",api/policies.py,train/ownership/1,Python,train,1,0,,,inventory_verify_object_owner = True
+inventory-ownership-1-1,synthetic/inventory,"Caso controlado original, scripts/corpus.py",api/policies.py,train/ownership/1,Python,train,1,1,ownership,A01:2025|API1:2023,inventory_verify_object_owner = False
+inventory-ownership-2-0,synthetic/inventory,"Caso controlado original, scripts/corpus.py",api/policies.js,train/ownership/2,JavaScript,train,1,0,,,const inventoryObjectOwnerCheck = true;
+inventory-ownership-2-1,synthetic/inventory,"Caso controlado original, scripts/corpus.py",api/policies.js,train/ownership/2,JavaScript,train,1,1,ownership,A01:2025|API1:2023,const inventoryObjectOwnerCheck = false;
+inventory-ownership-3-0,synthetic/inventory,"Caso controlado original, scripts/corpus.py",config/application.yml,train/ownership/3,YAML,train,1,0,,,inventory_require_ownership: true
+inventory-ownership-3-1,synthetic/inventory,"Caso controlado original, scripts/corpus.py",config/application.yml,train/ownership/3,YAML,train,1,1,ownership,A01:2025|API1:2023,inventory_require_ownership: false
+inventory-ownership-4-0,synthetic/inventory,"Caso controlado original, scripts/corpus.py",config/application.properties,train/ownership/4,Properties,train,0,0,,,inventory.resource.owner.verify=true
+inventory-ownership-4-1,synthetic/inventory,"Caso controlado original, scripts/corpus.py",config/application.properties,train/ownership/4,Properties,train,0,1,ownership,A01:2025,inventory.resource.owner.verify=false
+inventory-debug-1-0,synthetic/inventory,"Caso controlado original, scripts/corpus.py",api/policies.py,train/debug/1,Python,train,1,0,,,inventory_debug = False
+inventory-debug-1-1,synthetic/inventory,"Caso controlado original, scripts/corpus.py",api/policies.py,train/debug/1,Python,train,1,1,debug,A02:2025|API8:2023,inventory_debug = True
+inventory-debug-2-0,synthetic/inventory,"Caso controlado original, scripts/corpus.py",api/policies.js,train/debug/2,JavaScript,train,1,0,,,const inventoryDebugMode = false;
+inventory-debug-2-1,synthetic/inventory,"Caso controlado original, scripts/corpus.py",api/policies.js,train/debug/2,JavaScript,train,1,1,debug,A02:2025|API8:2023,const inventoryDebugMode = true;
+inventory-debug-3-0,synthetic/inventory,"Caso controlado original, scripts/corpus.py",config/application.yml,train/debug/3,YAML,train,1,0,,,inventory_debug_diagnostics: false
+inventory-debug-3-1,synthetic/inventory,"Caso controlado original, scripts/corpus.py",config/application.yml,train/debug/3,YAML,train,1,1,debug,A02:2025|API8:2023,inventory_debug_diagnostics: true
+inventory-debug-4-0,synthetic/inventory,"Caso controlado original, scripts/corpus.py",config/application.properties,train/debug/4,Properties,train,0,0,,,inventory.server.debug.enabled=false
+inventory-debug-4-1,synthetic/inventory,"Caso controlado original, scripts/corpus.py",config/application.properties,train/debug/4,Properties,train,0,1,debug,A02:2025,inventory.server.debug.enabled=true
+inventory-transport-1-0,synthetic/inventory,"Caso controlado original, scripts/corpus.py",api/policies.py,train/transport/1,Python,train,1,0,,,inventory_require_tls = True
+inventory-transport-1-1,synthetic/inventory,"Caso controlado original, scripts/corpus.py",api/policies.py,train/transport/1,Python,train,1,1,transport,A04:2025,inventory_require_tls = False
+inventory-transport-2-0,synthetic/inventory,"Caso controlado original, scripts/corpus.py",api/policies.js,train/transport/2,JavaScript,train,1,0,,,const inventoryTlsRequired = true;
+inventory-transport-2-1,synthetic/inventory,"Caso controlado original, scripts/corpus.py",api/policies.js,train/transport/2,JavaScript,train,1,1,transport,A04:2025,const inventoryTlsRequired = false;
+inventory-transport-3-0,synthetic/inventory,"Caso controlado original, scripts/corpus.py",config/application.yml,train/transport/3,YAML,train,1,0,,,inventory_enforce_https: true
+inventory-transport-3-1,synthetic/inventory,"Caso controlado original, scripts/corpus.py",config/application.yml,train/transport/3,YAML,train,1,1,transport,A04:2025,inventory_enforce_https: false
+inventory-transport-4-0,synthetic/inventory,"Caso controlado original, scripts/corpus.py",config/application.properties,train/transport/4,Properties,train,0,0,,,inventory.transport.encryption.required=true
+inventory-transport-4-1,synthetic/inventory,"Caso controlado original, scripts/corpus.py",config/application.properties,train/transport/4,Properties,train,0,1,transport,A04:2025,inventory.transport.encryption.required=false
+inventory-rate_limit-1-0,synthetic/inventory,"Caso controlado original, scripts/corpus.py",api/policies.py,train/rate_limit/1,Python,train,1,0,,,inventory_rate_limit_enabled = True
+inventory-rate_limit-1-1,synthetic/inventory,"Caso controlado original, scripts/corpus.py",api/policies.py,train/rate_limit/1,Python,train,1,1,rate_limit,A06:2025|API4:2023,inventory_rate_limit_enabled = False
+inventory-rate_limit-2-0,synthetic/inventory,"Caso controlado original, scripts/corpus.py",api/policies.js,train/rate_limit/2,JavaScript,train,1,0,,,const inventoryEnforceRateLimit = true;
+inventory-rate_limit-2-1,synthetic/inventory,"Caso controlado original, scripts/corpus.py",api/policies.js,train/rate_limit/2,JavaScript,train,1,1,rate_limit,A06:2025|API4:2023,const inventoryEnforceRateLimit = false;
+inventory-rate_limit-3-0,synthetic/inventory,"Caso controlado original, scripts/corpus.py",config/application.yml,train/rate_limit/3,YAML,train,1,0,,,inventory_request_limit: 110
+inventory-rate_limit-3-1,synthetic/inventory,"Caso controlado original, scripts/corpus.py",config/application.yml,train/rate_limit/3,YAML,train,1,1,rate_limit,A06:2025|API4:2023,inventory_request_limit: 0
+inventory-rate_limit-4-0,synthetic/inventory,"Caso controlado original, scripts/corpus.py",config/application.properties,train/rate_limit/4,Properties,train,0,0,,,inventory.request.rate.limit=true
+inventory-rate_limit-4-1,synthetic/inventory,"Caso controlado original, scripts/corpus.py",config/application.properties,train/rate_limit/4,Properties,train,0,1,rate_limit,A06:2025,inventory.request.rate.limit=false
+inventory-expiration-1-0,synthetic/inventory,"Caso controlado original, scripts/corpus.py",api/policies.py,train/expiration/1,Python,train,1,0,,,inventory_verify_expiration = True
+inventory-expiration-1-1,synthetic/inventory,"Caso controlado original, scripts/corpus.py",api/policies.py,train/expiration/1,Python,train,1,1,expiration,A07:2025|API2:2023,inventory_verify_expiration = False
+inventory-expiration-2-0,synthetic/inventory,"Caso controlado original, scripts/corpus.py",api/policies.js,train/expiration/2,JavaScript,train,1,0,,,const inventoryRequireTokenExpiration = true;
+inventory-expiration-2-1,synthetic/inventory,"Caso controlado original, scripts/corpus.py",api/policies.js,train/expiration/2,JavaScript,train,1,1,expiration,A07:2025|API2:2023,const inventoryRequireTokenExpiration = false;
+inventory-expiration-3-0,synthetic/inventory,"Caso controlado original, scripts/corpus.py",config/application.yml,train/expiration/3,YAML,train,1,0,,,inventory_session_ttl: 110
+inventory-expiration-3-1,synthetic/inventory,"Caso controlado original, scripts/corpus.py",config/application.yml,train/expiration/3,YAML,train,1,1,expiration,A07:2025|API2:2023,inventory_session_ttl: 0
+inventory-expiration-4-0,synthetic/inventory,"Caso controlado original, scripts/corpus.py",config/application.properties,train/expiration/4,Properties,train,0,0,,,inventory.session.expiration.required=true
+inventory-expiration-4-1,synthetic/inventory,"Caso controlado original, scripts/corpus.py",config/application.properties,train/expiration/4,Properties,train,0,1,expiration,A07:2025,inventory.session.expiration.required=false
+travel-ownership-1-0,synthetic/travel,"Caso controlado original, scripts/corpus.py",api/policies.py,validation/ownership/1,Python,validation,1,0,,,travel_require_object_ownership = True
+travel-ownership-1-1,synthetic/travel,"Caso controlado original, scripts/corpus.py",api/policies.py,validation/ownership/1,Python,validation,1,1,ownership,A01:2025|API1:2023,travel_require_object_ownership = False
+travel-ownership-2-0,synthetic/travel,"Caso controlado original, scripts/corpus.py",api/policies.js,validation/ownership/2,JavaScript,validation,1,0,,,const travelVerifyResourceOwner = true;
+travel-ownership-2-1,synthetic/travel,"Caso controlado original, scripts/corpus.py",api/policies.js,validation/ownership/2,JavaScript,validation,1,1,ownership,A01:2025|API1:2023,const travelVerifyResourceOwner = false;
+travel-ownership-3-0,synthetic/travel,"Caso controlado original, scripts/corpus.py",config/application.yml,validation/ownership/3,YAML,validation,1,0,,,travel_owner_verify_required: true
+travel-ownership-3-1,synthetic/travel,"Caso controlado original, scripts/corpus.py",config/application.yml,validation/ownership/3,YAML,validation,1,1,ownership,A01:2025|API1:2023,travel_owner_verify_required: false
+travel-ownership-4-0,synthetic/travel,"Caso controlado original, scripts/corpus.py",config/application.properties,validation/ownership/4,Properties,validation,1,0,,,travel.object.owner.check=true
+travel-ownership-4-1,synthetic/travel,"Caso controlado original, scripts/corpus.py",config/application.properties,validation/ownership/4,Properties,validation,1,1,ownership,A01:2025|API1:2023,travel.object.owner.check=false
+travel-debug-1-0,synthetic/travel,"Caso controlado original, scripts/corpus.py",api/policies.py,validation/debug/1,Python,validation,1,0,,,travel_debug_mode_enabled = False
+travel-debug-1-1,synthetic/travel,"Caso controlado original, scripts/corpus.py",api/policies.py,validation/debug/1,Python,validation,1,1,debug,A02:2025|API8:2023,travel_debug_mode_enabled = True
+travel-debug-2-0,synthetic/travel,"Caso controlado original, scripts/corpus.py",api/policies.js,validation/debug/2,JavaScript,validation,1,0,,,const travelEnableDebug = false;
+travel-debug-2-1,synthetic/travel,"Caso controlado original, scripts/corpus.py",api/policies.js,validation/debug/2,JavaScript,validation,1,1,debug,A02:2025|API8:2023,const travelEnableDebug = true;
+travel-debug-3-0,synthetic/travel,"Caso controlado original, scripts/corpus.py",config/application.yml,validation/debug/3,YAML,validation,1,0,,,travel_show_tracebacks: false
+travel-debug-3-1,synthetic/travel,"Caso controlado original, scripts/corpus.py",config/application.yml,validation/debug/3,YAML,validation,1,1,debug,A02:2025|API8:2023,travel_show_tracebacks: true
+travel-debug-4-0,synthetic/travel,"Caso controlado original, scripts/corpus.py",config/application.properties,validation/debug/4,Properties,validation,1,0,,,travel.service.debug.enable=false
+travel-debug-4-1,synthetic/travel,"Caso controlado original, scripts/corpus.py",config/application.properties,validation/debug/4,Properties,validation,1,1,debug,A02:2025|API8:2023,travel.service.debug.enable=true
+travel-transport-1-0,synthetic/travel,"Caso controlado original, scripts/corpus.py",api/policies.py,validation/transport/1,Python,validation,1,0,,,travel_require_https_transport = True
+travel-transport-1-1,synthetic/travel,"Caso controlado original, scripts/corpus.py",api/policies.py,validation/transport/1,Python,validation,1,1,transport,A04:2025,travel_require_https_transport = False
+travel-transport-2-0,synthetic/travel,"Caso controlado original, scripts/corpus.py",api/policies.js,validation/transport/2,JavaScript,validation,1,0,,,const travelEnforceTLS = true;
+travel-transport-2-1,synthetic/travel,"Caso controlado original, scripts/corpus.py",api/policies.js,validation/transport/2,JavaScript,validation,1,1,transport,A04:2025,const travelEnforceTLS = false;
+travel-transport-3-0,synthetic/travel,"Caso controlado original, scripts/corpus.py",config/application.yml,validation/transport/3,YAML,validation,1,0,,,travel_tls_encryption_required: true
+travel-transport-3-1,synthetic/travel,"Caso controlado original, scripts/corpus.py",config/application.yml,validation/transport/3,YAML,validation,1,1,transport,A04:2025,travel_tls_encryption_required: false
+travel-transport-4-0,synthetic/travel,"Caso controlado original, scripts/corpus.py",config/application.properties,validation/transport/4,Properties,validation,1,0,,,travel.network.tls.require=true
+travel-transport-4-1,synthetic/travel,"Caso controlado original, scripts/corpus.py",config/application.properties,validation/transport/4,Properties,validation,1,1,transport,A04:2025,travel.network.tls.require=false
+travel-rate_limit-1-0,synthetic/travel,"Caso controlado original, scripts/corpus.py",api/policies.py,validation/rate_limit/1,Python,validation,1,0,,,travel_enable_request_throttle = True
+travel-rate_limit-1-1,synthetic/travel,"Caso controlado original, scripts/corpus.py",api/policies.py,validation/rate_limit/1,Python,validation,1,1,rate_limit,A06:2025|API4:2023,travel_enable_request_throttle = False
+travel-rate_limit-2-0,synthetic/travel,"Caso controlado original, scripts/corpus.py",api/policies.js,validation/rate_limit/2,JavaScript,validation,1,0,,,const travelRequestRateLimit = true;
+travel-rate_limit-2-1,synthetic/travel,"Caso controlado original, scripts/corpus.py",api/policies.js,validation/rate_limit/2,JavaScript,validation,1,1,rate_limit,A06:2025|API4:2023,const travelRequestRateLimit = false;
+travel-rate_limit-3-0,synthetic/travel,"Caso controlado original, scripts/corpus.py",config/application.yml,validation/rate_limit/3,YAML,validation,1,0,,,travel_rate_limit: 45
+travel-rate_limit-3-1,synthetic/travel,"Caso controlado original, scripts/corpus.py",config/application.yml,validation/rate_limit/3,YAML,validation,1,1,rate_limit,A06:2025|API4:2023,travel_rate_limit: 0
+travel-rate_limit-4-0,synthetic/travel,"Caso controlado original, scripts/corpus.py",config/application.properties,validation/rate_limit/4,Properties,validation,1,0,,,travel.requests.quota.limit=true
+travel-rate_limit-4-1,synthetic/travel,"Caso controlado original, scripts/corpus.py",config/application.properties,validation/rate_limit/4,Properties,validation,1,1,rate_limit,A06:2025|API4:2023,travel.requests.quota.limit=false
+travel-expiration-1-0,synthetic/travel,"Caso controlado original, scripts/corpus.py",api/policies.py,validation/expiration/1,Python,validation,1,0,,,travel_verify_token_expiry = True
+travel-expiration-1-1,synthetic/travel,"Caso controlado original, scripts/corpus.py",api/policies.py,validation/expiration/1,Python,validation,1,1,expiration,A07:2025|API2:2023,travel_verify_token_expiry = False
+travel-expiration-2-0,synthetic/travel,"Caso controlado original, scripts/corpus.py",api/policies.js,validation/expiration/2,JavaScript,validation,1,0,,,const travelValidateSessionExpiration = true;
+travel-expiration-2-1,synthetic/travel,"Caso controlado original, scripts/corpus.py",api/policies.js,validation/expiration/2,JavaScript,validation,1,1,expiration,A07:2025|API2:2023,const travelValidateSessionExpiration = false;
+travel-expiration-3-0,synthetic/travel,"Caso controlado original, scripts/corpus.py",config/application.yml,validation/expiration/3,YAML,validation,1,0,,,travel_token_ttl_seconds: 45
+travel-expiration-3-1,synthetic/travel,"Caso controlado original, scripts/corpus.py",config/application.yml,validation/expiration/3,YAML,validation,1,1,expiration,A07:2025|API2:2023,travel_token_ttl_seconds: 0
+travel-expiration-4-0,synthetic/travel,"Caso controlado original, scripts/corpus.py",config/application.properties,validation/expiration/4,Properties,validation,1,0,,,travel.auth.expiry.required=true
+travel-expiration-4-1,synthetic/travel,"Caso controlado original, scripts/corpus.py",config/application.properties,validation/expiration/4,Properties,validation,1,1,expiration,A07:2025|API2:2023,travel.auth.expiry.required=false
+books-ownership-1-0,synthetic/books,"Caso controlado original, scripts/corpus.py",api/policies.py,validation/ownership/1,Python,validation,1,0,,,books_require_object_ownership = True
+books-ownership-1-1,synthetic/books,"Caso controlado original, scripts/corpus.py",api/policies.py,validation/ownership/1,Python,validation,1,1,ownership,A01:2025|API1:2023,books_require_object_ownership = False
+books-ownership-2-0,synthetic/books,"Caso controlado original, scripts/corpus.py",api/policies.js,validation/ownership/2,JavaScript,validation,1,0,,,const booksVerifyResourceOwner = true;
+books-ownership-2-1,synthetic/books,"Caso controlado original, scripts/corpus.py",api/policies.js,validation/ownership/2,JavaScript,validation,1,1,ownership,A01:2025|API1:2023,const booksVerifyResourceOwner = false;
+books-ownership-3-0,synthetic/books,"Caso controlado original, scripts/corpus.py",config/application.yml,validation/ownership/3,YAML,validation,1,0,,,books_owner_verify_required: true
+books-ownership-3-1,synthetic/books,"Caso controlado original, scripts/corpus.py",config/application.yml,validation/ownership/3,YAML,validation,1,1,ownership,A01:2025|API1:2023,books_owner_verify_required: false
+books-ownership-4-0,synthetic/books,"Caso controlado original, scripts/corpus.py",config/application.properties,validation/ownership/4,Properties,validation,0,0,,,books.object.owner.check=true
+books-ownership-4-1,synthetic/books,"Caso controlado original, scripts/corpus.py",config/application.properties,validation/ownership/4,Properties,validation,0,1,ownership,A01:2025,books.object.owner.check=false
+books-debug-1-0,synthetic/books,"Caso controlado original, scripts/corpus.py",api/policies.py,validation/debug/1,Python,validation,1,0,,,books_debug_mode_enabled = False
+books-debug-1-1,synthetic/books,"Caso controlado original, scripts/corpus.py",api/policies.py,validation/debug/1,Python,validation,1,1,debug,A02:2025|API8:2023,books_debug_mode_enabled = True
+books-debug-2-0,synthetic/books,"Caso controlado original, scripts/corpus.py",api/policies.js,validation/debug/2,JavaScript,validation,1,0,,,const booksEnableDebug = false;
+books-debug-2-1,synthetic/books,"Caso controlado original, scripts/corpus.py",api/policies.js,validation/debug/2,JavaScript,validation,1,1,debug,A02:2025|API8:2023,const booksEnableDebug = true;
+books-debug-3-0,synthetic/books,"Caso controlado original, scripts/corpus.py",config/application.yml,validation/debug/3,YAML,validation,1,0,,,books_show_tracebacks: false
+books-debug-3-1,synthetic/books,"Caso controlado original, scripts/corpus.py",config/application.yml,validation/debug/3,YAML,validation,1,1,debug,A02:2025|API8:2023,books_show_tracebacks: true
+books-debug-4-0,synthetic/books,"Caso controlado original, scripts/corpus.py",config/application.properties,validation/debug/4,Properties,validation,0,0,,,books.service.debug.enable=false
+books-debug-4-1,synthetic/books,"Caso controlado original, scripts/corpus.py",config/application.properties,validation/debug/4,Properties,validation,0,1,debug,A02:2025,books.service.debug.enable=true
+books-transport-1-0,synthetic/books,"Caso controlado original, scripts/corpus.py",api/policies.py,validation/transport/1,Python,validation,1,0,,,books_require_https_transport = True
+books-transport-1-1,synthetic/books,"Caso controlado original, scripts/corpus.py",api/policies.py,validation/transport/1,Python,validation,1,1,transport,A04:2025,books_require_https_transport = False
+books-transport-2-0,synthetic/books,"Caso controlado original, scripts/corpus.py",api/policies.js,validation/transport/2,JavaScript,validation,1,0,,,const booksEnforceTLS = true;
+books-transport-2-1,synthetic/books,"Caso controlado original, scripts/corpus.py",api/policies.js,validation/transport/2,JavaScript,validation,1,1,transport,A04:2025,const booksEnforceTLS = false;
+books-transport-3-0,synthetic/books,"Caso controlado original, scripts/corpus.py",config/application.yml,validation/transport/3,YAML,validation,1,0,,,books_tls_encryption_required: true
+books-transport-3-1,synthetic/books,"Caso controlado original, scripts/corpus.py",config/application.yml,validation/transport/3,YAML,validation,1,1,transport,A04:2025,books_tls_encryption_required: false
+books-transport-4-0,synthetic/books,"Caso controlado original, scripts/corpus.py",config/application.properties,validation/transport/4,Properties,validation,0,0,,,books.network.tls.require=true
+books-transport-4-1,synthetic/books,"Caso controlado original, scripts/corpus.py",config/application.properties,validation/transport/4,Properties,validation,0,1,transport,A04:2025,books.network.tls.require=false
+books-rate_limit-1-0,synthetic/books,"Caso controlado original, scripts/corpus.py",api/policies.py,validation/rate_limit/1,Python,validation,1,0,,,books_enable_request_throttle = True
+books-rate_limit-1-1,synthetic/books,"Caso controlado original, scripts/corpus.py",api/policies.py,validation/rate_limit/1,Python,validation,1,1,rate_limit,A06:2025|API4:2023,books_enable_request_throttle = False
+books-rate_limit-2-0,synthetic/books,"Caso controlado original, scripts/corpus.py",api/policies.js,validation/rate_limit/2,JavaScript,validation,1,0,,,const booksRequestRateLimit = true;
+books-rate_limit-2-1,synthetic/books,"Caso controlado original, scripts/corpus.py",api/policies.js,validation/rate_limit/2,JavaScript,validation,1,1,rate_limit,A06:2025|API4:2023,const booksRequestRateLimit = false;
+books-rate_limit-3-0,synthetic/books,"Caso controlado original, scripts/corpus.py",config/application.yml,validation/rate_limit/3,YAML,validation,1,0,,,books_rate_limit: 50
+books-rate_limit-3-1,synthetic/books,"Caso controlado original, scripts/corpus.py",config/application.yml,validation/rate_limit/3,YAML,validation,1,1,rate_limit,A06:2025|API4:2023,books_rate_limit: 0
+books-rate_limit-4-0,synthetic/books,"Caso controlado original, scripts/corpus.py",config/application.properties,validation/rate_limit/4,Properties,validation,0,0,,,books.requests.quota.limit=true
+books-rate_limit-4-1,synthetic/books,"Caso controlado original, scripts/corpus.py",config/application.properties,validation/rate_limit/4,Properties,validation,0,1,rate_limit,A06:2025,books.requests.quota.limit=false
+books-expiration-1-0,synthetic/books,"Caso controlado original, scripts/corpus.py",api/policies.py,validation/expiration/1,Python,validation,1,0,,,books_verify_token_expiry = True
+books-expiration-1-1,synthetic/books,"Caso controlado original, scripts/corpus.py",api/policies.py,validation/expiration/1,Python,validation,1,1,expiration,A07:2025|API2:2023,books_verify_token_expiry = False
+books-expiration-2-0,synthetic/books,"Caso controlado original, scripts/corpus.py",api/policies.js,validation/expiration/2,JavaScript,validation,1,0,,,const booksValidateSessionExpiration = true;
+books-expiration-2-1,synthetic/books,"Caso controlado original, scripts/corpus.py",api/policies.js,validation/expiration/2,JavaScript,validation,1,1,expiration,A07:2025|API2:2023,const booksValidateSessionExpiration = false;
+books-expiration-3-0,synthetic/books,"Caso controlado original, scripts/corpus.py",config/application.yml,validation/expiration/3,YAML,validation,1,0,,,books_token_ttl_seconds: 50
+books-expiration-3-1,synthetic/books,"Caso controlado original, scripts/corpus.py",config/application.yml,validation/expiration/3,YAML,validation,1,1,expiration,A07:2025|API2:2023,books_token_ttl_seconds: 0
+books-expiration-4-0,synthetic/books,"Caso controlado original, scripts/corpus.py",config/application.properties,validation/expiration/4,Properties,validation,0,0,,,books.auth.expiry.required=true
+books-expiration-4-1,synthetic/books,"Caso controlado original, scripts/corpus.py",config/application.properties,validation/expiration/4,Properties,validation,0,1,expiration,A07:2025,books.auth.expiry.required=false
+archives-ownership-1-0,synthetic/archives,"Caso controlado original, scripts/corpus.py",api/policies.py,validation/ownership/1,Python,validation,1,0,,,archives_require_object_ownership = True
+archives-ownership-1-1,synthetic/archives,"Caso controlado original, scripts/corpus.py",api/policies.py,validation/ownership/1,Python,validation,1,1,ownership,A01:2025|API1:2023,archives_require_object_ownership = False
+archives-ownership-2-0,synthetic/archives,"Caso controlado original, scripts/corpus.py",api/policies.js,validation/ownership/2,JavaScript,validation,1,0,,,const archivesVerifyResourceOwner = true;
+archives-ownership-2-1,synthetic/archives,"Caso controlado original, scripts/corpus.py",api/policies.js,validation/ownership/2,JavaScript,validation,1,1,ownership,A01:2025|API1:2023,const archivesVerifyResourceOwner = false;
+archives-ownership-3-0,synthetic/archives,"Caso controlado original, scripts/corpus.py",config/application.yml,validation/ownership/3,YAML,validation,1,0,,,archives_owner_verify_required: true
+archives-ownership-3-1,synthetic/archives,"Caso controlado original, scripts/corpus.py",config/application.yml,validation/ownership/3,YAML,validation,1,1,ownership,A01:2025|API1:2023,archives_owner_verify_required: false
+archives-ownership-4-0,synthetic/archives,"Caso controlado original, scripts/corpus.py",config/application.properties,validation/ownership/4,Properties,validation,1,0,,,archives.object.owner.check=true
+archives-ownership-4-1,synthetic/archives,"Caso controlado original, scripts/corpus.py",config/application.properties,validation/ownership/4,Properties,validation,1,1,ownership,A01:2025|API1:2023,archives.object.owner.check=false
+archives-debug-1-0,synthetic/archives,"Caso controlado original, scripts/corpus.py",api/policies.py,validation/debug/1,Python,validation,1,0,,,archives_debug_mode_enabled = False
+archives-debug-1-1,synthetic/archives,"Caso controlado original, scripts/corpus.py",api/policies.py,validation/debug/1,Python,validation,1,1,debug,A02:2025|API8:2023,archives_debug_mode_enabled = True
+archives-debug-2-0,synthetic/archives,"Caso controlado original, scripts/corpus.py",api/policies.js,validation/debug/2,JavaScript,validation,1,0,,,const archivesEnableDebug = false;
+archives-debug-2-1,synthetic/archives,"Caso controlado original, scripts/corpus.py",api/policies.js,validation/debug/2,JavaScript,validation,1,1,debug,A02:2025|API8:2023,const archivesEnableDebug = true;
+archives-debug-3-0,synthetic/archives,"Caso controlado original, scripts/corpus.py",config/application.yml,validation/debug/3,YAML,validation,1,0,,,archives_show_tracebacks: false
+archives-debug-3-1,synthetic/archives,"Caso controlado original, scripts/corpus.py",config/application.yml,validation/debug/3,YAML,validation,1,1,debug,A02:2025|API8:2023,archives_show_tracebacks: true
+archives-debug-4-0,synthetic/archives,"Caso controlado original, scripts/corpus.py",config/application.properties,validation/debug/4,Properties,validation,1,0,,,archives.service.debug.enable=false
+archives-debug-4-1,synthetic/archives,"Caso controlado original, scripts/corpus.py",config/application.properties,validation/debug/4,Properties,validation,1,1,debug,A02:2025|API8:2023,archives.service.debug.enable=true
+archives-transport-1-0,synthetic/archives,"Caso controlado original, scripts/corpus.py",api/policies.py,validation/transport/1,Python,validation,1,0,,,archives_require_https_transport = True
+archives-transport-1-1,synthetic/archives,"Caso controlado original, scripts/corpus.py",api/policies.py,validation/transport/1,Python,validation,1,1,transport,A04:2025,archives_require_https_transport = False
+archives-transport-2-0,synthetic/archives,"Caso controlado original, scripts/corpus.py",api/policies.js,validation/transport/2,JavaScript,validation,1,0,,,const archivesEnforceTLS = true;
+archives-transport-2-1,synthetic/archives,"Caso controlado original, scripts/corpus.py",api/policies.js,validation/transport/2,JavaScript,validation,1,1,transport,A04:2025,const archivesEnforceTLS = false;
+archives-transport-3-0,synthetic/archives,"Caso controlado original, scripts/corpus.py",config/application.yml,validation/transport/3,YAML,validation,1,0,,,archives_tls_encryption_required: true
+archives-transport-3-1,synthetic/archives,"Caso controlado original, scripts/corpus.py",config/application.yml,validation/transport/3,YAML,validation,1,1,transport,A04:2025,archives_tls_encryption_required: false
+archives-transport-4-0,synthetic/archives,"Caso controlado original, scripts/corpus.py",config/application.properties,validation/transport/4,Properties,validation,1,0,,,archives.network.tls.require=true
+archives-transport-4-1,synthetic/archives,"Caso controlado original, scripts/corpus.py",config/application.properties,validation/transport/4,Properties,validation,1,1,transport,A04:2025,archives.network.tls.require=false
+archives-rate_limit-1-0,synthetic/archives,"Caso controlado original, scripts/corpus.py",api/policies.py,validation/rate_limit/1,Python,validation,1,0,,,archives_enable_request_throttle = True
+archives-rate_limit-1-1,synthetic/archives,"Caso controlado original, scripts/corpus.py",api/policies.py,validation/rate_limit/1,Python,validation,1,1,rate_limit,A06:2025|API4:2023,archives_enable_request_throttle = False
+archives-rate_limit-2-0,synthetic/archives,"Caso controlado original, scripts/corpus.py",api/policies.js,validation/rate_limit/2,JavaScript,validation,1,0,,,const archivesRequestRateLimit = true;
+archives-rate_limit-2-1,synthetic/archives,"Caso controlado original, scripts/corpus.py",api/policies.js,validation/rate_limit/2,JavaScript,validation,1,1,rate_limit,A06:2025|API4:2023,const archivesRequestRateLimit = false;
+archives-rate_limit-3-0,synthetic/archives,"Caso controlado original, scripts/corpus.py",config/application.yml,validation/rate_limit/3,YAML,validation,1,0,,,archives_rate_limit: 55
+archives-rate_limit-3-1,synthetic/archives,"Caso controlado original, scripts/corpus.py",config/application.yml,validation/rate_limit/3,YAML,validation,1,1,rate_limit,A06:2025|API4:2023,archives_rate_limit: 0
+archives-rate_limit-4-0,synthetic/archives,"Caso controlado original, scripts/corpus.py",config/application.properties,validation/rate_limit/4,Properties,validation,1,0,,,archives.requests.quota.limit=true
+archives-rate_limit-4-1,synthetic/archives,"Caso controlado original, scripts/corpus.py",config/application.properties,validation/rate_limit/4,Properties,validation,1,1,rate_limit,A06:2025|API4:2023,archives.requests.quota.limit=false
+archives-expiration-1-0,synthetic/archives,"Caso controlado original, scripts/corpus.py",api/policies.py,validation/expiration/1,Python,validation,1,0,,,archives_verify_token_expiry = True
+archives-expiration-1-1,synthetic/archives,"Caso controlado original, scripts/corpus.py",api/policies.py,validation/expiration/1,Python,validation,1,1,expiration,A07:2025|API2:2023,archives_verify_token_expiry = False
+archives-expiration-2-0,synthetic/archives,"Caso controlado original, scripts/corpus.py",api/policies.js,validation/expiration/2,JavaScript,validation,1,0,,,const archivesValidateSessionExpiration = true;
+archives-expiration-2-1,synthetic/archives,"Caso controlado original, scripts/corpus.py",api/policies.js,validation/expiration/2,JavaScript,validation,1,1,expiration,A07:2025|API2:2023,const archivesValidateSessionExpiration = false;
+archives-expiration-3-0,synthetic/archives,"Caso controlado original, scripts/corpus.py",config/application.yml,validation/expiration/3,YAML,validation,1,0,,,archives_token_ttl_seconds: 55
+archives-expiration-3-1,synthetic/archives,"Caso controlado original, scripts/corpus.py",config/application.yml,validation/expiration/3,YAML,validation,1,1,expiration,A07:2025|API2:2023,archives_token_ttl_seconds: 0
+archives-expiration-4-0,synthetic/archives,"Caso controlado original, scripts/corpus.py",config/application.properties,validation/expiration/4,Properties,validation,1,0,,,archives.auth.expiry.required=true
+archives-expiration-4-1,synthetic/archives,"Caso controlado original, scripts/corpus.py",config/application.properties,validation/expiration/4,Properties,validation,1,1,expiration,A07:2025|API2:2023,archives.auth.expiry.required=false
+licensing-ownership-1-0,synthetic/licensing,"Caso controlado original, scripts/corpus.py",api/policies.py,test/ownership/1,Python,test,1,0,,,licensing_verify_record_owner = True
+licensing-ownership-1-1,synthetic/licensing,"Caso controlado original, scripts/corpus.py",api/policies.py,test/ownership/1,Python,test,1,1,ownership,A01:2025|API1:2023,licensing_verify_record_owner = False
+licensing-ownership-2-0,synthetic/licensing,"Caso controlado original, scripts/corpus.py",api/policies.js,test/ownership/2,JavaScript,test,1,0,,,const licensingAuthorizeObjectOwner = true;
+licensing-ownership-2-1,synthetic/licensing,"Caso controlado original, scripts/corpus.py",api/policies.js,test/ownership/2,JavaScript,test,1,1,ownership,A01:2025|API1:2023,const licensingAuthorizeObjectOwner = false;
+licensing-ownership-3-0,synthetic/licensing,"Caso controlado original, scripts/corpus.py",config/application.yml,test/ownership/3,YAML,test,1,0,,,licensing_object_ownership_required: true
+licensing-ownership-3-1,synthetic/licensing,"Caso controlado original, scripts/corpus.py",config/application.yml,test/ownership/3,YAML,test,1,1,ownership,A01:2025|API1:2023,licensing_object_ownership_required: false
+licensing-ownership-4-0,synthetic/licensing,"Caso controlado original, scripts/corpus.py",config/application.properties,test/ownership/4,Properties,test,1,0,,,licensing.record.owner.validation=true
+licensing-ownership-4-1,synthetic/licensing,"Caso controlado original, scripts/corpus.py",config/application.properties,test/ownership/4,Properties,test,1,1,ownership,A01:2025|API1:2023,licensing.record.owner.validation=false
+licensing-debug-1-0,synthetic/licensing,"Caso controlado original, scripts/corpus.py",api/policies.py,test/debug/1,Python,test,1,0,,,licensing_debugging_enabled = False
+licensing-debug-1-1,synthetic/licensing,"Caso controlado original, scripts/corpus.py",api/policies.py,test/debug/1,Python,test,1,1,debug,A02:2025|API8:2023,licensing_debugging_enabled = True
+licensing-debug-2-0,synthetic/licensing,"Caso controlado original, scripts/corpus.py",api/policies.js,test/debug/2,JavaScript,test,1,0,,,const licensingDebugDiagnostics = false;
+licensing-debug-2-1,synthetic/licensing,"Caso controlado original, scripts/corpus.py",api/policies.js,test/debug/2,JavaScript,test,1,1,debug,A02:2025|API8:2023,const licensingDebugDiagnostics = true;
+licensing-debug-3-0,synthetic/licensing,"Caso controlado original, scripts/corpus.py",config/application.yml,test/debug/3,YAML,test,1,0,,,licensing_display_debug_traceback: false
+licensing-debug-3-1,synthetic/licensing,"Caso controlado original, scripts/corpus.py",config/application.yml,test/debug/3,YAML,test,1,1,debug,A02:2025|API8:2023,licensing_display_debug_traceback: true
+licensing-debug-4-0,synthetic/licensing,"Caso controlado original, scripts/corpus.py",config/application.properties,test/debug/4,Properties,test,1,0,,,licensing.runtime.debug.mode=false
+licensing-debug-4-1,synthetic/licensing,"Caso controlado original, scripts/corpus.py",config/application.properties,test/debug/4,Properties,test,1,1,debug,A02:2025|API8:2023,licensing.runtime.debug.mode=true
+licensing-transport-1-0,synthetic/licensing,"Caso controlado original, scripts/corpus.py",api/policies.py,test/transport/1,Python,test,1,0,,,licensing_tls_enforced = True
+licensing-transport-1-1,synthetic/licensing,"Caso controlado original, scripts/corpus.py",api/policies.py,test/transport/1,Python,test,1,1,transport,A04:2025,licensing_tls_enforced = False
+licensing-transport-2-0,synthetic/licensing,"Caso controlado original, scripts/corpus.py",api/policies.js,test/transport/2,JavaScript,test,1,0,,,const licensingRequireEncryptedTransport = true;
+licensing-transport-2-1,synthetic/licensing,"Caso controlado original, scripts/corpus.py",api/policies.js,test/transport/2,JavaScript,test,1,1,transport,A04:2025,const licensingRequireEncryptedTransport = false;
+licensing-transport-3-0,synthetic/licensing,"Caso controlado original, scripts/corpus.py",config/application.yml,test/transport/3,YAML,test,1,0,,,licensing_https_required: true
+licensing-transport-3-1,synthetic/licensing,"Caso controlado original, scripts/corpus.py",config/application.yml,test/transport/3,YAML,test,1,1,transport,A04:2025,licensing_https_required: false
+licensing-transport-4-0,synthetic/licensing,"Caso controlado original, scripts/corpus.py",config/application.properties,test/transport/4,Properties,test,1,0,,,licensing.connection.transport.tls.required=true
+licensing-transport-4-1,synthetic/licensing,"Caso controlado original, scripts/corpus.py",config/application.properties,test/transport/4,Properties,test,1,1,transport,A04:2025,licensing.connection.transport.tls.required=false
+licensing-rate_limit-1-0,synthetic/licensing,"Caso controlado original, scripts/corpus.py",api/policies.py,test/rate_limit/1,Python,test,1,0,,,licensing_require_rate_limiting = True
+licensing-rate_limit-1-1,synthetic/licensing,"Caso controlado original, scripts/corpus.py",api/policies.py,test/rate_limit/1,Python,test,1,1,rate_limit,A06:2025|API4:2023,licensing_require_rate_limiting = False
+licensing-rate_limit-2-0,synthetic/licensing,"Caso controlado original, scripts/corpus.py",api/policies.js,test/rate_limit/2,JavaScript,test,1,0,,,const licensingEnableRequestLimiter = true;
+licensing-rate_limit-2-1,synthetic/licensing,"Caso controlado original, scripts/corpus.py",api/policies.js,test/rate_limit/2,JavaScript,test,1,1,rate_limit,A06:2025|API4:2023,const licensingEnableRequestLimiter = false;
+licensing-rate_limit-3-0,synthetic/licensing,"Caso controlado original, scripts/corpus.py",config/application.yml,test/rate_limit/3,YAML,test,1,0,,,licensing_request_rate_quota: 45
+licensing-rate_limit-3-1,synthetic/licensing,"Caso controlado original, scripts/corpus.py",config/application.yml,test/rate_limit/3,YAML,test,1,1,rate_limit,A06:2025|API4:2023,licensing_request_rate_quota: 0
+licensing-rate_limit-4-0,synthetic/licensing,"Caso controlado original, scripts/corpus.py",config/application.properties,test/rate_limit/4,Properties,test,1,0,,,licensing.endpoint.rate.limit=true
+licensing-rate_limit-4-1,synthetic/licensing,"Caso controlado original, scripts/corpus.py",config/application.properties,test/rate_limit/4,Properties,test,1,1,rate_limit,A06:2025|API4:2023,licensing.endpoint.rate.limit=false
+licensing-expiration-1-0,synthetic/licensing,"Caso controlado original, scripts/corpus.py",api/policies.py,test/expiration/1,Python,test,1,0,,,licensing_require_session_expiration = True
+licensing-expiration-1-1,synthetic/licensing,"Caso controlado original, scripts/corpus.py",api/policies.py,test/expiration/1,Python,test,1,1,expiration,A07:2025|API2:2023,licensing_require_session_expiration = False
+licensing-expiration-2-0,synthetic/licensing,"Caso controlado original, scripts/corpus.py",api/policies.js,test/expiration/2,JavaScript,test,1,0,,,const licensingVerifyExpiration = true;
+licensing-expiration-2-1,synthetic/licensing,"Caso controlado original, scripts/corpus.py",api/policies.js,test/expiration/2,JavaScript,test,1,1,expiration,A07:2025|API2:2023,const licensingVerifyExpiration = false;
+licensing-expiration-3-0,synthetic/licensing,"Caso controlado original, scripts/corpus.py",config/application.yml,test/expiration/3,YAML,test,1,0,,,licensing_session_expiry_seconds: 45
+licensing-expiration-3-1,synthetic/licensing,"Caso controlado original, scripts/corpus.py",config/application.yml,test/expiration/3,YAML,test,1,1,expiration,A07:2025|API2:2023,licensing_session_expiry_seconds: 0
+licensing-expiration-4-0,synthetic/licensing,"Caso controlado original, scripts/corpus.py",config/application.properties,test/expiration/4,Properties,test,1,0,,,licensing.token.expiration.check=true
+licensing-expiration-4-1,synthetic/licensing,"Caso controlado original, scripts/corpus.py",config/application.properties,test/expiration/4,Properties,test,1,1,expiration,A07:2025|API2:2023,licensing.token.expiration.check=false
+surveys-ownership-1-0,synthetic/surveys,"Caso controlado original, scripts/corpus.py",api/policies.py,test/ownership/1,Python,test,1,0,,,surveys_verify_record_owner = True
+surveys-ownership-1-1,synthetic/surveys,"Caso controlado original, scripts/corpus.py",api/policies.py,test/ownership/1,Python,test,1,1,ownership,A01:2025|API1:2023,surveys_verify_record_owner = False
+surveys-ownership-2-0,synthetic/surveys,"Caso controlado original, scripts/corpus.py",api/policies.js,test/ownership/2,JavaScript,test,1,0,,,const surveysAuthorizeObjectOwner = true;
+surveys-ownership-2-1,synthetic/surveys,"Caso controlado original, scripts/corpus.py",api/policies.js,test/ownership/2,JavaScript,test,1,1,ownership,A01:2025|API1:2023,const surveysAuthorizeObjectOwner = false;
+surveys-ownership-3-0,synthetic/surveys,"Caso controlado original, scripts/corpus.py",config/application.yml,test/ownership/3,YAML,test,1,0,,,surveys_object_ownership_required: true
+surveys-ownership-3-1,synthetic/surveys,"Caso controlado original, scripts/corpus.py",config/application.yml,test/ownership/3,YAML,test,1,1,ownership,A01:2025|API1:2023,surveys_object_ownership_required: false
+surveys-ownership-4-0,synthetic/surveys,"Caso controlado original, scripts/corpus.py",config/application.properties,test/ownership/4,Properties,test,0,0,,,surveys.record.owner.validation=true
+surveys-ownership-4-1,synthetic/surveys,"Caso controlado original, scripts/corpus.py",config/application.properties,test/ownership/4,Properties,test,0,1,ownership,A01:2025,surveys.record.owner.validation=false
+surveys-debug-1-0,synthetic/surveys,"Caso controlado original, scripts/corpus.py",api/policies.py,test/debug/1,Python,test,1,0,,,surveys_debugging_enabled = False
+surveys-debug-1-1,synthetic/surveys,"Caso controlado original, scripts/corpus.py",api/policies.py,test/debug/1,Python,test,1,1,debug,A02:2025|API8:2023,surveys_debugging_enabled = True
+surveys-debug-2-0,synthetic/surveys,"Caso controlado original, scripts/corpus.py",api/policies.js,test/debug/2,JavaScript,test,1,0,,,const surveysDebugDiagnostics = false;
+surveys-debug-2-1,synthetic/surveys,"Caso controlado original, scripts/corpus.py",api/policies.js,test/debug/2,JavaScript,test,1,1,debug,A02:2025|API8:2023,const surveysDebugDiagnostics = true;
+surveys-debug-3-0,synthetic/surveys,"Caso controlado original, scripts/corpus.py",config/application.yml,test/debug/3,YAML,test,1,0,,,surveys_display_debug_traceback: false
+surveys-debug-3-1,synthetic/surveys,"Caso controlado original, scripts/corpus.py",config/application.yml,test/debug/3,YAML,test,1,1,debug,A02:2025|API8:2023,surveys_display_debug_traceback: true
+surveys-debug-4-0,synthetic/surveys,"Caso controlado original, scripts/corpus.py",config/application.properties,test/debug/4,Properties,test,0,0,,,surveys.runtime.debug.mode=false
+surveys-debug-4-1,synthetic/surveys,"Caso controlado original, scripts/corpus.py",config/application.properties,test/debug/4,Properties,test,0,1,debug,A02:2025,surveys.runtime.debug.mode=true
+surveys-transport-1-0,synthetic/surveys,"Caso controlado original, scripts/corpus.py",api/policies.py,test/transport/1,Python,test,1,0,,,surveys_tls_enforced = True
+surveys-transport-1-1,synthetic/surveys,"Caso controlado original, scripts/corpus.py",api/policies.py,test/transport/1,Python,test,1,1,transport,A04:2025,surveys_tls_enforced = False
+surveys-transport-2-0,synthetic/surveys,"Caso controlado original, scripts/corpus.py",api/policies.js,test/transport/2,JavaScript,test,1,0,,,const surveysRequireEncryptedTransport = true;
+surveys-transport-2-1,synthetic/surveys,"Caso controlado original, scripts/corpus.py",api/policies.js,test/transport/2,JavaScript,test,1,1,transport,A04:2025,const surveysRequireEncryptedTransport = false;
+surveys-transport-3-0,synthetic/surveys,"Caso controlado original, scripts/corpus.py",config/application.yml,test/transport/3,YAML,test,1,0,,,surveys_https_required: true
+surveys-transport-3-1,synthetic/surveys,"Caso controlado original, scripts/corpus.py",config/application.yml,test/transport/3,YAML,test,1,1,transport,A04:2025,surveys_https_required: false
+surveys-transport-4-0,synthetic/surveys,"Caso controlado original, scripts/corpus.py",config/application.properties,test/transport/4,Properties,test,0,0,,,surveys.connection.transport.tls.required=true
+surveys-transport-4-1,synthetic/surveys,"Caso controlado original, scripts/corpus.py",config/application.properties,test/transport/4,Properties,test,0,1,transport,A04:2025,surveys.connection.transport.tls.required=false
+surveys-rate_limit-1-0,synthetic/surveys,"Caso controlado original, scripts/corpus.py",api/policies.py,test/rate_limit/1,Python,test,1,0,,,surveys_require_rate_limiting = True
+surveys-rate_limit-1-1,synthetic/surveys,"Caso controlado original, scripts/corpus.py",api/policies.py,test/rate_limit/1,Python,test,1,1,rate_limit,A06:2025|API4:2023,surveys_require_rate_limiting = False
+surveys-rate_limit-2-0,synthetic/surveys,"Caso controlado original, scripts/corpus.py",api/policies.js,test/rate_limit/2,JavaScript,test,1,0,,,const surveysEnableRequestLimiter = true;
+surveys-rate_limit-2-1,synthetic/surveys,"Caso controlado original, scripts/corpus.py",api/policies.js,test/rate_limit/2,JavaScript,test,1,1,rate_limit,A06:2025|API4:2023,const surveysEnableRequestLimiter = false;
+surveys-rate_limit-3-0,synthetic/surveys,"Caso controlado original, scripts/corpus.py",config/application.yml,test/rate_limit/3,YAML,test,1,0,,,surveys_request_rate_quota: 50
+surveys-rate_limit-3-1,synthetic/surveys,"Caso controlado original, scripts/corpus.py",config/application.yml,test/rate_limit/3,YAML,test,1,1,rate_limit,A06:2025|API4:2023,surveys_request_rate_quota: 0
+surveys-rate_limit-4-0,synthetic/surveys,"Caso controlado original, scripts/corpus.py",config/application.properties,test/rate_limit/4,Properties,test,0,0,,,surveys.endpoint.rate.limit=true
+surveys-rate_limit-4-1,synthetic/surveys,"Caso controlado original, scripts/corpus.py",config/application.properties,test/rate_limit/4,Properties,test,0,1,rate_limit,A06:2025,surveys.endpoint.rate.limit=false
+surveys-expiration-1-0,synthetic/surveys,"Caso controlado original, scripts/corpus.py",api/policies.py,test/expiration/1,Python,test,1,0,,,surveys_require_session_expiration = True
+surveys-expiration-1-1,synthetic/surveys,"Caso controlado original, scripts/corpus.py",api/policies.py,test/expiration/1,Python,test,1,1,expiration,A07:2025|API2:2023,surveys_require_session_expiration = False
+surveys-expiration-2-0,synthetic/surveys,"Caso controlado original, scripts/corpus.py",api/policies.js,test/expiration/2,JavaScript,test,1,0,,,const surveysVerifyExpiration = true;
+surveys-expiration-2-1,synthetic/surveys,"Caso controlado original, scripts/corpus.py",api/policies.js,test/expiration/2,JavaScript,test,1,1,expiration,A07:2025|API2:2023,const surveysVerifyExpiration = false;
+surveys-expiration-3-0,synthetic/surveys,"Caso controlado original, scripts/corpus.py",config/application.yml,test/expiration/3,YAML,test,1,0,,,surveys_session_expiry_seconds: 50
+surveys-expiration-3-1,synthetic/surveys,"Caso controlado original, scripts/corpus.py",config/application.yml,test/expiration/3,YAML,test,1,1,expiration,A07:2025|API2:2023,surveys_session_expiry_seconds: 0
+surveys-expiration-4-0,synthetic/surveys,"Caso controlado original, scripts/corpus.py",config/application.properties,test/expiration/4,Properties,test,0,0,,,surveys.token.expiration.check=true
+surveys-expiration-4-1,synthetic/surveys,"Caso controlado original, scripts/corpus.py",config/application.properties,test/expiration/4,Properties,test,0,1,expiration,A07:2025,surveys.token.expiration.check=false
+booking-ownership-1-0,synthetic/booking,"Caso controlado original, scripts/corpus.py",api/policies.py,test/ownership/1,Python,test,1,0,,,booking_verify_record_owner = True
+booking-ownership-1-1,synthetic/booking,"Caso controlado original, scripts/corpus.py",api/policies.py,test/ownership/1,Python,test,1,1,ownership,A01:2025|API1:2023,booking_verify_record_owner = False
+booking-ownership-2-0,synthetic/booking,"Caso controlado original, scripts/corpus.py",api/policies.js,test/ownership/2,JavaScript,test,1,0,,,const bookingAuthorizeObjectOwner = true;
+booking-ownership-2-1,synthetic/booking,"Caso controlado original, scripts/corpus.py",api/policies.js,test/ownership/2,JavaScript,test,1,1,ownership,A01:2025|API1:2023,const bookingAuthorizeObjectOwner = false;
+booking-ownership-3-0,synthetic/booking,"Caso controlado original, scripts/corpus.py",config/application.yml,test/ownership/3,YAML,test,1,0,,,booking_object_ownership_required: true
+booking-ownership-3-1,synthetic/booking,"Caso controlado original, scripts/corpus.py",config/application.yml,test/ownership/3,YAML,test,1,1,ownership,A01:2025|API1:2023,booking_object_ownership_required: false
+booking-ownership-4-0,synthetic/booking,"Caso controlado original, scripts/corpus.py",config/application.properties,test/ownership/4,Properties,test,1,0,,,booking.record.owner.validation=true
+booking-ownership-4-1,synthetic/booking,"Caso controlado original, scripts/corpus.py",config/application.properties,test/ownership/4,Properties,test,1,1,ownership,A01:2025|API1:2023,booking.record.owner.validation=false
+booking-debug-1-0,synthetic/booking,"Caso controlado original, scripts/corpus.py",api/policies.py,test/debug/1,Python,test,1,0,,,booking_debugging_enabled = False
+booking-debug-1-1,synthetic/booking,"Caso controlado original, scripts/corpus.py",api/policies.py,test/debug/1,Python,test,1,1,debug,A02:2025|API8:2023,booking_debugging_enabled = True
+booking-debug-2-0,synthetic/booking,"Caso controlado original, scripts/corpus.py",api/policies.js,test/debug/2,JavaScript,test,1,0,,,const bookingDebugDiagnostics = false;
+booking-debug-2-1,synthetic/booking,"Caso controlado original, scripts/corpus.py",api/policies.js,test/debug/2,JavaScript,test,1,1,debug,A02:2025|API8:2023,const bookingDebugDiagnostics = true;
+booking-debug-3-0,synthetic/booking,"Caso controlado original, scripts/corpus.py",config/application.yml,test/debug/3,YAML,test,1,0,,,booking_display_debug_traceback: false
+booking-debug-3-1,synthetic/booking,"Caso controlado original, scripts/corpus.py",config/application.yml,test/debug/3,YAML,test,1,1,debug,A02:2025|API8:2023,booking_display_debug_traceback: true
+booking-debug-4-0,synthetic/booking,"Caso controlado original, scripts/corpus.py",config/application.properties,test/debug/4,Properties,test,1,0,,,booking.runtime.debug.mode=false
+booking-debug-4-1,synthetic/booking,"Caso controlado original, scripts/corpus.py",config/application.properties,test/debug/4,Properties,test,1,1,debug,A02:2025|API8:2023,booking.runtime.debug.mode=true
+booking-transport-1-0,synthetic/booking,"Caso controlado original, scripts/corpus.py",api/policies.py,test/transport/1,Python,test,1,0,,,booking_tls_enforced = True
+booking-transport-1-1,synthetic/booking,"Caso controlado original, scripts/corpus.py",api/policies.py,test/transport/1,Python,test,1,1,transport,A04:2025,booking_tls_enforced = False
+booking-transport-2-0,synthetic/booking,"Caso controlado original, scripts/corpus.py",api/policies.js,test/transport/2,JavaScript,test,1,0,,,const bookingRequireEncryptedTransport = true;
+booking-transport-2-1,synthetic/booking,"Caso controlado original, scripts/corpus.py",api/policies.js,test/transport/2,JavaScript,test,1,1,transport,A04:2025,const bookingRequireEncryptedTransport = false;
+booking-transport-3-0,synthetic/booking,"Caso controlado original, scripts/corpus.py",config/application.yml,test/transport/3,YAML,test,1,0,,,booking_https_required: true
+booking-transport-3-1,synthetic/booking,"Caso controlado original, scripts/corpus.py",config/application.yml,test/transport/3,YAML,test,1,1,transport,A04:2025,booking_https_required: false
+booking-transport-4-0,synthetic/booking,"Caso controlado original, scripts/corpus.py",config/application.properties,test/transport/4,Properties,test,1,0,,,booking.connection.transport.tls.required=true
+booking-transport-4-1,synthetic/booking,"Caso controlado original, scripts/corpus.py",config/application.properties,test/transport/4,Properties,test,1,1,transport,A04:2025,booking.connection.transport.tls.required=false
+booking-rate_limit-1-0,synthetic/booking,"Caso controlado original, scripts/corpus.py",api/policies.py,test/rate_limit/1,Python,test,1,0,,,booking_require_rate_limiting = True
+booking-rate_limit-1-1,synthetic/booking,"Caso controlado original, scripts/corpus.py",api/policies.py,test/rate_limit/1,Python,test,1,1,rate_limit,A06:2025|API4:2023,booking_require_rate_limiting = False
+booking-rate_limit-2-0,synthetic/booking,"Caso controlado original, scripts/corpus.py",api/policies.js,test/rate_limit/2,JavaScript,test,1,0,,,const bookingEnableRequestLimiter = true;
+booking-rate_limit-2-1,synthetic/booking,"Caso controlado original, scripts/corpus.py",api/policies.js,test/rate_limit/2,JavaScript,test,1,1,rate_limit,A06:2025|API4:2023,const bookingEnableRequestLimiter = false;
+booking-rate_limit-3-0,synthetic/booking,"Caso controlado original, scripts/corpus.py",config/application.yml,test/rate_limit/3,YAML,test,1,0,,,booking_request_rate_quota: 55
+booking-rate_limit-3-1,synthetic/booking,"Caso controlado original, scripts/corpus.py",config/application.yml,test/rate_limit/3,YAML,test,1,1,rate_limit,A06:2025|API4:2023,booking_request_rate_quota: 0
+booking-rate_limit-4-0,synthetic/booking,"Caso controlado original, scripts/corpus.py",config/application.properties,test/rate_limit/4,Properties,test,1,0,,,booking.endpoint.rate.limit=true
+booking-rate_limit-4-1,synthetic/booking,"Caso controlado original, scripts/corpus.py",config/application.properties,test/rate_limit/4,Properties,test,1,1,rate_limit,A06:2025|API4:2023,booking.endpoint.rate.limit=false
+booking-expiration-1-0,synthetic/booking,"Caso controlado original, scripts/corpus.py",api/policies.py,test/expiration/1,Python,test,1,0,,,booking_require_session_expiration = True
+booking-expiration-1-1,synthetic/booking,"Caso controlado original, scripts/corpus.py",api/policies.py,test/expiration/1,Python,test,1,1,expiration,A07:2025|API2:2023,booking_require_session_expiration = False
+booking-expiration-2-0,synthetic/booking,"Caso controlado original, scripts/corpus.py",api/policies.js,test/expiration/2,JavaScript,test,1,0,,,const bookingVerifyExpiration = true;
+booking-expiration-2-1,synthetic/booking,"Caso controlado original, scripts/corpus.py",api/policies.js,test/expiration/2,JavaScript,test,1,1,expiration,A07:2025|API2:2023,const bookingVerifyExpiration = false;
+booking-expiration-3-0,synthetic/booking,"Caso controlado original, scripts/corpus.py",config/application.yml,test/expiration/3,YAML,test,1,0,,,booking_session_expiry_seconds: 55
+booking-expiration-3-1,synthetic/booking,"Caso controlado original, scripts/corpus.py",config/application.yml,test/expiration/3,YAML,test,1,1,expiration,A07:2025|API2:2023,booking_session_expiry_seconds: 0
+booking-expiration-4-0,synthetic/booking,"Caso controlado original, scripts/corpus.py",config/application.properties,test/expiration/4,Properties,test,1,0,,,booking.token.expiration.check=true
+booking-expiration-4-1,synthetic/booking,"Caso controlado original, scripts/corpus.py",config/application.properties,test/expiration/4,Properties,test,1,1,expiration,A07:2025|API2:2023,booking.token.expiration.check=false

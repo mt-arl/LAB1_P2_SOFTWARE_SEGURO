@@ -1,0 +1,71 @@
+{
+  "proyecto-contraste": {
+    "archivos_analizados": 4,
+    "archivos_omitidos": 0,
+    "categorias_api_demostradas": [
+      "API2:2023",
+      "API4:2023",
+      "API8:2023"
+    ],
+    "categorias_web_demostradas": [
+      "A02:2025",
+      "A06:2025",
+      "A07:2025"
+    ],
+    "coincidencias": 8,
+    "f1": 0.9411764705882353,
+    "falsos_negativos": [
+      [
+        "services/events-api/settings.js",
+        3,
+        "A04:2025"
+      ]
+    ],
+    "falsos_positivos": [],
+    "hallazgos_potenciales": 4,
+    "lenguajes_y_formatos": [
+      "Configuración",
+      "JSON",
+      "JavaScript",
+      "YAML"
+    ],
+    "microservicios": 2,
+    "pendientes_de_revision": 0,
+    "precision": 1.0,
+    "recall": 0.8888888888888888
+  },
+  "proyecto-reservado": {
+    "archivos_analizados": 8,
+    "archivos_omitidos": 0,
+    "categorias_api_demostradas": [
+      "API1:2023",
+      "API2:2023",
+      "API4:2023",
+      "API8:2023"
+    ],
+    "categorias_web_demostradas": [
+      "A01:2025",
+      "A02:2025",
+      "A04:2025",
+      "A06:2025",
+      "A07:2025"
+    ],
+    "coincidencias": 9,
+    "f1": 1.0,
+    "falsos_negativos": [],
+    "falsos_positivos": [],
+    "hallazgos_potenciales": 5,
+    "lenguajes_y_formatos": [
+      "Configuración",
+      "JSON",
+      "JavaScript",
+      "Python",
+      "TOML",
+      "YAML"
+    ],
+    "microservicios": 3,
+    "pendientes_de_revision": 0,
+    "precision": 1.0,
+    "recall": 1.0
+  }
+}

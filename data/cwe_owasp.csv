@@ -1,0 +1,6 @@
+patron,cwe,owasp_2025,owasp_api_2023,criterio_api,fuente_web,fuente_api
+ownership,CWE-283,A01:2025,API1:2023,Evidencia léxica de contexto de API y control de propiedad,https://top10.owasp.org/2025/A01_2025-Broken_Access_Control/,https://api-security.owasp.org/editions/2023/en/0xa1-broken-object-level-authorization/
+debug,CWE-489,A02:2025,API8:2023,Evidencia léxica de contexto de API y diagnóstico activo,https://top10.owasp.org/2025/A02_2025-Security_Misconfiguration/,https://api-security.owasp.org/editions/2023/en/0xa8-security-misconfiguration/
+transport,CWE-319,A04:2025,,Sin correspondencia API automática,https://top10.owasp.org/2025/A04_2025-Cryptographic_Failures/,
+rate_limit,CWE-799,A06:2025,API4:2023,Evidencia léxica de contexto de API y límite de frecuencia,https://top10.owasp.org/2025/A06_2025-Insecure_Design/,https://api-security.owasp.org/editions/2023/en/0xa4-unrestricted-resource-consumption/
+expiration,CWE-613,A07:2025,API2:2023,Evidencia léxica de contexto de API y expiración de la autenticación,https://top10.owasp.org/2025/A07_2025-Authentication_Failures/,https://api-security.owasp.org/editions/2023/en/0xa2-broken-authentication/

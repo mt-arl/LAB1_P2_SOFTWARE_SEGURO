@@ -1,0 +1,254 @@
+{
+  "version_reporte": 1,
+  "proyecto": "proyecto-contraste",
+  "estandares": [
+    "owasp2025",
+    "api2023"
+  ],
+  "modelo": {
+    "algoritmo": "logistic",
+    "version": 1,
+    "huella_dataset": "231663a06dceedfb9a761c461771ae3b654c3d7e1b5f83d503a0ddf24b4ccbbb"
+  },
+  "resumen": {
+    "microservicios": 2,
+    "archivos_analizados": 4,
+    "archivos_omitidos": 0,
+    "lenguajes_y_formatos": [
+      "Configuración",
+      "JSON",
+      "JavaScript",
+      "YAML"
+    ],
+    "hallazgos_potenciales": 4,
+    "pendientes_de_revision": 0
+  },
+  "microservicios": [
+    {
+      "nombre": "events-api",
+      "directorio": "services/events-api",
+      "descubrimiento": "manifiesto"
+    },
+    {
+      "nombre": "ops-api",
+      "directorio": "services/ops-api",
+      "descubrimiento": "manifiesto"
+    }
+  ],
+  "catalogo": [
+    {
+      "codigo": "A01:2025",
+      "nombre": "Control de acceso roto",
+      "estado": "evaluada_en_laboratorio"
+    },
+    {
+      "codigo": "A02:2025",
+      "nombre": "Configuración de seguridad incorrecta",
+      "estado": "evaluada_en_laboratorio"
+    },
+    {
+      "codigo": "A03:2025",
+      "nombre": "Fallas en la cadena de suministro de software",
+      "estado": "no_evaluada"
+    },
+    {
+      "codigo": "A04:2025",
+      "nombre": "Fallas criptográficas",
+      "estado": "evaluada_en_laboratorio"
+    },
+    {
+      "codigo": "A05:2025",
+      "nombre": "Inyección",
+      "estado": "no_evaluada"
+    },
+    {
+      "codigo": "A06:2025",
+      "nombre": "Diseño inseguro",
+      "estado": "evaluada_en_laboratorio"
+    },
+    {
+      "codigo": "A07:2025",
+      "nombre": "Fallas de autenticación",
+      "estado": "evaluada_en_laboratorio"
+    },
+    {
+      "codigo": "A08:2025",
+      "nombre": "Fallas de integridad del software o los datos",
+      "estado": "no_evaluada"
+    },
+    {
+      "codigo": "A09:2025",
+      "nombre": "Fallas en el registro y las alertas de seguridad",
+      "estado": "no_evaluada"
+    },
+    {
+      "codigo": "A10:2025",
+      "nombre": "Manejo inadecuado de condiciones excepcionales",
+      "estado": "no_evaluada"
+    },
+    {
+      "codigo": "API1:2023",
+      "nombre": "Autorización rota a nivel de objeto",
+      "estado": "evaluada_en_laboratorio"
+    },
+    {
+      "codigo": "API2:2023",
+      "nombre": "Autenticación rota",
+      "estado": "evaluada_en_laboratorio"
+    },
+    {
+      "codigo": "API3:2023",
+      "nombre": "Autorización rota a nivel de propiedades del objeto",
+      "estado": "no_evaluada"
+    },
+    {
+      "codigo": "API4:2023",
+      "nombre": "Consumo de recursos sin restricciones",
+      "estado": "evaluada_en_laboratorio"
+    },
+    {
+      "codigo": "API5:2023",
+      "nombre": "Autorización rota a nivel de función",
+      "estado": "no_evaluada"
+    },
+    {
+      "codigo": "API6:2023",
+      "nombre": "Acceso sin restricciones a flujos de negocio sensibles",
+      "estado": "no_evaluada"
+    },
+    {
+      "codigo": "API7:2023",
+      "nombre": "Falsificación de solicitudes del lado del servidor",
+      "estado": "no_evaluada"
+    },
+    {
+      "codigo": "API8:2023",
+      "nombre": "Configuración de seguridad incorrecta",
+      "estado": "evaluada_en_laboratorio"
+    },
+    {
+      "codigo": "API9:2023",
+      "nombre": "Inventario inadecuado de API",
+      "estado": "no_evaluada"
+    },
+    {
+      "codigo": "API10:2023",
+      "nombre": "Consumo inseguro de API",
+      "estado": "no_evaluada"
+    }
+  ],
+  "archivos_omitidos": [],
+  "hallazgos": [
+    {
+      "id": "VM-f088af41534f",
+      "microservicio": "events-api",
+      "archivo": "services/events-api/settings.js",
+      "linea": 1,
+      "lenguaje": "JavaScript",
+      "descripcion": "Posible política que omite la expiración de sesión o token.",
+      "evidencia": {
+        "fragmento": "export const apiSessionLifetimeSeconds = 0;",
+        "senales_modelo": [
+          "session=zero",
+          "session/zero"
+        ]
+      },
+      "categorias_owasp": [
+        "A07:2025",
+        "API2:2023"
+      ],
+      "cwe": "CWE-613",
+      "confianza": 0.716,
+      "severidad": {
+        "nivel": "alta",
+        "justificacion": "Si controla sesiones activas, puede prolongar el uso de una sesión comprometida."
+      },
+      "remediacion": "Exigir expiración explícita, verificarla del lado del servidor y definir invalidación y renovación según el flujo de autenticación.",
+      "estado": "requiere_verificacion"
+    },
+    {
+      "id": "VM-d1cdcc39937e",
+      "microservicio": "events-api",
+      "archivo": "services/events-api/settings.js",
+      "linea": 2,
+      "lenguaje": "JavaScript",
+      "descripcion": "Posible desactivación o ausencia de un límite declarado de frecuencia.",
+      "evidencia": {
+        "fragmento": "export const enforceApiRequestThrottle = false;",
+        "senales_modelo": [
+          "limit=false",
+          "limit/false",
+          "request=false",
+          "request/false"
+        ]
+      },
+      "categorias_owasp": [
+        "A06:2025",
+        "API4:2023"
+      ],
+      "cwe": "CWE-799",
+      "confianza": 0.8985,
+      "severidad": {
+        "nivel": "media",
+        "justificacion": "Las operaciones costosas podrían afectar la disponibilidad del servicio."
+      },
+      "remediacion": "Definir límites por identidad y operación, aplicarlos de forma centralizada y revisar los límites efectivos del gateway.",
+      "estado": "requiere_verificacion"
+    },
+    {
+      "id": "VM-7c70ee0263ca",
+      "microservicio": "ops-api",
+      "archivo": "services/ops-api/application.yml",
+      "linea": 5,
+      "lenguaje": "YAML",
+      "descripcion": "Posible política que omite la expiración de sesión o token.",
+      "evidencia": {
+        "fragmento": "expiration: false",
+        "senales_modelo": [
+          "expire=false",
+          "expire/false",
+          "session/false"
+        ]
+      },
+      "categorias_owasp": [
+        "A07:2025",
+        "API2:2023"
+      ],
+      "cwe": "CWE-613",
+      "confianza": 0.9733,
+      "severidad": {
+        "nivel": "alta",
+        "justificacion": "Si controla sesiones activas, puede prolongar el uso de una sesión comprometida."
+      },
+      "remediacion": "Exigir expiración explícita, verificarla del lado del servidor y definir invalidación y renovación según el flujo de autenticación.",
+      "estado": "requiere_verificacion"
+    },
+    {
+      "id": "VM-c78b311f588e",
+      "microservicio": "ops-api",
+      "archivo": "services/ops-api/application.yml",
+      "linea": 9,
+      "lenguaje": "YAML",
+      "descripcion": "Posible modo de depuración o diagnóstico detallado habilitado.",
+      "evidencia": {
+        "fragmento": "debug: true",
+        "senales_modelo": [
+          "debug=true",
+          "debug/true"
+        ]
+      },
+      "categorias_owasp": [
+        "A02:2025",
+        "API8:2023"
+      ],
+      "cwe": "CWE-489",
+      "confianza": 0.9836,
+      "severidad": {
+        "nivel": "media",
+        "justificacion": "En un entorno expuesto, el diagnóstico puede revelar detalles internos."
+      },
+      "remediacion": "Desactivar la depuración en despliegues y enviar diagnósticos detallados a registros internos con control de acceso.",
+      "estado": "requiere_verificacion"
+    }
+  ]
+}

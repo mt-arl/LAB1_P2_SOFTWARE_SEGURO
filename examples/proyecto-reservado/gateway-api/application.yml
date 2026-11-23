@@ -1,0 +1,4 @@
+http_api_debug_output: true
+enable_api_rate_limit: false
+verify_api_session_expiry: true
+require_api_transport_tls: true

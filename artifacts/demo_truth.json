@@ -1,0 +1,16 @@
+{
+  "proyecto-reservado": [
+    {"archivo": "identity-api/session_policy.py", "linea": 3, "categorias": ["A07:2025", "API2:2023"]},
+    {"archivo": "identity-api/session_policy.py", "linea": 4, "categorias": ["A04:2025"]},
+    {"archivo": "documents-api/document-policy.js", "linea": 1, "categorias": ["A01:2025", "API1:2023"]},
+    {"archivo": "gateway-api/application.yml", "linea": 1, "categorias": ["A02:2025", "API8:2023"]},
+    {"archivo": "gateway-api/application.yml", "linea": 2, "categorias": ["A06:2025", "API4:2023"]}
+  ],
+  "proyecto-contraste": [
+    {"archivo": "services/events-api/settings.js", "linea": 1, "categorias": ["A07:2025", "API2:2023"]},
+    {"archivo": "services/events-api/settings.js", "linea": 2, "categorias": ["A06:2025", "API4:2023"]},
+    {"archivo": "services/events-api/settings.js", "linea": 3, "categorias": ["A04:2025"]},
+    {"archivo": "services/ops-api/application.yml", "linea": 5, "categorias": ["A07:2025", "API2:2023"]},
+    {"archivo": "services/ops-api/application.yml", "linea": 9, "categorias": ["A02:2025", "API8:2023"]}
+  ]
+}

@@ -1,0 +1,8 @@
+services:
+  identity:
+    build: ./identity-api
+  documents:
+    build:
+      context: ./documents-api
+  gateway:
+    build: ./gateway-api

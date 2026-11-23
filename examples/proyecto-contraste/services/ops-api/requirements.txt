@@ -1,0 +1,1 @@
+# Este servicio contiene únicamente declaraciones para revisión estática.

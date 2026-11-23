@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vulnminer-semma"
+version = "1.0.0"
+description = "Análisis estático local de microservicios con clasificación supervisada"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = []
+
+[project.scripts]
+vulnminer = "vulnminer.cli:main"
+
+[tool.setuptools]
+packages = ["vulnminer"]
+
+[tool.setuptools.package-data]
+vulnminer = ["model.json"]

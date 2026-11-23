@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VulnMiner · proyecto-contraste</title><style>
+:root{color-scheme:light;--ink:#182a32;--muted:#485e66;--line:#d5e0dc;--accent:#186350}
+*{box-sizing:border-box}body{margin:0;background:#edf3ef;color:var(--ink);font:16px/1.55 system-ui,sans-serif}
+main{width:min(1140px,calc(100% - 36px));margin:auto;padding:28px 0 50px}
+header{background:#14372f;color:#fff;padding:35px;border-radius:14px}h1,h2,h3{line-height:1.2}
+h1{font-size:clamp(2rem,5vw,3.25rem);margin:.25rem 0}h2{margin-top:34px}
+header p{color:#d8ece2;margin:0}.subtitle{margin-bottom:9px}
+a{color:#16614d}nav{margin-top:18px;display:flex;gap:18px;flex-wrap:wrap}
+nav a{color:#fff}dl.summary{display:grid;grid-template-columns:repeat(auto-fit,minmax(153px,1fr));gap:12px}
+.summary div,article,.table-wrap{background:#fff;border:1px solid var(--line);border-radius:10px;padding:15px}
+dt{color:var(--muted)}dd{margin:0;font-weight:700}.summary dd{font-size:1.55rem}
+.table-wrap{overflow-x:auto}table{width:100%;border-collapse:collapse;text-align:left}
+th,td{border-bottom:1px solid var(--line);padding:8px 12px;vertical-align:top}
+article{margin-bottom:12px;padding:20px}article h3{margin-top:0}article p{margin:.45rem 0}
+.detail{color:var(--muted)}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#eef4f1;padding:10px;border-radius:6px}
+code{overflow-wrap:anywhere}small{color:var(--muted)}:target{scroll-margin-top:12px}
+</style></head><body><main>
+<header><p>VulnMiner · Análisis estático</p><h1>proyecto-contraste</h1>
+<p class="subtitle">Modelo logistic · owasp2025, api2023</p>
+<nav aria-label="Secciones"><a href="#servicios">Microservicios</a><a href="#hallazgos">Hallazgos</a>
+<a href="#categorias">Cobertura OWASP</a></nav></header>
+<dl class="summary"><div><dt>Microservicios</dt><dd>2</dd></div><div><dt>Archivos analizados</dt><dd>4</dd></div><div><dt>Hallazgos potenciales</dt><dd>4</dd></div><div><dt>Pendientes de revisión</dt><dd>0</dd></div></dl>
+<h2 id="servicios">Microservicios</h2>
+<div class='table-wrap'><table><thead><tr><th scope='col'>Servicio</th><th scope='col'>Directorio</th><th scope='col'>Descubrimiento</th><th scope='col'>Hallazgos</th></tr></thead><tbody><tr><td>events-api</td><td>services/events-api</td><td>manifiesto</td><td>2</td></tr><tr><td>ops-api</td><td>services/ops-api</td><td>manifiesto</td><td>2</td></tr></tbody></table></div>
+<h2 id="hallazgos">Hallazgos</h2>
+<p>Los resultados describen señales estáticas. El estado indica si requieren verificación o revisión adicional.</p>
+
+<article id="VM-f088af41534f">
+<h3>Posible política que omite la expiración de sesión o token.</h3>
+<p class="detail"><code>VM-f088af41534f</code> · events-api ·
+<code>services/events-api/settings.js:1</code> · JavaScript</p>
+<p><strong>OWASP</strong> A07:2025, API2:2023 · <strong>CWE</strong> CWE-613</p>
+<p><strong>Confianza</strong> 71.60% ·
+<strong>Estado</strong> requiere verificacion</p>
+<pre>export const apiSessionLifetimeSeconds = 0;</pre>
+<p><strong>Señales del modelo</strong> session=zero, session/zero</p>
+<p><strong>Severidad alta.</strong> Si controla sesiones activas, puede prolongar el uso de una sesión comprometida.</p>
+<p><strong>Remediación</strong> Exigir expiración explícita, verificarla del lado del servidor y definir invalidación y renovación según el flujo de autenticación.</p>
+</article>
+<article id="VM-d1cdcc39937e">
+<h3>Posible desactivación o ausencia de un límite declarado de frecuencia.</h3>
+<p class="detail"><code>VM-d1cdcc39937e</code> · events-api ·
+<code>services/events-api/settings.js:2</code> · JavaScript</p>
+<p><strong>OWASP</strong> A06:2025, API4:2023 · <strong>CWE</strong> CWE-799</p>
+<p><strong>Confianza</strong> 89.85% ·
+<strong>Estado</strong> requiere verificacion</p>
+<pre>export const enforceApiRequestThrottle = false;</pre>
+<p><strong>Señales del modelo</strong> limit=false, limit/false, request=false, request/false</p>
+<p><strong>Severidad media.</strong> Las operaciones costosas podrían afectar la disponibilidad del servicio.</p>
+<p><strong>Remediación</strong> Definir límites por identidad y operación, aplicarlos de forma centralizada y revisar los límites efectivos del gateway.</p>
+</article>
+<article id="VM-7c70ee0263ca">
+<h3>Posible política que omite la expiración de sesión o token.</h3>
+<p class="detail"><code>VM-7c70ee0263ca</code> · ops-api ·
+<code>services/ops-api/application.yml:5</code> · YAML</p>
+<p><strong>OWASP</strong> A07:2025, API2:2023 · <strong>CWE</strong> CWE-613</p>
+<p><strong>Confianza</strong> 97.33% ·
+<strong>Estado</strong> requiere verificacion</p>
+<pre>expiration: false</pre>
+<p><strong>Señales del modelo</strong> expire=false, expire/false, session/false</p>
+<p><strong>Severidad alta.</strong> Si controla sesiones activas, puede prolongar el uso de una sesión comprometida.</p>
+<p><strong>Remediación</strong> Exigir expiración explícita, verificarla del lado del servidor y definir invalidación y renovación según el flujo de autenticación.</p>
+</article>
+<article id="VM-c78b311f588e">
+<h3>Posible modo de depuración o diagnóstico detallado habilitado.</h3>
+<p class="detail"><code>VM-c78b311f588e</code> · ops-api ·
+<code>services/ops-api/application.yml:9</code> · YAML</p>
+<p><strong>OWASP</strong> A02:2025, API8:2023 · <strong>CWE</strong> CWE-489</p>
+<p><strong>Confianza</strong> 98.36% ·
+<strong>Estado</strong> requiere verificacion</p>
+<pre>debug: true</pre>
+<p><strong>Señales del modelo</strong> debug=true, debug/true</p>
+<p><strong>Severidad media.</strong> En un entorno expuesto, el diagnóstico puede revelar detalles internos.</p>
+<p><strong>Remediación</strong> Desactivar la depuración en despliegues y enviar diagnósticos detallados a registros internos con control de acceso.</p>
+</article>
+<h2 id="categorias">Cobertura OWASP</h2>
+<div class='table-wrap'><table><thead><tr><th scope='col'>Código</th><th scope='col'>Categoría</th><th scope='col'>Evaluación</th><th scope='col'>Hallazgos</th></tr></thead><tbody><tr><td>A01:2025</td><td>Control de acceso roto</td><td>evaluada en laboratorio</td><td>0</td></tr><tr><td>A02:2025</td><td>Configuración de seguridad incorrecta</td><td>evaluada en laboratorio</td><td>1</td></tr><tr><td>A03:2025</td><td>Fallas en la cadena de suministro de software</td><td>no evaluada</td><td>0</td></tr><tr><td>A04:2025</td><td>Fallas criptográficas</td><td>evaluada en laboratorio</td><td>0</td></tr><tr><td>A05:2025</td><td>Inyección</td><td>no evaluada</td><td>0</td></tr><tr><td>A06:2025</td><td>Diseño inseguro</td><td>evaluada en laboratorio</td><td>1</td></tr><tr><td>A07:2025</td><td>Fallas de autenticación</td><td>evaluada en laboratorio</td><td>2</td></tr><tr><td>A08:2025</td><td>Fallas de integridad del software o los datos</td><td>no evaluada</td><td>0</td></tr><tr><td>A09:2025</td><td>Fallas en el registro y las alertas de seguridad</td><td>no evaluada</td><td>0</td></tr><tr><td>A10:2025</td><td>Manejo inadecuado de condiciones excepcionales</td><td>no evaluada</td><td>0</td></tr><tr><td>API1:2023</td><td>Autorización rota a nivel de objeto</td><td>evaluada en laboratorio</td><td>0</td></tr><tr><td>API2:2023</td><td>Autenticación rota</td><td>evaluada en laboratorio</td><td>2</td></tr><tr><td>API3:2023</td><td>Autorización rota a nivel de propiedades del objeto</td><td>no evaluada</td><td>0</td></tr><tr><td>API4:2023</td><td>Consumo de recursos sin restricciones</td><td>evaluada en laboratorio</td><td>1</td></tr><tr><td>API5:2023</td><td>Autorización rota a nivel de función</td><td>no evaluada</td><td>0</td></tr><tr><td>API6:2023</td><td>Acceso sin restricciones a flujos de negocio sensibles</td><td>no evaluada</td><td>0</td></tr><tr><td>API7:2023</td><td>Falsificación de solicitudes del lado del servidor</td><td>no evaluada</td><td>0</td></tr><tr><td>API8:2023</td><td>Configuración de seguridad incorrecta</td><td>evaluada en laboratorio</td><td>1</td></tr><tr><td>API9:2023</td><td>Inventario inadecuado de API</td><td>no evaluada</td><td>0</td></tr><tr><td>API10:2023</td><td>Consumo inseguro de API</td><td>no evaluada</td><td>0</td></tr></tbody></table></div>
+
+</main></body></html>
